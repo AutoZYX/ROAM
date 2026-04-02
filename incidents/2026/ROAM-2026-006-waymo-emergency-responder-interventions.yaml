@@ -1,0 +1,57 @@
+id: "ROAM-2026-006"
+date: "2026-03-01"
+operator: "Waymo"
+location:
+  city: "Multiple US cities"
+  road_type: "various"
+  specific: "San Francisco, Phoenix, Los Angeles, Austin — various emergency scenes"
+scenario:
+  primary: "E3"
+  secondary: ["C1"]
+severity: "S2"
+urgency: "U2"
+description: |
+  Throughout 2026, at least 6 documented instances occurred where first responders
+  had to physically take control of Waymo vehicles during emergency operations.
+  These incidents span multiple cities in Waymo's operating territory. In each case,
+  the autonomous vehicle either failed to yield to emergency vehicles, blocked
+  emergency access routes, or froze in positions that obstructed emergency operations.
+  Fire departments and police in multiple jurisdictions have reported frustration
+  with the inability to quickly clear autonomous vehicles from emergency scenes.
+  The pattern indicates a systemic gap in ADS emergency vehicle interaction rather
+  than isolated incidents.
+impact:
+  vehicles_affected: 6
+  duration_minutes: null
+  traffic_disruption: "moderate to severe per incident"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "varied"
+  customer_service: "slow response relative to emergency timelines"
+  remote_intervention: "latency too high for emergency contexts"
+  on_site_response: "first responders forced to intervene directly with vehicles"
+  resolution_method: "first responders manually moved or overrode vehicles"
+root_cause:
+  category: "emergency vehicle interaction — systemic pattern"
+  description: "Recurring failure to detect, yield to, and clear path for emergency vehicles across multiple scenarios and cities; the pattern indicates a fundamental gap in emergency response behavior rather than isolated bugs"
+  confirmed: true
+systemic_issues:
+  - "At least 6 documented incidents across multiple cities indicate systemic failure"
+  - "Emergency vehicle detection and response is a safety-critical function"
+  - "First responders lack standardized tools to quickly clear autonomous vehicles"
+  - "Remote intervention latency is structurally incompatible with emergency timelines"
+  - "No standardized interface between ADS fleets and emergency dispatch systems"
+  - "Each incident potentially delays life-saving emergency response"
+regulatory_action: |
+  NHTSA opened investigation into Waymo emergency vehicle interaction.
+  International Association of Fire Chiefs (IAFC) issued guidance on
+  autonomous vehicle interaction. Multiple cities considering mandatory
+  emergency responder override requirements.
+sources:
+  - url: "https://www.nhtsa.gov/technology-innovation/automated-vehicles-safety"
+    title: "NHTSA Automated Vehicles Safety Investigation"
+  - url: "https://www.iafc.org/topics-and-tools/autonomous-vehicles"
+    title: "IAFC - Fire Service Guidance on Autonomous Vehicles"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

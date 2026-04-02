@@ -1,0 +1,49 @@
+id: "ROAM-2025-001"
+date: "2025-05-19"
+operator: "Pony.ai (小马智行)"
+location:
+  city: "Beijing, China"
+  road_type: "urban road"
+  specific: "Daxing district, Beijing"
+scenario:
+  primary: "D3"
+  secondary: ["D2"]
+severity: "S2"
+urgency: "U2"
+description: |
+  A Pony.ai autonomous test vehicle caught fire after veering off the road in
+  Beijing's Daxing district. The vehicle was operating without passengers at the
+  time of the incident. No injuries were reported. The fire was significant enough
+  to require fire department response. The incident led to a temporary suspension
+  of Pony.ai's robotaxi service in the affected district while an investigation
+  was conducted. This was notable as one of the few vehicle fire incidents
+  involving an L4 autonomous vehicle.
+impact:
+  vehicles_affected: 1
+  duration_minutes: null
+  traffic_disruption: "moderate"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "not applicable (no passengers)"
+  customer_service: "not applicable"
+  remote_intervention: "unable to prevent fire"
+  on_site_response: "fire department"
+  resolution_method: "fire extinguished by fire department; vehicle total loss"
+root_cause:
+  category: "vehicle fire / mechanical failure"
+  description: "Vehicle veered off road and caught fire; root cause under investigation. Potential causes include electrical system failure, battery thermal event, or mechanical failure leading to loss of control"
+  confirmed: false
+systemic_issues:
+  - "Vehicle fire represents a severe failure mode for public trust"
+  - "Loss of vehicle control preceding fire suggests possible cascading failure"
+  - "Remote monitoring was unable to prevent or mitigate the incident"
+  - "Autonomous test vehicles operating without safety drivers face unique fire response challenges"
+regulatory_action: |
+  Beijing Daxing district temporarily suspended Pony.ai's robotaxi service
+  pending investigation. Service gradually resumed after review.
+sources:
+  - url: "https://www.reuters.com/business/autos-transportation/ponyai-autonomous-vehicle-catches-fire-beijing-2025-05-19/"
+    title: "Reuters - Pony.ai vehicle fire in Beijing"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

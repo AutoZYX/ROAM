@@ -1,0 +1,49 @@
+id: "ROAM-2024-002"
+date: "2024-07-07"
+operator: "Baidu Apollo (萝卜快跑)"
+location:
+  city: "Wuhan, China"
+  road_type: "urban intersection"
+  specific: "Wuhan urban area"
+scenario:
+  primary: "C5"
+  secondary: ["B4"]
+severity: "S1"
+urgency: "U3"
+description: |
+  A Baidu Apollo robotaxi (萝卜快跑/Luobo Kuaipao) collided with a jaywalking
+  pedestrian at an intersection while the vehicle had a green light. The incident
+  was described as "light contact" (轻微接触) by Baidu. The pedestrian crossed
+  against the signal. The incident drew significant public attention in China as
+  萝卜快跑 was rapidly scaling operations in Wuhan, becoming the world's largest
+  robotaxi fleet deployment. Public debate intensified around the displacement of
+  traditional taxi drivers and safety of autonomous vehicles in Chinese cities.
+impact:
+  vehicles_affected: 1
+  duration_minutes: null
+  traffic_disruption: "minimal"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "not triggered"
+  customer_service: "normal"
+  remote_intervention: "post-incident review"
+  on_site_response: "traffic police"
+  resolution_method: "standard traffic incident handling"
+root_cause:
+  category: "pedestrian behavior (jaywalking)"
+  description: "Pedestrian jaywalked against the signal; vehicle had right of way but made contact at low speed. Questions remain about whether ADS should have anticipated and avoided the jaywalker entirely"
+  confirmed: false
+systemic_issues:
+  - "Chinese urban environments have high jaywalking rates requiring robust pedestrian prediction"
+  - "Public trust fragile during rapid fleet scaling"
+  - "Tension between robotaxi deployment and traditional taxi driver livelihoods"
+  - "'Light contact' framing raised questions about incident reporting transparency"
+regulatory_action: |
+  No formal regulatory action. Local Wuhan authorities reviewed the incident.
+  The event contributed to broader national discussion about robotaxi regulation in China.
+sources:
+  - url: "https://www.reuters.com/technology/baidu-robotaxi-unit-involved-accident-with-pedestrian-wuhan-2024-07-08/"
+    title: "Reuters - Baidu robotaxi accident in Wuhan"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

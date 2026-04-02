@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ROAM Incident Record",
+  "description": "Standard format for recording L4+ robotaxi operational anomalies",
+  "type": "object",
+  "required": ["id", "date", "operator", "location", "scenario", "severity", "description"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ROAM-\\d{4}-\\d{3}",
+      "description": "Unique identifier: ROAM-YYYY-NNN"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string",
+      "description": "Local time of incident (HH:MM)"
+    },
+    "operator": {
+      "type": "string",
+      "description": "Company operating the vehicle"
+    },
+    "vehicle_model": {
+      "type": "string"
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "city": { "type": "string" },
+        "country": { "type": "string" },
+        "road_type": {
+          "type": "string",
+          "enum": ["urban_street", "elevated_highway", "expressway", "intersection", "parking_lot", "school_zone", "residential", "construction_zone", "other"]
+        },
+        "specific": { "type": "string" }
+      }
+    },
+    "scenario": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "string",
+          "description": "Primary scenario code from taxonomy (e.g., A1, B2, C3)"
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["S0", "S1", "S2", "S3", "S4"],
+      "description": "S0=Near-miss, S1=Minor, S2=Moderate, S3=Severe, S4=Critical/Fatal"
+    },
+    "urgency": {
+      "type": "string",
+      "enum": ["U0", "U1", "U2", "U3"],
+      "description": "U0=Low, U1=Medium, U2=High, U3=Immediate"
+    },
+    "description": {
+      "type": "string"
+    },
+    "impact": {
+      "type": "object",
+      "properties": {
+        "vehicles_affected": { "type": "integer" },
+        "duration_minutes": { "type": "integer" },
+        "traffic_disruption": {
+          "type": "string",
+          "enum": ["none", "minor", "moderate", "severe", "critical"]
+        },
+        "injuries": { "type": "integer" },
+        "fatalities": { "type": "integer" }
+      }
+    },
+    "emergency_response": {
+      "type": "object",
+      "properties": {
+        "sos_button": {
+          "type": "string",
+          "enum": ["functional", "non_functional", "delayed", "not_applicable"]
+        },
+        "customer_service": {
+          "type": "string",
+          "enum": ["responsive", "delayed", "overloaded", "unavailable"]
+        },
+        "remote_intervention": {
+          "type": "string",
+          "enum": ["none", "attempted", "successful", "partial"]
+        },
+        "on_site_response": {
+          "type": "string",
+          "enum": ["none", "company_team", "police_manual", "tow_truck", "fire_department", "ambulance"]
+        },
+        "resolution_method": { "type": "string" }
+      }
+    },
+    "root_cause": {
+      "type": "object",
+      "properties": {
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "confirmed": { "type": "boolean" }
+      }
+    },
+    "systemic_issues": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "regulatory_action": {
+      "type": "string",
+      "description": "Any recall, fine, or regulatory response"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": { "type": "string", "format": "uri" },
+          "title": { "type": "string" }
+        }
+      }
+    },
+    "contributor": { "type": "string" },
+    "last_updated": { "type": "string", "format": "date" }
+  }
+}

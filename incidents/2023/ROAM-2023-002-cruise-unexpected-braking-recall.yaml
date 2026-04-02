@@ -1,0 +1,47 @@
+id: "ROAM-2023-002"
+date: "2023-08-18"
+operator: "Cruise (GM)"
+location:
+  city: "Multiple locations, USA"
+  road_type: "urban roads"
+  specific: "Various cities where Cruise operated"
+scenario:
+  primary: "C1"
+  secondary: ["B1"]
+severity: "S2"
+urgency: "U2"
+description: |
+  Cruise issued a voluntary recall of 1,194 vehicles due to a software defect causing
+  unexpected hard braking events. The vehicles would brake suddenly and without apparent
+  cause, leading to rear-end collisions by following vehicles. Multiple incidents were
+  reported where the unexpected braking caused injuries to occupants of following vehicles.
+  The recall addressed the prediction software that was incorrectly assessing the behavior
+  of oncoming vehicles in certain scenarios.
+impact:
+  vehicles_affected: 1194
+  duration_minutes: null
+  traffic_disruption: "moderate"
+  injuries: 2
+  fatalities: 0
+emergency_response:
+  sos_button: "not applicable"
+  customer_service: "normal"
+  remote_intervention: "not applicable"
+  on_site_response: "standard collision response"
+  resolution_method: "software recall and OTA update"
+root_cause:
+  category: "prediction software defect"
+  description: "Software incorrectly predicted oncoming vehicle trajectories, triggering unnecessary hard braking; the prediction model overestimated collision risk in certain traffic configurations"
+  confirmed: true
+systemic_issues:
+  - "Prediction model overly conservative in specific oncoming traffic scenarios"
+  - "Hard braking without sufficient warning creates secondary collision risk"
+  - "Pattern of incidents accumulated before recall was initiated"
+regulatory_action: |
+  NHTSA recall (23V-579). Cruise issued voluntary recall and deployed OTA software
+  update to address the prediction software defect.
+sources:
+  - url: "https://www.nhtsa.gov/recalls"
+    title: "NHTSA Recall 23V-579"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

@@ -1,0 +1,48 @@
+id: "ROAM-2025-002"
+date: "2025-05-15"
+operator: "Waymo"
+location:
+  city: "Multiple locations, USA"
+  road_type: "various"
+  specific: "Parking lots, driveways, and gated areas across service territories"
+scenario:
+  primary: "C4"
+  secondary: ["B1"]
+severity: "S1"
+urgency: "U3"
+description: |
+  Waymo issued a voluntary recall of 1,212 vehicles due to a software issue causing
+  collisions with roadside barriers, gates, and chains. The vehicles failed to
+  properly detect or respond to certain types of thin or low-contrast barriers
+  such as parking lot gates, chains, and flexible bollards. Multiple low-speed
+  collisions were reported across Waymo's operating territories. No injuries
+  resulted from these incidents but vehicle and property damage occurred.
+impact:
+  vehicles_affected: 1212
+  duration_minutes: null
+  traffic_disruption: "minimal"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "not needed"
+  customer_service: "normal"
+  remote_intervention: "post-incident"
+  on_site_response: "Waymo roadside assistance"
+  resolution_method: "software recall and OTA update to improve barrier detection"
+root_cause:
+  category: "perception deficiency"
+  description: "Perception system failed to reliably detect thin, low-contrast, or flexible barriers such as chains, gates, and flexible bollards; these objects fell outside the trained detection model's reliable performance envelope"
+  confirmed: true
+systemic_issues:
+  - "Thin and low-contrast objects remain a challenging perception edge case"
+  - "Parking lot and driveway environments have diverse barrier types"
+  - "Pattern of repeated collisions before recall indicates detection gap was systematic"
+  - "Largest Waymo recall to date at 1,212 vehicles"
+regulatory_action: |
+  NHTSA recall. Waymo issued voluntary recall and deployed OTA software update
+  to improve detection of thin barriers, gates, and chains.
+sources:
+  - url: "https://www.nhtsa.gov/recalls"
+    title: "NHTSA Waymo Recall - Barrier Collisions"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

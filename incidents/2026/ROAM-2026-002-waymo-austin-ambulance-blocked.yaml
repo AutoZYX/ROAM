@@ -1,0 +1,53 @@
+id: "ROAM-2026-002"
+date: "2026-03-15"
+operator: "Waymo"
+location:
+  city: "Austin, USA"
+  road_type: "urban arterial"
+  specific: "Near mass shooting scene, Austin TX"
+scenario:
+  primary: "E3"
+  secondary: ["C1", "F1"]
+severity: "S3"
+urgency: "U1"
+description: |
+  A Waymo robotaxi became stuck and blocked an ambulance responding to a mass
+  shooting in Austin, Texas. The vehicle froze in the path of emergency vehicles
+  attempting to reach the scene. Police officers had to physically intervene to
+  move the robotaxi out of the ambulance's path. The incident occurred during
+  an active emergency where seconds mattered for victim survival. This event
+  highlighted the critical gap in autonomous vehicle interaction with emergency
+  response operations and the life-threatening consequences when robotaxis
+  cannot yield to emergency vehicles in real time.
+impact:
+  vehicles_affected: 1
+  duration_minutes: 15
+  traffic_disruption: "severe"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "not relevant (no passengers)"
+  customer_service: "not contacted during emergency"
+  remote_intervention: "too slow for emergency context"
+  on_site_response: "police physically intervened"
+  resolution_method: "police officers manually moved vehicle out of ambulance path"
+root_cause:
+  category: "emergency vehicle interaction failure"
+  description: "Vehicle failed to detect and yield to approaching emergency vehicles with active lights and sirens; entered a frozen state in the emergency corridor, unable to execute an appropriate pullover maneuver"
+  confirmed: false
+systemic_issues:
+  - "Emergency vehicle detection and yielding is a critical safety function that failed"
+  - "Frozen vehicle blocking emergency access during active emergency is potentially life-threatening"
+  - "Remote intervention latency incompatible with emergency response timelines"
+  - "No pre-established protocol between Waymo and local emergency services"
+  - "Mass casualty events create chaotic traffic patterns that exceed ADS capabilities"
+regulatory_action: |
+  Austin city council held emergency session on robotaxi operations. Texas DOT
+  opened review of autonomous vehicle emergency response requirements. Federal
+  legislators cited incident in calls for mandatory emergency vehicle interaction
+  standards for autonomous vehicles.
+sources:
+  - url: "https://www.statesman.com/story/news/2026/03/16/waymo-blocks-ambulance-austin-shooting/"
+    title: "Austin American-Statesman - Waymo blocks ambulance after mass shooting"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

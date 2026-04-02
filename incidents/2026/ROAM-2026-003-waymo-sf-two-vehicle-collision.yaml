@@ -1,0 +1,51 @@
+id: "ROAM-2026-003"
+date: "2026-02-15"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  road_type: "urban intersection"
+  specific: "San Francisco, intersection area"
+scenario:
+  primary: "C3"
+  secondary: ["C1", "B1"]
+severity: "S2"
+urgency: "U2"
+description: |
+  Two Waymo robotaxis collided with each other in San Francisco, blocking all
+  traffic at the location. After the collision, a third Waymo vehicle approaching
+  from behind became stuck, unable to navigate around the two disabled vehicles.
+  The result was three Waymo vehicles creating a complete traffic blockage.
+  The incident raised questions about fleet-level coordination — whether vehicles
+  from the same fleet should have shared awareness to prevent same-fleet collisions
+  and cascading blockages. The incident went viral on social media as a symbol of
+  robotaxi operational challenges.
+impact:
+  vehicles_affected: 3
+  duration_minutes: 45
+  traffic_disruption: "severe"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "activated by passengers in both colliding vehicles"
+  customer_service: "responsive but slow to dispatch"
+  remote_intervention: "unable to clear third vehicle"
+  on_site_response: "Waymo field team, SFPD traffic control"
+  resolution_method: "manual towing of disabled vehicles; third vehicle remotely rerouted after delay"
+root_cause:
+  category: "vehicle-to-vehicle coordination failure"
+  description: "Two vehicles from the same fleet collided, indicating no effective V2V awareness or fleet coordination; third vehicle's inability to navigate around the scene indicates path planning failure in degraded scenarios"
+  confirmed: false
+systemic_issues:
+  - "Same-fleet vehicles lack V2V coordination to prevent mutual collisions"
+  - "Cascading blockage from third vehicle amplifies the incident"
+  - "Fleet-level situational awareness is absent"
+  - "Social media amplification of 'three Waymos blocking traffic' damaged brand perception"
+  - "Path planning cannot handle scenarios with disabled fleet vehicles blocking the route"
+regulatory_action: |
+  CPUC requested briefing from Waymo on fleet coordination capabilities.
+  No formal enforcement action taken.
+sources:
+  - url: "https://sfstandard.com/2026/02/16/two-waymo-vehicles-collide-san-francisco/"
+    title: "SF Standard - Two Waymo robotaxis collide in SF"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

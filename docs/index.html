@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROAM — RoboTaxi Operations Anomaly Management</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; background: #f8f9fc; line-height: 1.6; }
+
+        /* Header */
+        .header { background: linear-gradient(135deg, #0f1629 0%, #1a2744 100%); color: white; padding: 60px 20px 50px; text-align: center; }
+        .header h1 { font-size: 2.8em; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+        .header h1 span { color: #f59e0b; }
+        .header .subtitle { font-size: 1.15em; color: #94a3b8; max-width: 700px; margin: 0 auto 30px; }
+        .header .badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .badge { padding: 6px 16px; border-radius: 20px; font-size: 0.85em; font-weight: 600; }
+        .badge-red { background: rgba(239,68,68,0.15); color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); }
+        .badge-orange { background: rgba(245,158,11,0.15); color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
+        .badge-blue { background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+        .badge-green { background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
+
+        /* Stats bar */
+        .stats { display: flex; justify-content: center; gap: 40px; padding: 30px 20px; background: white; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat-num { font-size: 2em; font-weight: 800; color: #0f1629; }
+        .stat-label { font-size: 0.85em; color: #64748b; margin-top: 2px; }
+
+        /* Container */
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Alert box */
+        .alert { background: linear-gradient(135deg, #fef3c7, #fde68a); border-left: 4px solid #f59e0b; padding: 20px 24px; border-radius: 0 8px 8px 0; margin-bottom: 40px; }
+        .alert-title { font-weight: 700; font-size: 1.05em; margin-bottom: 4px; }
+        .alert-text { color: #78350f; font-size: 0.95em; }
+
+        /* Section */
+        .section { margin-bottom: 50px; }
+        .section h2 { font-size: 1.6em; font-weight: 700; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
+
+        /* Cards grid */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .card { background: white; border-radius: 12px; padding: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: transform 0.2s, box-shadow 0.2s; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .card-icon { font-size: 2em; margin-bottom: 12px; }
+        .card h3 { font-size: 1.1em; font-weight: 700; margin-bottom: 6px; }
+        .card p { color: #64748b; font-size: 0.9em; }
+        .card a { color: #2563eb; text-decoration: none; font-weight: 600; font-size: 0.9em; }
+        .card a:hover { text-decoration: underline; }
+
+        /* Incident table */
+        .incident-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .incident-table th { background: #0f1629; color: white; padding: 14px 16px; text-align: left; font-size: 0.85em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .incident-table td { padding: 12px 16px; border-bottom: 1px solid #f1f5f9; font-size: 0.9em; }
+        .incident-table tr:hover { background: #f8fafc; }
+        .severity { padding: 3px 10px; border-radius: 12px; font-size: 0.8em; font-weight: 700; }
+        .s1 { background: #dbeafe; color: #1e40af; }
+        .s2 { background: #fef3c7; color: #92400e; }
+        .s3 { background: #fee2e2; color: #991b1b; }
+        .s4 { background: #1f2937; color: #fca5a5; }
+        .scenario-tag { background: #f1f5f9; color: #475569; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-family: monospace; }
+
+        /* Architecture diagram */
+        .arch-layers { display: flex; flex-direction: column; gap: 12px; }
+        .arch-layer { padding: 24px; border-radius: 10px; border-left: 5px solid; }
+        .layer-1 { background: #ecfdf5; border-color: #059669; }
+        .layer-2 { background: #fefce8; border-color: #ca8a04; }
+        .layer-3 { background: #fef2f2; border-color: #dc2626; }
+        .layer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .layer-header h3 { font-size: 1.05em; }
+        .layer-pct { font-size: 1.4em; font-weight: 800; }
+        .layer-1 .layer-pct { color: #059669; }
+        .layer-2 .layer-pct { color: #ca8a04; }
+        .layer-3 .layer-pct { color: #dc2626; }
+
+        /* Supporters */
+        .supporters { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; padding: 30px; }
+        .supporter { text-align: center; }
+        .supporter-name { font-weight: 700; font-size: 0.95em; }
+        .supporter-desc { color: #64748b; font-size: 0.82em; }
+
+        /* Footer */
+        .footer { background: #0f1629; color: #94a3b8; padding: 40px 20px; text-align: center; font-size: 0.85em; }
+        .footer a { color: #60a5fa; text-decoration: none; }
+
+        /* CTA */
+        .cta-btn { display: inline-block; background: #2563eb; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 0.95em; transition: background 0.2s; }
+        .cta-btn:hover { background: #1d4ed8; }
+        .cta-btn-outline { background: transparent; border: 2px solid #475569; color: #e2e8f0; }
+        .cta-btn-outline:hover { border-color: #93c5fd; color: white; }
+        .cta-group { display: flex; gap: 16px; justify-content: center; margin-top: 30px; }
+
+        @media (max-width: 640px) {
+            .header h1 { font-size: 1.8em; }
+            .stats { gap: 20px; }
+            .stat-num { font-size: 1.5em; }
+            .cta-group { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1><span>ROAM</span></h1>
+    <p style="font-size:1.1em; color:#cbd5e1; margin-bottom:6px;">RoboTaxi Operations Anomaly Management</p>
+    <p class="subtitle">Open-source incident database, scenario taxonomy & reference architecture for L4+ robotaxi remote operations</p>
+    <div class="badges">
+        <span class="badge badge-red">16 Incidents Recorded</span>
+        <span class="badge badge-orange">6 Categories &middot; 20+ Scenarios</span>
+        <span class="badge badge-blue">3-Layer Reference Architecture</span>
+        <span class="badge badge-green">Apache 2.0 License</span>
+    </div>
+    <div class="cta-group">
+        <a href="https://github.com/zyx312/ROAM" class="cta-btn">View on GitHub</a>
+        <a href="#incidents" class="cta-btn cta-btn-outline">Browse Incidents</a>
+    </div>
+</div>
+
+<div class="stats">
+    <div class="stat"><div class="stat-num">16</div><div class="stat-label">Incidents Recorded</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-label">Operators Covered</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Countries</div></div>
+    <div class="stat"><div class="stat-num">26</div><div class="stat-label">Scenario Types</div></div>
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">KPI Benchmarks</div></div>
+</div>
+
+<div class="container">
+
+    <!-- Why ROAM -->
+    <div class="alert">
+        <div class="alert-title">Why does this project exist?</div>
+        <div class="alert-text">On March 31, 2026, ~100 Baidu robotaxis simultaneously shut down on elevated highways in Wuhan. Passengers were trapped for 2 hours. SOS buttons went unanswered. Resolution: police officers rescuing vehicles one by one. <strong>This is not sustainable at scale.</strong></div>
+    </div>
+
+    <!-- Four pillars -->
+    <div class="section">
+        <h2>Four Pillars</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h3>Incident Database</h3>
+                <p>Structured, searchable YAML records of every known L4+ robotaxi anomaly. Community-maintained.</p>
+                <a href="https://github.com/zyx312/ROAM/tree/main/incidents">Browse incidents &rarr;</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏷️</div>
+                <h3>Scenario Taxonomy</h3>
+                <p>6 categories, 26 sub-scenarios. Standardized classification for operational anomalies.</p>
+                <a href="https://github.com/zyx312/ROAM/blob/main/taxonomy/scenario-taxonomy-v1.0.md">View taxonomy &rarr;</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏗️</div>
+                <h3>Reference Architecture</h3>
+                <p>Three-layer AI-first decision model: autonomous response &rarr; human confirm &rarr; remote driving.</p>
+                <a href="https://github.com/zyx312/ROAM/blob/main/architecture/reference-architecture.md">View architecture &rarr;</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>Evaluation Benchmarks</h3>
+                <p>8 KPIs with target values and baseline data for measuring remote operations performance.</p>
+                <a href="https://github.com/zyx312/ROAM/blob/main/benchmarks/kpi-definitions.md">View KPIs &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Incidents -->
+    <div class="section" id="incidents">
+        <h2>Recent Incidents</h2>
+        <table class="incident-table">
+            <thead>
+                <tr><th>Date</th><th>Operator</th><th>Location</th><th>Incident</th><th>Scenario</th><th>Severity</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2026-03-31</td><td>Baidu Apollo</td><td>Wuhan, CN</td>
+                    <td>~100 vehicles mass shutdown on elevated highways, passengers trapped 2hrs</td>
+                    <td><span class="scenario-tag">A1</span> <span class="scenario-tag">F1</span></td>
+                    <td><span class="severity s3">S3</span></td>
+                </tr>
+                <tr>
+                    <td>2026-03-07</td><td>Waymo</td><td>Phoenix, US</td>
+                    <td>Attempted 8-lane crossing without adequate gap, stopped mid-road</td>
+                    <td><span class="scenario-tag">C3</span></td>
+                    <td><span class="severity s2">S2</span></td>
+                </tr>
+                <tr>
+                    <td>2026-03-01</td><td>Waymo</td><td>Austin, US</td>
+                    <td>Blocked ambulance at mass shooting scene</td>
+                    <td><span class="scenario-tag">E3</span></td>
+                    <td><span class="severity s3">S3</span></td>
+                </tr>
+                <tr>
+                    <td>2026-01-23</td><td>Waymo</td><td>Santa Monica, US</td>
+                    <td>Struck 9-year-old child near school during drop-off</td>
+                    <td><span class="scenario-tag">C5</span></td>
+                    <td><span class="severity s2">S2</span></td>
+                </tr>
+                <tr>
+                    <td>2026 (ongoing)</td><td>Waymo</td><td>Multiple, US</td>
+                    <td>6+ instances of first responders taking control of vehicles</td>
+                    <td><span class="scenario-tag">E3</span></td>
+                    <td><span class="severity s2">S2</span></td>
+                </tr>
+                <tr>
+                    <td>2025-12</td><td>Waymo</td><td>San Francisco, US</td>
+                    <td>Power outage: mass fleet paralysis, 31 emergency calls, 2.5hr wait</td>
+                    <td><span class="scenario-tag">A3</span></td>
+                    <td><span class="severity s3">S3</span></td>
+                </tr>
+                <tr>
+                    <td>2025-05</td><td>Pony.ai</td><td>Beijing, CN</td>
+                    <td>Test vehicle caught fire after veering off road</td>
+                    <td><span class="scenario-tag">D3</span></td>
+                    <td><span class="severity s2">S2</span></td>
+                </tr>
+                <tr>
+                    <td>2023-10</td><td>Cruise</td><td>San Francisco, US</td>
+                    <td>Vehicle ran over and dragged pedestrian 20 feet</td>
+                    <td><span class="scenario-tag">C5</span></td>
+                    <td><span class="severity s4">S4</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top:14px; color:#64748b; font-size:0.85em;">Showing 8 of 16 incidents. <a href="https://github.com/zyx312/ROAM/tree/main/incidents" style="color:#2563eb;">View all incidents on GitHub &rarr;</a></p>
+    </div>
+
+    <!-- Reference Architecture -->
+    <div class="section">
+        <h2>Reference Architecture: Three-Layer Decision Model</h2>
+        <div class="arch-layers">
+            <div class="arch-layer layer-1">
+                <div class="layer-header">
+                    <h3>Layer 1: AI Autonomous Response</h3>
+                    <span class="layer-pct">70%</span>
+                </div>
+                <p>AI identifies the scenario, assesses risk, generates a response plan, and executes autonomously. Examples: pull over safely, reroute around obstacle, restart perception module, calm passenger via voice.</p>
+            </div>
+            <div class="arch-layer layer-2">
+                <div class="layer-header">
+                    <h3>Layer 2: AI-Assisted + Human Confirm</h3>
+                    <span class="layer-pct">25%</span>
+                </div>
+                <p>AI generates a recommended action plan with confidence score. Remote operator reviews, confirms or modifies, then the vehicle executes. Examples: complex intersection escape, police gesture interpretation, multi-vehicle conflict resolution.</p>
+            </div>
+            <div class="arch-layer layer-3">
+                <div class="layer-header">
+                    <h3>Layer 3: Remote Driving / On-Site Dispatch</h3>
+                    <span class="layer-pct">5%</span>
+                </div>
+                <p>Full remote teleoperation at ≤10 km/h, or dispatch on-site rescue team. Examples: vehicle hardware failure (cannot self-move), accident scene management, vehicle fire, mass system failure.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Who is this for -->
+    <div class="section">
+        <h2>Who Is This For?</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🚕</div>
+                <h3>Robotaxi Operators</h3>
+                <p>Baidu, Pony.ai, WeRide — reference architecture for building your remote operations platform.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏭</div>
+                <h3>OEMs</h3>
+                <p>SAIC, FAW, Changan — scenario database for planning L4 service deployment.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Teleops Startups</h3>
+                <p>Build on an open baseline instead of starting from scratch. Customize for your specific needs.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">📜</div>
+                <h3>Regulators &amp; Researchers</h3>
+                <p>Evidence-based incident data for policy development and academic research.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contribute -->
+    <div class="section" style="text-align:center; padding:40px 0;">
+        <h2 style="border:none;">Contribute</h2>
+        <p style="color:#64748b; max-width:600px; margin:0 auto 20px;">ROAM is community-driven. Report incidents, improve the taxonomy, enhance the reference architecture, or contribute baseline data.</p>
+        <a href="https://github.com/zyx312/ROAM/blob/main/CONTRIBUTING.md" class="cta-btn">Contribution Guide</a>
+    </div>
+
+    <!-- Supporters -->
+    <div class="section" style="text-align:center;">
+        <h2 style="border:none;">Supported By</h2>
+        <div class="supporters">
+            <div class="supporter">
+                <div class="supporter-name">Jilin University</div>
+                <div class="supporter-desc">AD Safety Joint Lab<br/>Scenario taxonomy &amp; SOTIF methodology</div>
+            </div>
+            <div class="supporter">
+                <div class="supporter-name">DRIVEResearch</div>
+                <div class="supporter-desc">驭研科技<br/>750h+ aerial naturalistic driving data</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p><strong>ROAM</strong> &mdash; RoboTaxi Operations Anomaly Management</p>
+    <p style="margin-top:8px;">Apache 2.0 License &middot; <a href="https://github.com/zyx312/ROAM">GitHub</a> &middot; Initiated by <a href="https://www.linkedin.com/in/yuxin-zhang-auto/">Yuxin Zhang</a></p>
+    <p style="margin-top:12px; font-size:0.8em;">The incident data in this project is collected from publicly available sources for research purposes.</p>
+</div>
+
+</body>
+</html>

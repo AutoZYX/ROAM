@@ -1,0 +1,48 @@
+id: "ROAM-2024-003"
+date: "2024-07-10"
+operator: "Baidu Apollo (萝卜快跑)"
+location:
+  city: "Wuhan, China"
+  road_type: "urban road"
+  specific: "Wuhan urban area, during evening rush hour"
+scenario:
+  primary: "C1"
+  secondary: ["B1"]
+severity: "S1"
+urgency: "U3"
+description: |
+  A 萝卜快跑 (Luobo Kuaipao) robotaxi stalled during evening rush hour traffic
+  in Wuhan, blocking traffic flow. The vehicle stopped mid-road and was unable to
+  resume autonomous driving. The incident occurred during the peak of public scrutiny
+  following the pedestrian contact incident days earlier. Traffic congestion resulted
+  as other vehicles had to navigate around the stalled robotaxi. The incident
+  highlighted concerns about robotaxi fleet resilience during high-traffic periods.
+impact:
+  vehicles_affected: 1
+  duration_minutes: 30
+  traffic_disruption: "moderate"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "unknown"
+  customer_service: "contacted"
+  remote_intervention: "attempted, unable to resolve"
+  on_site_response: "Baidu support team dispatched"
+  resolution_method: "on-site technician manually moved the vehicle"
+root_cause:
+  category: "software freeze / planning failure"
+  description: "Vehicle entered a state where the planning module could not find a viable path, resulting in indefinite stop in active traffic lane"
+  confirmed: false
+systemic_issues:
+  - "Mid-road stalling creates safety hazard and traffic disruption"
+  - "Rush hour complexity may exceed current planning module capabilities"
+  - "Remote intervention unable to resolve frozen planning state"
+  - "Physical human response required adds significant delay"
+regulatory_action: |
+  No formal regulatory action. Incident contributed to public pressure on Wuhan
+  city government regarding the pace of robotaxi deployment.
+sources:
+  - url: "https://www.scmp.com/tech/tech-trends/article/3271234/baidu-robotaxi-wuhan"
+    title: "SCMP - Baidu robotaxi issues in Wuhan"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

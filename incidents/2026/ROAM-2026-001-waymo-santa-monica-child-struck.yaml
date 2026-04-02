@@ -1,0 +1,52 @@
+id: "ROAM-2026-001"
+date: "2026-01-28"
+time: "08:15"
+operator: "Waymo"
+location:
+  city: "Santa Monica, USA"
+  road_type: "urban residential / school zone"
+  specific: "Near elementary school, Santa Monica, during morning drop-off"
+scenario:
+  primary: "C5"
+  secondary: ["B4", "B1"]
+severity: "S2"
+urgency: "U1"
+description: |
+  A Waymo robotaxi struck a 9-year-old child near an elementary school during
+  the morning drop-off period. The child sustained minor injuries. The incident
+  occurred in a school zone with heavy pedestrian activity including children,
+  parents, and crossing guards. The school zone environment presents elevated
+  risk due to the unpredictable movement patterns of young children. The incident
+  reignited debate about robotaxi operations near schools and in areas with
+  high concentrations of vulnerable road users.
+impact:
+  vehicles_affected: 1
+  duration_minutes: null
+  traffic_disruption: "moderate"
+  injuries: 1
+  fatalities: 0
+emergency_response:
+  sos_button: "activated by passenger"
+  customer_service: "responsive"
+  remote_intervention: "post-incident"
+  on_site_response: "paramedics, school administration, police"
+  resolution_method: "child treated on scene; vehicle secured by Waymo"
+root_cause:
+  category: "pedestrian detection / child behavior prediction"
+  description: "Vehicle failed to adequately predict and respond to the movement of a child in a school zone environment; children exhibit less predictable trajectories than adult pedestrians"
+  confirmed: false
+systemic_issues:
+  - "School zones represent a high-risk ODD that may require special operating restrictions"
+  - "Child pedestrian behavior is significantly less predictable than adult behavior"
+  - "Morning drop-off creates chaotic, dense pedestrian environments"
+  - "Public sensitivity extremely high when children are involved"
+  - "Question of whether L4 vehicles should operate in active school zones"
+regulatory_action: |
+  Santa Monica city council initiated review of robotaxi operations near schools.
+  NHTSA opened a preliminary evaluation. California legislators proposed bills
+  restricting autonomous vehicle operations in school zones.
+sources:
+  - url: "https://www.latimes.com/california/story/2026-01-29/waymo-strikes-child-santa-monica"
+    title: "LA Times - Waymo robotaxi strikes child in Santa Monica"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

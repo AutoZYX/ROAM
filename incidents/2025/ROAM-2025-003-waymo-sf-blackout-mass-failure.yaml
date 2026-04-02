@@ -1,0 +1,56 @@
+id: "ROAM-2025-003"
+date: "2025-12-13"
+time: "04:30"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  road_type: "urban network"
+  specific: "Multiple locations across San Francisco during PG&E power outage"
+scenario:
+  primary: "A3"
+  secondary: ["A1", "C1", "E3"]
+severity: "S3"
+urgency: "U1"
+description: |
+  A widespread PG&E power outage in San Francisco caused mass paralysis of the
+  Waymo robotaxi fleet. Over 20 vehicles became immobilized across the city,
+  blocking traffic lanes and intersections. The outage disabled traffic signals
+  and connectivity infrastructure that the vehicles depended on. Emergency services
+  were severely impacted — first responders called Waymo's support hotline 31 times,
+  spending a cumulative 2 hours and 36 minutes on hold waiting for assistance.
+  The incident exposed critical dependencies on external infrastructure and
+  revealed that Waymo's emergency response systems were wholly inadequate for
+  a multi-vehicle simultaneous failure scenario. This was the first documented
+  mass fleet failure event for a commercial robotaxi service.
+impact:
+  vehicles_affected: 20
+  duration_minutes: 180
+  traffic_disruption: "severe"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "non-functional for some vehicles"
+  customer_service: "overwhelmed, 2h36m cumulative hold time for emergency services"
+  remote_intervention: "severely degraded due to connectivity loss"
+  on_site_response: "SFFD, SFPD, Waymo field teams"
+  resolution_method: "manual vehicle retrieval one by one after power restoration"
+root_cause:
+  category: "external infrastructure dependency"
+  description: "PG&E power outage disabled traffic signals and cellular/network infrastructure; vehicles entered safe stop mode but blocked traffic; fleet management system could not coordinate mass recovery; emergency response channels overwhelmed"
+  confirmed: true
+systemic_issues:
+  - "Fleet has critical single-point dependency on external power and connectivity infrastructure"
+  - "No graceful degradation strategy for mass infrastructure failure"
+  - "Emergency response hotline completely inadequate for multi-vehicle events"
+  - "31 calls from first responders with 2h36m total wait time is unacceptable"
+  - "Safe stop behavior (stop in lane) creates secondary hazards at scale"
+  - "No pre-coordinated protocol with city emergency services"
+regulatory_action: |
+  SFMTA and CPUC launched reviews of robotaxi resilience requirements.
+  San Francisco officials publicly criticized Waymo's emergency response capacity.
+  Renewed calls for mandatory fleet resilience standards.
+sources:
+  - url: "https://sfstandard.com/2025/12/14/waymo-blackout-san-francisco/"
+    title: "SF Standard - Waymo fleet paralyzed during blackout"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

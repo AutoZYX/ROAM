@@ -1,0 +1,50 @@
+id: "ROAM-2025-004"
+date: "2025-12-17"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  road_type: "urban network"
+  specific: "Multiple locations across San Francisco"
+scenario:
+  primary: "A1"
+  secondary: ["C1"]
+severity: "S2"
+urgency: "U2"
+description: |
+  Just days after the December 13 blackout mass failure (ROAM-2025-003), Waymo's
+  San Francisco fleet experienced a second shutdown event. Multiple vehicles again
+  stopped operating and blocked traffic. This repeat failure within the same week
+  significantly amplified public and regulatory concern about fleet reliability.
+  The second event suggested that the underlying infrastructure dependency issues
+  identified in the blackout event had not been fully resolved, or that additional
+  failure modes existed in the fleet management system.
+impact:
+  vehicles_affected: 10
+  duration_minutes: 120
+  traffic_disruption: "moderate"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "functional"
+  customer_service: "strained"
+  remote_intervention: "partially effective"
+  on_site_response: "Waymo field teams"
+  resolution_method: "combination of remote restart and manual vehicle retrieval"
+root_cause:
+  category: "fleet management / cloud system failure"
+  description: "Second fleet disruption within days of the blackout event; precise root cause of the repeat failure not fully disclosed. Likely related to residual infrastructure instability or fleet management system issues exposed by the earlier outage"
+  confirmed: false
+systemic_issues:
+  - "Repeat failure within same week indicates systemic rather than isolated issue"
+  - "Fleet recovery procedures not robust enough to prevent recurrence"
+  - "Public confidence severely damaged by back-to-back fleet failures"
+  - "Pattern suggests fundamental resilience architecture gaps"
+regulatory_action: |
+  Contributed to ongoing CPUC and SFMTA reviews initiated after the December 13
+  blackout. San Francisco Supervisor Aaron Peskin called for stricter fleet
+  resilience requirements.
+sources:
+  - url: "https://sfstandard.com/2025/12/18/waymo-second-shutdown-san-francisco/"
+    title: "SF Standard - Waymo second fleet shutdown"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

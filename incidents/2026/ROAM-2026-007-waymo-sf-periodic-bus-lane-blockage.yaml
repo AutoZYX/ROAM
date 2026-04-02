@@ -1,0 +1,57 @@
+id: "ROAM-2026-007"
+date: "2026-01-01"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  road_type: "urban bus lanes and intersections"
+  specific: "Various bus lanes and intersections across San Francisco, recurring"
+scenario:
+  primary: "C1"
+  secondary: ["E3"]
+severity: "S1"
+urgency: "U3"
+description: |
+  Recurring incidents of Waymo robotaxis stalling in bus lanes and intersections
+  across San Francisco throughout 2026. These are not single events but a persistent
+  pattern where vehicles enter a frozen or confused state, blocking dedicated bus
+  lanes and intersection approaches. Average resolution time is approximately
+  20 minutes per incident. SFMTA has documented multiple instances where stalled
+  robotaxis delayed Muni bus service. The cumulative impact on public transit
+  reliability is significant, affecting thousands of daily bus riders.
+  The recurring nature of the problem suggests a systemic issue with the
+  vehicle's handling of bus lane geometry, signaling, or right-of-way rules
+  rather than random failures.
+impact:
+  vehicles_affected: 1
+  duration_minutes: 20
+  traffic_disruption: "moderate (recurring)"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "not typically activated"
+  customer_service: "contacted per incident"
+  remote_intervention: "attempted, often unsuccessful"
+  on_site_response: "Waymo field team or SFMTA"
+  resolution_method: "manual vehicle restart or towing; average 20 minutes per incident"
+root_cause:
+  category: "bus lane / intersection planning failure — recurring"
+  description: "Vehicles repeatedly enter frozen states in bus lanes and intersections; likely related to complex right-of-way rules, bus lane markings, or transit signal priority systems that the planning module cannot reliably handle"
+  confirmed: false
+systemic_issues:
+  - "Recurring pattern indicates systemic rather than random failure"
+  - "Bus lane blockage disproportionately impacts public transit users"
+  - "20-minute average resolution time is operationally unacceptable"
+  - "Cumulative impact on Muni service reliability affects thousands of riders"
+  - "Tension between robotaxi operations and public transit priority"
+  - "Remote intervention frequently unable to resolve the frozen state"
+regulatory_action: |
+  SFMTA documenting incidents and engaging with Waymo on bus lane performance.
+  San Francisco Board of Supervisors considering legislation to penalize
+  repeated bus lane blockages by autonomous vehicles.
+sources:
+  - url: "https://sfstandard.com/2026/02/waymo-blocking-bus-lanes-sf/"
+    title: "SF Standard - Waymo vehicles repeatedly blocking Muni bus lanes"
+  - url: "https://www.sfmta.com/reports/autonomous-vehicle-transit-impact"
+    title: "SFMTA - Autonomous Vehicle Impact on Transit Operations"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

@@ -1,0 +1,46 @@
+id: "ROAM-2024-001"
+date: "2024-05-14"
+operator: "Waymo"
+location:
+  city: "Phoenix, USA"
+  road_type: "urban alley"
+  specific: "Residential alley, Phoenix metropolitan area"
+scenario:
+  primary: "C4"
+  secondary: ["B1"]
+severity: "S1"
+urgency: "U3"
+description: |
+  A Waymo autonomous vehicle collided with a wooden utility pole while navigating
+  a narrow alley at low speed. No injuries were reported. The incident was caused
+  by a software issue in the vehicle's perception and path planning system that
+  failed to properly account for the pole's position in the constrained alley
+  environment. Waymo issued a voluntary recall of 672 vehicles to address the
+  software defect via an OTA update.
+impact:
+  vehicles_affected: 672
+  duration_minutes: null
+  traffic_disruption: "minimal"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "not needed"
+  customer_service: "normal"
+  remote_intervention: "post-incident"
+  on_site_response: "Waymo roadside assistance"
+  resolution_method: "vehicle retrieved by Waymo team; software recall issued"
+root_cause:
+  category: "perception and path planning"
+  description: "Software failed to properly detect and maintain clearance from a stationary wooden utility pole in a narrow alley environment"
+  confirmed: true
+systemic_issues:
+  - "Static object detection in constrained environments needs improvement"
+  - "Alley and narrow passage navigation is an edge case for urban robotaxis"
+regulatory_action: |
+  NHTSA recall. Waymo issued voluntary recall of 672 vehicles and deployed OTA
+  software update to improve static object avoidance in constrained spaces.
+sources:
+  - url: "https://www.nhtsa.gov/recalls"
+    title: "NHTSA Waymo Recall - Pole Collision"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

@@ -1,0 +1,52 @@
+id: "ROAM-2026-005"
+date: "2026-03-20"
+operator: "Waymo"
+location:
+  city: "Phoenix, USA"
+  road_type: "urban arterial / major intersection"
+  specific: "8-lane road, Phoenix metropolitan area"
+scenario:
+  primary: "C3"
+  secondary: ["B1", "C1"]
+severity: "S2"
+urgency: "U2"
+description: |
+  A Waymo robotaxi attempted to cross an 8-lane road without an adequate gap in
+  oncoming traffic. The vehicle committed to the crossing maneuver but stopped
+  in the middle of the road, blocking multiple lanes of oncoming traffic.
+  Passengers inside the vehicle were screaming in distress as vehicles approached
+  at speed. The robotaxi remained frozen in the exposed position for an extended
+  period before eventually completing the crossing. The incident was captured on
+  video by passengers and went viral, illustrating the terror experienced when
+  an ADS makes a dangerous decision that passengers cannot override.
+impact:
+  vehicles_affected: 1
+  duration_minutes: 5
+  traffic_disruption: "severe"
+  injuries: 0
+  fatalities: 0
+emergency_response:
+  sos_button: "pressed by panicked passengers"
+  customer_service: "connected but unable to intervene in real time"
+  remote_intervention: "too slow for the acute danger window"
+  on_site_response: "none required, vehicle eventually moved"
+  resolution_method: "vehicle eventually completed crossing autonomously"
+root_cause:
+  category: "gap acceptance / decision making"
+  description: "Planning module committed to a multi-lane crossing without sufficient gap in oncoming traffic; vehicle then froze mid-crossing rather than accelerating through or reversing, creating maximum exposure to collision risk"
+  confirmed: false
+systemic_issues:
+  - "Gap acceptance algorithm failed for high-speed multi-lane crossing scenario"
+  - "Commit-then-freeze behavior is the worst possible outcome for mid-road exposure"
+  - "Passengers had no ability to override the dangerous decision"
+  - "Remote intervention latency incompatible with seconds-critical danger"
+  - "8-lane crossings may require dedicated handling or avoidance in route planning"
+  - "Passenger psychological trauma from loss of control in dangerous situation"
+regulatory_action: |
+  Arizona DOT reviewed the incident. No formal enforcement action.
+  Incident cited in federal discussions about passenger override capabilities.
+sources:
+  - url: "https://www.azcentral.com/story/news/local/phoenix/2026/03/21/waymo-robotaxi-stuck-crossing-phoenix/"
+    title: "AZ Central - Waymo robotaxi stuck crossing 8-lane road"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

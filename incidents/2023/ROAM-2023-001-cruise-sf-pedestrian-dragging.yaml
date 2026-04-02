@@ -1,0 +1,56 @@
+id: "ROAM-2023-001"
+date: "2023-10-02"
+time: "21:39"
+operator: "Cruise (GM)"
+location:
+  city: "San Francisco, USA"
+  road_type: "urban arterial"
+  specific: "5th and Market Street, SoMa district"
+scenario:
+  primary: "C5"
+  secondary: ["B4", "F1"]
+severity: "S4"
+urgency: "U1"
+description: |
+  A Cruise autonomous vehicle ran over and dragged a pedestrian approximately 20 feet
+  (6 meters) after she was initially struck by a separate human-driven vehicle and thrown
+  into the path of the robotaxi. The Cruise vehicle initially stopped after impact but
+  then executed a pullover maneuver, dragging the trapped pedestrian. The pedestrian
+  suffered severe, life-altering injuries. Cruise initially failed to disclose the
+  dragging portion of the incident to regulators, providing only a truncated video.
+  This incident triggered the most significant regulatory backlash in the L4 industry
+  to date.
+impact:
+  vehicles_affected: 950
+  duration_minutes: null
+  traffic_disruption: "severe"
+  injuries: 1
+  fatalities: 0
+emergency_response:
+  sos_button: "unknown"
+  customer_service: "unknown"
+  remote_intervention: "failed to prevent dragging"
+  on_site_response: "emergency services"
+  resolution_method: "emergency responders extracted pedestrian from under vehicle"
+root_cause:
+  category: "software decision logic"
+  description: "Vehicle's post-collision pullover maneuver failed to detect trapped pedestrian underneath; software executed a 'minimize risk condition' pullover without recognizing the obstruction"
+  confirmed: true
+systemic_issues:
+  - "Post-collision behavior logic did not account for pedestrian entrapment scenario"
+  - "Company initially concealed critical portion of incident from CPUC and NHTSA"
+  - "Remote operations center failed to prevent the pullover maneuver"
+  - "Regulatory trust fundamentally broken by incomplete disclosure"
+regulatory_action: |
+  CPUC suspended Cruise's driverless permit in California. NHTSA opened investigation
+  and issued recall of 950 vehicles. Cruise fined $1.5M by NHTSA for delayed reporting.
+  DMV revoked Cruise's autonomous vehicle deployment permit. CEO Kyle Vogt resigned.
+  Cruise suspended all driverless operations nationwide. GM subsequently wound down
+  Cruise operations entirely in late 2024.
+sources:
+  - url: "https://www.nhtsa.gov/press-releases/nhtsa-closes-cruise-investigation"
+    title: "NHTSA Cruise Investigation"
+  - url: "https://www.cpuc.ca.gov/news-and-updates/all-news/cpuc-issues-citation-to-cruise"
+    title: "CPUC Citation to Cruise"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-02"

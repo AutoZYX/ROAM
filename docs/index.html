@@ -117,8 +117,8 @@ footer a { color:var(--accent); }
 .sup-name { font-weight:700; color:var(--text); font-size:0.88rem; margin-bottom:2px; }
 .sup-desc { font-size:0.78rem; color:var(--text2); }
 
-/* Taxonomy side-by-side responsive */
-@media(max-width:768px) { div[style*="grid-template-columns:1fr 1fr"] { display:block!important; } div[style*="grid-template-columns:1fr 1fr"] > div + div { margin-top:20px; } }
+/* Responsive grids */
+@media(max-width:768px) { div[style*="grid-template-columns:1fr 1fr"] { display:block!important; } div[style*="grid-template-columns:1fr 1fr"] > div + div { margin-top:20px; } div[style*="grid-template-columns:1fr 1fr 1fr"] { display:block!important; } div[style*="grid-template-columns:1fr 1fr 1fr"] > div + div { margin-top:16px; } }
 @media(max-width:640px) {
   header h1 { font-size:14vw; }
   header .sub { font-size:3.2vw; letter-spacing:2px; }
@@ -350,6 +350,60 @@ footer a { color:var(--accent); }
         <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">基于事件数据制定监管政策，用分类体系开展安全评价研究</span><span class="en">Develop regulatory policies from incident data, conduct safety evaluation research with taxonomy</span></div>
       </div>
     </div>
+  </section>
+
+  <!-- Future Vision -->
+  <section>
+    <h2 class="sec-title"><span class="cn">未来展望：无人驾驶出租车的救援保险模式</span><span class="en">Future Vision: Robotaxi Rescue Insurance</span></h2>
+    <p class="sec-sub"><span class="cn">从远程运维到数据驱动的风险管理生态</span><span class="en">From remote operations to a data-driven risk management ecosystem</span></p>
+
+    <div class="alert" style="border-color:#c8d5e8; background:#f0f4fa;">
+      <p style="color:#2c4a6e;"><span class="cn">当Robotaxi从试点走向规模化运营，每家运营商在每个城市都建独立的远程运维团队，就像每个车主自己养一辆修车队一样不经济。未来的远程运营，可能演化出类似汽车保险的服务形态。</span><span class="en">As robotaxis scale from pilots to city-wide operations, each operator maintaining independent remote operations teams in every city becomes as uneconomical as every car owner maintaining a private repair crew. Future remote operations may evolve into an insurance-like service model.</span></p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px; margin-top:24px;">
+      <div class="pillar" style="border-top:4px solid var(--green);">
+        <div class="pillar-num"><span class="cn">第一层</span><span class="en">Layer 1</span></div>
+        <h3><span class="cn">远程运维即服务</span><span class="en">Remote Ops as a Service</span></h3>
+        <p><span class="cn">第三方平台为多家运营商提供7×24小时远程监控与异常处置，按车·月收费。类似AAA道路救援——多品牌车辆共享同一套救援基础设施。</span><span class="en">Third-party platforms provide 24/7 remote monitoring and anomaly resolution for multiple operators. Like AAA roadside assistance — multi-brand vehicles sharing common rescue infrastructure.</span></p>
+        <div class="align"><span class="cn">对标：AAA道路救援 / 12122交通救援</span><span class="en">Analogy: AAA / roadside assistance</span></div>
+      </div>
+      <div class="pillar" style="border-top:4px solid var(--amber);">
+        <div class="pillar-num"><span class="cn">第二层</span><span class="en">Layer 2</span></div>
+        <h3><span class="cn">事故响应保险</span><span class="en">Incident Response Insurance</span></h3>
+        <p><span class="cn">远程处置无法解决时，保险公司承保、运维平台执行：派线下团队到场处理拖车、乘客安置、医疗转运。"保险+运维"协同模式。</span><span class="en">When remote intervention fails, insurers underwrite while operations platforms execute: on-site towing, passenger relocation, medical transfer. An "insurance + operations" synergy model.</span></p>
+        <div class="align"><span class="cn">对标：传统车险查勘定损+拖车服务</span><span class="en">Analogy: traditional auto insurance claims + towing</span></div>
+      </div>
+      <div class="pillar" style="border-top:4px solid var(--accent);">
+        <div class="pillar-num"><span class="cn">第三层</span><span class="en">Layer 3</span></div>
+        <h3><span class="cn">数据驱动的风险定价</span><span class="en">Data-Driven Risk Pricing</span></h3>
+        <p><span class="cn">基于事件数据库和自然驾驶基线，为不同运营商、ADS系统、城市环境计算差异化事故率。区分"可预防事故"与"不可预防事故"，实现保费精算。</span><span class="en">Using incident data and naturalistic driving baselines to calculate differentiated accident rates across operators, ADS systems, and cities. Distinguishing preventable vs. unpreventable accidents for actuarial pricing.</span></p>
+        <div class="align"><span class="cn">关键输入：ROAM事件库 + 自然驾驶基线数据</span><span class="en">Key input: ROAM incidents + naturalistic driving baselines</span></div>
+      </div>
+    </div>
+
+    <div style="margin-top:28px; padding:20px 24px; background:var(--card); border:1px solid var(--border); border-radius:6px;">
+      <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:12px;"><span class="cn">展望时间线</span><span class="en">Timeline Outlook</span></h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; font-size:1.05rem;">
+        <div>
+          <div style="font-weight:700; color:var(--green); margin-bottom:4px;">2026–2028</div>
+          <p style="color:var(--text2); font-size:0.95rem;"><span class="cn">远程运维体系标准化，GB安全档案落地，ROAM积累结构化事件数据</span><span class="en">Remote ops standardization, GB safety case implementation, ROAM accumulates structured data</span></p>
+        </div>
+        <div>
+          <div style="font-weight:700; color:var(--amber); margin-bottom:4px;">2028–2030</div>
+          <p style="color:var(--text2); font-size:0.95rem;"><span class="cn">第三方远程运维服务商出现，保险公司推出Robotaxi专项产品，差异化定价成为可能</span><span class="en">Third-party service providers emerge, insurers launch robotaxi products, differentiated pricing becomes feasible</span></p>
+        </div>
+        <div>
+          <div style="font-weight:700; color:var(--accent); margin-bottom:4px;">2030+</div>
+          <p style="color:var(--text2); font-size:0.95rem;"><span class="cn">"运营商+运维服务商+保险公司"三方协同生态形成，数据驱动的风险管理成为行业常态</span><span class="en">"Operator + service provider + insurer" tri-party ecosystem forms, data-driven risk management becomes industry norm</span></p>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:16px;color:var(--text3);font-size:0.95rem;">
+      <span class="cn">详细分析见文献综述第7章 <a href="https://github.com/zyx312/ROAM/blob/main/docs/literature-review.md">中文版</a></span>
+      <span class="en">Full analysis in Literature Review Section 7 <a href="https://github.com/zyx312/ROAM/blob/main/docs/literature-review-en.md">English version</a></span>
+    </p>
   </section>
 
   <section>

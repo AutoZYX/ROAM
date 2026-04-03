@@ -147,15 +147,66 @@ Based on the regulatory, practical, and academic analysis presented above, this 
 
 **Sixth, the absence of naturalistic driving behavior baselines.** The residual risk criteria in the Chinese GB standard (collision rate below 10^-4/h, etc.) require human driver behavioral baseline data as a reference. However, credible large-scale naturalistic driving behavior datasets for specific Chinese urban traffic scenarios remain scarce, constraining the scientific rigor of residual risk assessment.
 
-## 7 ROAM Project Positioning
+## 7 Future Outlook: From Remote Operations to "Robotaxi Rescue Insurance"
 
-Based on the analysis presented above, the ROAM (RoboTaxi Operations Anomaly Management) project aims to address critical gaps in this domain. ROAM is positioned as an open-source reference architecture and analytical toolkit, with core contributions spanning three dimensions:
+### 7.1 Structural Parallels with Traditional Auto Insurance
+
+The current automotive insurance industry has established a mature roadside assistance model: after an accident, the driver calls the insurer, who dispatches an adjuster, arranges towing, coordinates repairs, and processes claims. The essence of this chain is **risk pooling and scalable emergency response** — no individual car owner can economically maintain a dedicated rescue team; insurers aggregate premiums from a large pool of policyholders to sustain a 24/7 response network.
+
+L4 robotaxi remote operations face a structurally identical economic problem. Each operator currently builds independent remote operations centers in every city of deployment. However, as robotaxi services scale from pilot programs in a handful of cities to nationwide or global operations, the cost of maintaining dedicated remote operations teams in each city will become increasingly untenable. Just as car owners cannot afford their own repair crews, robotaxi operators maintaining city-by-city remote operations teams will face diminishing economic viability at scale.
+
+### 7.2 A Three-Layer Service Architecture
+
+Based on this analysis, future robotaxi remote operations may differentiate into three service layers:
+
+**Layer 1: Remote Operations as a Service (ROaaS).** This is the core business model described by ROAM's reference architecture. A third-party platform provides 24/7 remote monitoring, AI-assisted decision-making, and anomaly resolution for multiple operators and OEMs, charged per vehicle-month or per incident. The commercial logic mirrors AAA roadside assistance or China's 12122 traffic rescue service — multi-brand vehicles sharing a common rescue infrastructure.
+
+**Layer 2: Incident Response Insurance.** When remote intervention cannot resolve the situation (e.g., hardware failure, traffic accident, passenger injury), on-site teams are required. This segment directly overlaps with traditional auto insurance functions: loss assessment, towing, and claims processing. Insurance companies can serve as underwriters while remote operations platforms serve as execution partners, creating an "insurance + operations" synergy. Standardized coverage can be designed for passenger relocation, alternative transportation, and medical transfer.
+
+**Layer 3: Data-Driven Risk Pricing.** This is where the true insurance logic emerges. As ROAM's incident database and scenario taxonomy accumulate sufficient scale, they can enable differentiated accident rate and risk probability calculations across operators, ADS systems, and urban environments. Specifically:
+
+- **Exposure rate calculation**: Naturalistic driving data provides the denominator (normal driving miles/hours); accident data provides the numerator (incident frequency). Together, they yield scenario-specific accident exposure rates.
+- **Preventability assessment**: Distinguishing "accidents that human drivers also could not avoid" (force majeure, lower premiums) from "accidents that ADS should have prevented but did not" (system deficiency, higher premiums), enabling differentiated pricing by accident type.
+- **Operator rating**: Rating different operators' remote operations capability based on historical incident data, with ratings directly influencing premium levels.
+
+### 7.3 Early Industry Practice
+
+Globally, robotaxi insurance exploration has already begun. Waymo has partnered with Swiss Re to leverage autonomous driving operational data for insurance pricing model optimization [41]. The UK Automated Vehicles Act 2024 explicitly requires ASDEs to hold liability insurance [15]. In China, major insurers including Ping An and PICC are actively exploring intelligent connected vehicle insurance product design [42].
+
+However, current efforts face a common challenge: **the absence of standardized incident data and risk assessment frameworks.** Accident reporting formats differ across operators, severity and preventability assessment criteria are undefined, and insurers cannot build comparable actuarial models.
+
+### 7.4 ROAM's Position in the Insurance Ecosystem
+
+ROAM's four modules correspond precisely to critical infrastructure needs in the robotaxi insurance ecosystem:
+
+| ROAM Module | Role in Insurance Ecosystem |
+|-------------|----------------------------|
+| Incident Database | Claims case library and actuarial data source |
+| Scenario Taxonomy | Risk classification and premium pricing framework |
+| Reference Architecture | Technical standards for remote operations service providers (insurance execution partners) |
+| Evaluation Benchmarks | Operator capability rating and premium differentiation metrics |
+
+DRIVEResearch's aerial naturalistic driving dataset (750h+ flight hours, 10.5M+ trajectories) serves as the "healthy population baseline" in this ecosystem — just as health insurers need normal population health metrics to identify anomalies, robotaxi insurers need naturalistic driving behavior baselines to distinguish "reasonable residual risk" from "unreasonable system deficiency."
+
+### 7.5 Timeline Outlook
+
+The maturation of this ecosystem requires several prerequisites to fall into place:
+
+- **Near-term (2026–2028)**: Remote operations systems across operators gradually standardize; GB standard safety case and residual risk criteria enter implementation; open-source projects like ROAM accumulate structured incident data.
+- **Mid-term (2028–2030)**: Third-party remote operations service providers emerge; insurers launch robotaxi-specific insurance products; data-driven differentiated pricing becomes feasible.
+- **Long-term (2030+)**: A three-party collaborative ecosystem forms among operators, remote operations service providers, and insurers. Remote operations platforms become critical nodes in the insurance claims chain, and data-driven risk management becomes industry standard practice.
+
+## 8 ROAM Project Positioning
+
+Based on the analysis presented above, the ROAM (RoboTaxi Operations Anomaly Management) project aims to address critical gaps in this domain. ROAM is positioned as an open-source reference architecture and analytical toolkit, with core contributions spanning four dimensions:
 
 **Incident tracking baseline.** Establishing a structured recording and classification system for L4 robotaxi remote operations incidents, covering communication failures, system shutdowns, human-machine interaction breakdowns, and other representative event types. This provides the industry with a comparable incident analysis framework.
 
 **Scenario taxonomy.** Drawing on the ISO 34502 scenario description methodology, ROAM constructs a scenario classification system (Scenario Taxonomy) for remote operations. This taxonomy maps regulatory requirements, industry practices, and accident data into a searchable scenario repository.
 
 **Reference architecture.** Based on industry best practices and academic frontiers, ROAM proposes a modular reference architecture for Remote Operations Centers supporting flexible configuration across advisory and direct control modes.
+
+**Insurance ecosystem infrastructure.** Through standardized incident records, scenario classification, and evaluation benchmarks, ROAM provides the data foundation and methodological support for future robotaxi insurance product actuarial pricing and claims execution.
 
 DRIVEResearch's aerial-survey naturalistic driving dataset (750h+ flight hours, 10.5M+ trajectories) provides behavioral baseline data to support the above research. This dataset can be used to establish human driver behavioral benchmarks for Chinese urban traffic scenarios, creating alignment with the GB standard's residual risk criteria and supporting scenario analysis and known unsafe scenario identification under the SOTIF (ISO 21448) methodology.
 
@@ -244,6 +295,10 @@ The ROAM project will adhere to open-source collaboration principles, providing 
 [39] DAM Firm, "Waymo Accidents | NHTSA Crash Data," damfirm.com, 2025. [Link](https://www.damfirm.com/waymo-accident-statistics.html)
 
 [40] EVreporter, "Pony.ai Beijing operations suspended after Robotaxi fire," 2025. [Link](https://evreporter.com/autonomous-driving-startup-pony-ai-beijing-operations-suspended-after-robotaxi-fire/)
+
+[41] Swiss Re, "Waymo and Swiss Re partner on autonomous vehicle insurance," 2024. [Link](https://www.swissre.com/reinsurance/property-and-casualty/solutions/automotive-solutions.html)
+
+[42] China Banking and Insurance News, "Intelligent connected vehicle insurance: from traditional auto insurance to data-driven risk management [智能网联汽车保险]," 2025. [Link](https://www.cbimc.cn/)
 
 ---
 

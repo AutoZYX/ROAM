@@ -45,7 +45,9 @@ regulatory_action: |
   CPUC requested briefing from Waymo on fleet coordination capabilities.
   No formal enforcement action taken.
 sources:
-  - url: "https://sfstandard.com/2026/02/16/two-waymo-vehicles-collide-san-francisco/"
-    title: "SF Standard - Two Waymo robotaxis collide in SF"
+  - url: "https://futurism.com/advanced-transport/waymo-crashed-into-each-other"
+    title: "Two Self-Driving Waymos Crashed Into Each Other - Futurism"
+  - url: "https://www.autoblog.com/news/waymo-robotaxis-incidents-san-francisco"
+    title: "Waymo Robotaxis incidents - Autoblog"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

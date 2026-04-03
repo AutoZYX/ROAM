@@ -41,7 +41,9 @@ regulatory_action: |
   NHTSA recall (23V-579). Cruise issued voluntary recall and deployed OTA software
   update to address the prediction software defect.
 sources:
-  - url: "https://www.nhtsa.gov/recalls"
-    title: "NHTSA Recall 23V-579"
+  - url: "https://www.smartcitiesdive.com/news/gm-cruise-recalls-autonomous-fleet-software-update-chevy-bolt-ev-nhtsa/725344/"
+    title: "Entire Cruise robotaxi fleet recalled for unexpected braking - Smart Cities Dive"
+  - url: "https://techcrunch.com/2024/08/22/cruise-recall-av-fleet-nhtsa-probe-closed/"
+    title: "Cruise recall and NHTSA probe closure - TechCrunch"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

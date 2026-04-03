@@ -46,7 +46,7 @@ regulatory_action: |
   NHTSA opened a preliminary evaluation. California legislators proposed bills
   restricting autonomous vehicle operations in school zones.
 sources:
-  - url: "https://www.latimes.com/california/story/2026-01-29/waymo-strikes-child-santa-monica"
-    title: "LA Times - Waymo robotaxi strikes child in Santa Monica"
+  - url: "https://www.autoblog.com/news/waymo-robotaxis-incidents-san-francisco"
+    title: "Waymo Robotaxis incidents including Santa Monica child - Autoblog"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

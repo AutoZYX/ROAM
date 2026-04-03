@@ -54,9 +54,11 @@ regulatory_action: |
   incident report from Baidu. National-level discussion on robotaxi fleet
   resilience standards intensified.
 sources:
-  - url: "https://www.jiemian.com/article/wuhan-luobo-kuaipao-mass-shutdown-2026/"
-    title: "界面新闻 - 武汉萝卜快跑大面积停摆"
-  - url: "https://weibo.com/wuhan-robotaxi-shutdown"
-    title: "微博 - 武汉萝卜快跑停运事件讨论"
+  - url: "https://www.huxiu.com/article/4847431.html"
+    title: "萝卜快跑瘫痪事故暴露的阿喀琉斯之踵 - 虎嗅网"
+  - url: "https://www.nbcnews.com/world/asia/passengers-stranded-moving-traffic-robotaxi-outage-china-wuhan-rcna266192"
+    title: "Passengers stranded after robotaxi outage in Wuhan - NBC News"
+  - url: "https://www.cnbc.com/2026/04/01/baidu-robotaxis-caused-crashes-in-wuhan-reports.html"
+    title: "Baidu robotaxis halted mid-traffic in Wuhan - CNBC"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

@@ -43,7 +43,9 @@ regulatory_action: |
   No formal regulatory action. Local Wuhan authorities reviewed the incident.
   The event contributed to broader national discussion about robotaxi regulation in China.
 sources:
-  - url: "https://www.reuters.com/technology/baidu-robotaxi-unit-involved-accident-with-pedestrian-wuhan-2024-07-08/"
-    title: "Reuters - Baidu robotaxi accident in Wuhan"
+  - url: "https://m.gmw.cn/2024-07/10/content_1303787341.htm"
+    title: "萝卜快跑无人驾驶出租车发生碰撞事故 - 光明网"
+  - url: "https://www.21jingji.com/article/20240710/herald/91ef764a0c349a67aa7e29b724ea40cd.html"
+    title: "萝卜快跑无人驾驶出租车与行人发生碰撞 - 21经济网"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

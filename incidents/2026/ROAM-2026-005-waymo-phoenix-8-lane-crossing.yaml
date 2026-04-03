@@ -46,7 +46,7 @@ regulatory_action: |
   Arizona DOT reviewed the incident. No formal enforcement action.
   Incident cited in federal discussions about passenger override capabilities.
 sources:
-  - url: "https://www.azcentral.com/story/news/local/phoenix/2026/03/21/waymo-robotaxi-stuck-crossing-phoenix/"
-    title: "AZ Central - Waymo robotaxi stuck crossing 8-lane road"
+  - url: "https://www.autoblog.com/news/waymo-robotaxi-tries-to-cross-8-lanes-passengers-start-screaming"
+    title: "Waymo Robotaxi Tries to Cross 8 Lanes - Autoblog"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

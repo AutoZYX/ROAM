@@ -44,7 +44,9 @@ regulatory_action: |
   blackout. San Francisco Supervisor Aaron Peskin called for stricter fleet
   resilience requirements.
 sources:
-  - url: "https://sfstandard.com/2025/12/18/waymo-second-shutdown-san-francisco/"
-    title: "SF Standard - Waymo second fleet shutdown"
+  - url: "https://futurism.com/advanced-transport/waymo-shuts-down-again"
+    title: "Days After Mass Bricking Event, Waymo Fleet Shuts Down Again - Futurism"
+  - url: "https://sfstandard.com/2025/12/23/wtf-happened-waymo-blackout-industry-experts-have-guesses/"
+    title: "Industry experts discuss Waymo blackout - SF Standard"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

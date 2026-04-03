@@ -42,7 +42,7 @@ regulatory_action: |
   NHTSA recall. Waymo issued voluntary recall and deployed OTA software update
   to improve detection of thin barriers, gates, and chains.
 sources:
-  - url: "https://www.nhtsa.gov/recalls"
-    title: "NHTSA Waymo Recall - Barrier Collisions"
+  - url: "https://techcrunch.com/2025/05/14/waymo-recalls-1200-robotaxis-following-low-speed-collisions-with-gates-and-chains/"
+    title: "Waymo recalls 1,200 robotaxis - TechCrunch"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ROAM — L4+ 无人驾驶出租车远程运营异常管理</title>
+<title>ROAM — 无人驾驶出租车运营异常管理平台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #faf9f5;
@@ -12,7 +14,6 @@
   --text2: #5a5a52;
   --text3: #8a8a80;
   --accent: #c85a3a;
-  --accent-light: #f5ebe6;
   --border: #e0ded6;
   --card: #ffffff;
   --green: #2d7a4f;
@@ -20,108 +21,105 @@
   --red: #b83a3a;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif; color: var(--text); background: var(--bg); line-height:1.75; -webkit-font-smoothing: antialiased; }
-.serif { font-family: Georgia, 'Noto Serif SC', 'Source Han Serif SC', serif; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+body { font-family: 'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; color:var(--text); background:var(--bg); line-height:1.75; -webkit-font-smoothing:antialiased; }
+a { color:var(--accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+.wrap { max-width:1160px; margin:0 auto; padding:0 32px; }
 
-/* Language */
-.lang { position:fixed; top:20px; right:24px; z-index:99; display:flex; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:rgba(250,249,245,0.9); backdrop-filter:blur(8px); }
-.lang button { padding:6px 14px; border:none; cursor:pointer; font-size:12px; font-weight:600; background:transparent; color:var(--text3); transition:.15s; }
+/* Language toggle */
+.lang { position:fixed; top:24px; right:48px; z-index:99; display:flex; border:1px solid var(--border); border-radius:6px; overflow:hidden; background:rgba(250,249,245,0.92); backdrop-filter:blur(8px); }
+.lang button { padding:7px 16px; border:none; cursor:pointer; font-size:12px; font-weight:600; background:transparent; color:var(--text3); transition:.15s; font-family:inherit; }
 .lang button.on { background:var(--text); color:var(--bg); }
-.en { display:none; }
-body.E .cn { display:none!important; }
-body.E .en { display:inline!important; }
-body.E p.en, body.E div.en, body.E h1.en, body.E h2.en, body.E h3.en, body.E li.en, body.E span.en { display:inline!important; }
+span.en, p.en, div.en, h2.en { display:none; }
+body.E span.cn, body.E p.cn, body.E div.cn, body.E h2.cn { display:none!important; }
+body.E span.en { display:inline!important; }
+body.E p.en, body.E div.en, body.E h2.en { display:block!important; }
 
 /* Header */
-header { padding:100px 24px 72px; text-align:center; border-bottom:1px solid var(--border); }
-header h1 { font-size:clamp(2.2rem,2rem+2vw,3.6rem); font-weight:800; letter-spacing:-1.5px; margin-bottom:8px; }
-header h1 em { font-style:normal; color:var(--accent); }
-header .sub { font-size:1rem; color:var(--text3); margin-bottom:16px; letter-spacing:0.5px; }
-header .desc { font-size:1.12rem; color:var(--text2); max-width:620px; margin:0 auto 32px; }
+header { padding:96px 32px 72px; text-align:center; border-bottom:1px solid var(--border); }
+header h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(3.2rem,3rem+2.5vw,5rem); font-weight:800; letter-spacing:-2px; margin-bottom:6px; color:var(--accent); }
+header .sub { font-family:'Inter',sans-serif; font-size:0.95rem; color:var(--text3); margin-bottom:12px; letter-spacing:1px; text-transform:uppercase; font-weight:500; }
+header .desc { font-size:1.15rem; color:var(--text2); max-width:640px; margin:0 auto 36px; line-height:1.8; }
 header .actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-.btn { display:inline-block; padding:10px 24px; border-radius:4px; font-size:0.88rem; font-weight:600; transition:.2s; }
+.btn { display:inline-block; padding:11px 26px; border-radius:4px; font-size:0.88rem; font-weight:600; transition:.2s; font-family:inherit; }
 .btn-primary { background:var(--accent); color:white; }
 .btn-primary:hover { background:#b04e30; text-decoration:none; }
 .btn-secondary { border:1.5px solid var(--border); color:var(--text); background:transparent; }
 .btn-secondary:hover { border-color:var(--text3); text-decoration:none; }
 
 /* Section */
-section { padding:64px 0; }
+section { padding:56px 0; }
 section + section { border-top:1px solid var(--border); }
-.sec-title { font-size:1.6rem; font-weight:700; margin-bottom:8px; }
-.sec-sub { color:var(--text3); font-size:0.9rem; margin-bottom:32px; }
+.sec-title { font-family:'Playfair Display',Georgia,serif; font-size:1.7rem; font-weight:700; margin-bottom:6px; }
+.sec-sub { color:var(--text3); font-size:0.9rem; margin-bottom:28px; }
 
 /* Alert */
-.alert { border:1px solid #e8d5a0; background:#fdf8ec; border-radius:4px; padding:20px 24px; margin-bottom:48px; }
+.alert { border:1px solid #e8d5a0; background:#fdf8ec; border-radius:4px; padding:20px 24px; margin-bottom:40px; }
 .alert strong { color:#7a5c10; }
 .alert p { color:#5c4a12; font-size:0.92rem; }
 
 /* Pillars */
-.pillars { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
-.pillar { background:var(--card); border:1px solid var(--border); border-radius:4px; padding:28px 22px; transition:box-shadow .2s; }
-.pillar:hover { box-shadow:0 2px 12px rgba(0,0,0,0.06); }
-.pillar-num { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--text3); margin-bottom:12px; }
-.pillar h3 { font-size:1.05rem; font-weight:700; margin-bottom:4px; }
-.pillar .pillar-en { font-size:0.78rem; color:var(--text3); margin-bottom:12px; }
-.pillar p { font-size:0.85rem; color:var(--text2); margin-bottom:10px; }
-.pillar .align { font-size:0.78rem; color:var(--accent); border-top:1px solid var(--border); padding-top:10px; margin-top:auto; }
-@media(max-width:768px) { .pillars { grid-template-columns:1fr 1fr; } }
-@media(max-width:480px) { .pillars { grid-template-columns:1fr; } }
+.pillars { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.pillar { background:var(--card); border:1px solid var(--border); border-radius:6px; padding:26px 20px; display:flex; flex-direction:column; transition:box-shadow .2s; }
+.pillar:hover { box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+.pillar-num { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:var(--text3); margin-bottom:10px; }
+.pillar h3 { font-size:1rem; font-weight:700; margin-bottom:10px; line-height:1.4; }
+.pillar p { font-size:0.84rem; color:var(--text2); margin-bottom:12px; flex:1; }
+.pillar .align { font-size:0.76rem; color:var(--accent); border-top:1px solid var(--border); padding-top:10px; }
+@media(max-width:900px) { .pillars { grid-template-columns:1fr 1fr; } }
+@media(max-width:520px) { .pillars { grid-template-columns:1fr; } }
 
 /* Architecture */
 .layers { display:flex; flex-direction:column; gap:0; }
 .layer { display:flex; align-items:stretch; border:1px solid var(--border); border-bottom:none; background:var(--card); }
-.layer:first-child { border-radius:4px 4px 0 0; }
-.layer:last-child { border-bottom:1px solid var(--border); border-radius:0 0 4px 4px; }
+.layer:first-child { border-radius:6px 6px 0 0; }
+.layer:last-child { border-bottom:1px solid var(--border); border-radius:0 0 6px 6px; }
 .layer-bar { width:6px; flex-shrink:0; }
-.layer-bar.g { background:var(--green); }
-.layer-bar.a { background:var(--amber); }
-.layer-bar.r { background:var(--red); }
-.layer-body { flex:1; padding:22px 24px; }
-.layer-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; }
-.layer-head h3 { font-size:1rem; font-weight:700; }
+.layer-bar.g { background:var(--green); } .layer-bar.a { background:var(--amber); } .layer-bar.r { background:var(--red); }
+.layer-body { flex:1; padding:20px 24px; }
+.layer-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:5px; }
+.layer-head h3 { font-size:0.95rem; font-weight:700; }
 .layer-pct { font-size:1.3rem; font-weight:800; }
-.layer-pct.g { color:var(--green); }
-.layer-pct.a { color:var(--amber); }
-.layer-pct.r { color:var(--red); }
-.layer-desc { font-size:0.88rem; color:var(--text2); margin-bottom:4px; }
-.layer-items { font-size:0.82rem; color:var(--text3); }
-.layer-std { font-size:0.78rem; color:var(--accent); margin-top:6px; }
+.layer-pct.g { color:var(--green); } .layer-pct.a { color:var(--amber); } .layer-pct.r { color:var(--red); }
+.layer-desc { font-size:0.86rem; color:var(--text2); margin-bottom:3px; }
+.layer-items { font-size:0.8rem; color:var(--text3); }
+.layer-std { font-size:0.76rem; color:var(--accent); margin-top:5px; }
 
 /* Table */
 .tbl-wrap { overflow-x:auto; }
 table { width:100%; border-collapse:collapse; font-size:0.85rem; }
-table th { text-align:left; padding:10px 14px; font-weight:600; color:var(--text2); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.5px; border-bottom:2px solid var(--border); background:var(--bg2); }
+table th { text-align:left; padding:10px 14px; font-weight:600; color:var(--text2); font-size:0.76rem; text-transform:uppercase; letter-spacing:0.5px; border-bottom:2px solid var(--border); background:var(--bg2); }
 table td { padding:10px 14px; border-bottom:1px solid var(--border); }
 table tr:hover { background:var(--bg2); }
-.sev { font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:3px; }
-.sev.s1 { background:#e8f0fe; color:#1a4daa; }
-.sev.s2 { background:#fef3cd; color:#856404; }
-.sev.s3 { background:#f8d7da; color:#842029; }
-.sev.s4 { background:#2c2c2c; color:#f5a5a5; }
-.tag { font-family:monospace; font-size:0.75rem; background:var(--bg2); padding:1px 6px; border-radius:3px; color:var(--text2); }
+.sev { font-size:0.74rem; font-weight:700; padding:2px 8px; border-radius:3px; }
+.sev.s1 { background:#e8f0fe; color:#1a4daa; } .sev.s2 { background:#fef3cd; color:#856404; }
+.sev.s3 { background:#f8d7da; color:#842029; } .sev.s4 { background:#2c2c2c; color:#f5a5a5; }
+.tag { font-family:'SF Mono',Menlo,monospace; font-size:0.74rem; background:var(--bg2); padding:1px 6px; border-radius:3px; color:var(--text2); }
 
 /* Who */
-.who { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-.who-card { border:1px solid var(--border); border-radius:4px; padding:24px; background:var(--card); }
-.who-card h3 { font-size:1rem; font-weight:700; margin-bottom:4px; }
+.who { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.who-card { border:1px solid var(--border); border-radius:6px; padding:22px; background:var(--card); }
+.who-card h3 { font-size:0.95rem; font-weight:700; margin-bottom:3px; }
 .who-card .who-sub { font-size:0.82rem; color:var(--text3); margin-bottom:10px; }
-.who-card .who-ex { font-size:0.82rem; color:var(--text2); border-top:1px solid var(--border); padding-top:10px; margin-top:10px; }
+.who-card .who-ex { font-size:0.82rem; color:var(--text2); border-top:1px solid var(--border); padding-top:10px; margin-top:8px; }
 .who-card .who-ex strong { color:var(--accent); }
 @media(max-width:640px) { .who { grid-template-columns:1fr; } }
 
 /* Footer */
-footer { border-top:1px solid var(--border); padding:48px 24px; text-align:center; color:var(--text3); font-size:0.82rem; }
-footer p { margin-bottom:6px; }
+footer { border-top:1px solid var(--border); padding:40px 32px; text-align:center; color:var(--text3); font-size:0.82rem; }
+footer p { margin-bottom:5px; }
 footer a { color:var(--accent); }
-.supporters { display:flex; gap:48px; justify-content:center; flex-wrap:wrap; margin-bottom:32px; }
-.sup { text-align:center; }
-.sup-name { font-weight:700; color:var(--text); font-size:0.9rem; }
-.sup-sub { font-size:0.78rem; color:var(--text3); }
-.sup-desc { font-size:0.8rem; color:var(--text2); margin-top:2px; }
+.supporters { display:flex; gap:48px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
+.sup { text-align:center; max-width:300px; }
+.sup-name { font-weight:700; color:var(--text); font-size:0.88rem; margin-bottom:2px; }
+.sup-desc { font-size:0.78rem; color:var(--text2); }
+
+@media(max-width:640px) {
+  header h1 { font-size:2.8rem; }
+  .wrap { padding:0 18px; }
+  header { padding:72px 18px 48px; }
+  .lang { right:18px; }
+}
 </style>
 </head>
 <body>
@@ -132,10 +130,10 @@ footer a { color:var(--accent); }
 </div>
 
 <header>
-  <h1 class="serif"><em>ROAM</em></h1>
+  <h1>ROAM</h1>
   <p class="sub">RoboTaxi Operations Anomaly Management</p>
-  <p class="desc cn">L4+ 无人驾驶出租车远程运营异常管理<br>开源事故数据库 · 场景分类体系 · 参考架构 · 评价基准</p>
-  <p class="desc en">Open-source incident database, scenario taxonomy,<br>reference architecture & evaluation benchmarks for L4+ robotaxi remote operations</p>
+  <p class="desc cn">无人驾驶出租车运营异常管理平台<br>开源事故数据库 · 场景分类体系 · 参考架构 · 评价基准</p>
+  <p class="desc en">Open-source incident database, scenario taxonomy,<br>reference architecture & evaluation benchmarks for robotaxi remote operations</p>
   <div class="actions">
     <a href="https://github.com/zyx312/ROAM" class="btn btn-primary"><span class="cn">GitHub 仓库</span><span class="en">GitHub Repo</span></a>
     <a href="#incidents" class="btn btn-secondary"><span class="cn">浏览事件库</span><span class="en">Browse Incidents</span></a>
@@ -145,52 +143,45 @@ footer a { color:var(--accent); }
 
 <div class="wrap">
 
-  <!-- Alert -->
   <section>
     <div class="alert">
-      <p><span class="cn"><strong>为什么需要这个项目？</strong> 2026年3月31日，武汉近百辆萝卜快跑在高架路段同时熄火。乘客被困2小时，SOS无人应答，最终依靠交警逐车施救。三个月前，旧金山停电导致Waymo大面积瘫痪，应急热线等待2.5小时。当L4车队规模化运营时，这种靠人力逐车施救的模式不可持续。</span><span class="en"><strong>Why this project?</strong> On March 31, 2026, ~100 Baidu robotaxis shut down simultaneously on Wuhan's elevated highways. Passengers were trapped for 2 hours. SOS unanswered. Resolution: police rescuing vehicles one by one. Three months earlier, a San Francisco blackout left Waymo's fleet stranded, with emergency services waiting 2.5 hours on hold. At scale, this is unsustainable.</span></p>
+      <p><span class="cn"><strong>为什么需要这个项目？</strong> 2026年3月31日，武汉近百辆萝卜快跑在高架路段同时熄火。乘客被困2小时，SOS无人应答，最终依靠交警逐车施救。三个月前，旧金山停电导致Waymo大面积瘫痪，应急热线等待2.5小时。当无人驾驶出租车规模化运营时，这种靠人力逐车施救的模式不可持续。</span><span class="en"><strong>Why this project?</strong> On March 31, 2026, ~100 Baidu Apollo robotaxis shut down simultaneously on Wuhan's elevated highways. Passengers trapped for 2 hours. SOS unanswered. Police rescued vehicles one by one. Three months earlier, a San Francisco blackout stranded Waymo's fleet — emergency services waited 2.5 hours on hold. At scale, this is unsustainable.</span></p>
     </div>
   </section>
 
-  <!-- Pillars -->
   <section>
-    <h2 class="sec-title serif"><span class="cn">四个模块</span><span class="en">Four Modules</span></h2>
-    <p class="sec-sub"><span class="cn">ROAM 提供四个相互关联的开源模块，构成L4远程运营的完整基线</span><span class="en">Four interconnected open-source modules forming a complete baseline for L4 remote operations</span></p>
+    <h2 class="sec-title"><span class="cn">四个模块</span><span class="en">Four Modules</span></h2>
+    <p class="sec-sub"><span class="cn">构成无人驾驶出租车远程运营的完整开源基线</span><span class="en">A complete open-source baseline for robotaxi remote operations</span></p>
     <div class="pillars">
       <div class="pillar">
         <div class="pillar-num"><span class="cn">模块一</span><span class="en">Module 1</span></div>
         <h3><span class="cn">事故 / 异常事件库</span><span class="en">Incident Database</span></h3>
-        <div class="pillar-en">Incident Database</div>
-        <p><span class="cn">16+ 结构化事件记录，覆盖4家运营商（Waymo / Cruise / 百度Apollo / Pony.ai），YAML标准格式，社区持续更新</span><span class="en">16+ structured records across 4 operators, standardized YAML format, community-maintained</span></p>
-        <div class="align"><span class="cn">↳ 支撑GB标准附录D安全档案中的运营证据</span><span class="en">↳ Supports Safety Case evidence (GB Standard Appendix D)</span></div>
+        <p><span class="cn">16+ 结构化事件记录，覆盖 Waymo、Cruise、百度Apollo、Pony.ai 四家运营商，YAML标准格式，社区持续更新</span><span class="en">16+ structured records across 4 operators (Waymo, Cruise, Baidu Apollo, Pony.ai), standardized YAML format, community-maintained</span></p>
+        <div class="align"><span class="cn">↳ 支撑GB标准附录D安全档案中的运营证据要求</span><span class="en">↳ Supports Safety Case evidence (GB Standard Appendix D)</span></div>
       </div>
       <div class="pillar">
         <div class="pillar-num"><span class="cn">模块二</span><span class="en">Module 2</span></div>
         <h3><span class="cn">场景分类体系</span><span class="en">Scenario Taxonomy</span></h3>
-        <div class="pillar-en">Scenario Taxonomy</div>
-        <p><span class="cn">6大类、26子场景。含严重度S0–S4分级、紧急度U0–U3分级，对齐ISO 34502场景分层方法</span><span class="en">6 categories, 26 sub-scenarios. Severity S0–S4, urgency U0–U3, aligned with ISO 34502</span></p>
-        <div class="align"><span class="cn">↳ 对齐GB标准表D.1整车危害分类</span><span class="en">↳ Aligned with GB Standard Table D.1 hazard categories</span></div>
+        <p><span class="cn">6大类、26子场景，含严重度 S0–S4 和紧急度 U0–U3 分级，对齐 ISO 34502 场景分层方法</span><span class="en">6 categories, 26 sub-scenarios with severity S0–S4 and urgency U0–U3 scales, aligned with ISO 34502</span></p>
+        <div class="align"><span class="cn">↳ 对齐GB标准表D.1整车危害分类体系</span><span class="en">↳ Aligned with GB Standard Table D.1 hazard categories</span></div>
       </div>
       <div class="pillar">
         <div class="pillar-num"><span class="cn">模块三</span><span class="en">Module 3</span></div>
         <h3><span class="cn">参考架构</span><span class="en">Reference Architecture</span></h3>
-        <div class="pillar-en">Reference Architecture</div>
-        <p><span class="cn">三层决策模型（AI自主 → 人工确认 → 远程遥控）。含API接口规范、场景-处置映射表、操作员界面指南</span><span class="en">Three-layer decision model (AI autonomous → human confirm → remote driving). Includes API spec and handler mapping</span></p>
-        <div class="align"><span class="cn">↳ 对齐GB标准附录C.2远程协助要求</span><span class="en">↳ Aligned with GB Standard Appendix C.2 remote assistance</span></div>
+        <p><span class="cn">三层决策模型：AI自主处置 → AI辅助+人工确认 → 远程遥控/线下派人，含API接口规范和场景-处置映射表</span><span class="en">Three-layer decision model: AI autonomous → AI-assisted + human confirm → remote driving. Includes API spec and scenario-handler mapping</span></p>
+        <div class="align"><span class="cn">↳ 对齐GB标准附录C.2远程协助技术要求</span><span class="en">↳ Aligned with GB Standard Appendix C.2 remote assistance</span></div>
       </div>
       <div class="pillar">
         <div class="pillar-num"><span class="cn">模块四</span><span class="en">Module 4</span></div>
         <h3><span class="cn">评价基准</span><span class="en">Evaluation Benchmarks</span></h3>
-        <div class="pillar-en">Evaluation Benchmarks</div>
-        <p><span class="cn">8项KPI指标（MTTR、AI处置率、误升级率等），含目标值与自然驾驶基线数据</span><span class="en">8 KPIs (MTTR, AI resolution rate, false escalation rate, etc.) with target values and naturalistic driving baselines</span></p>
+        <p><span class="cn">8项KPI（MTTR、AI处置率、误升级率等），含目标值与自然驾驶基线数据</span><span class="en">8 KPIs (MTTR, AI resolution rate, false escalation rate, etc.) with target values and naturalistic driving baselines</span></p>
         <div class="align"><span class="cn">↳ 支撑残余风险接受准则（碰撞率 &lt;10⁻⁴/h）</span><span class="en">↳ Supports residual risk criteria (collision rate &lt;10⁻⁴/h)</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Architecture -->
   <section>
-    <h2 class="sec-title serif"><span class="cn">三层决策模型</span><span class="en">Three-Layer Decision Model</span></h2>
+    <h2 class="sec-title"><span class="cn">三层决策模型</span><span class="en">Three-Layer Decision Model</span></h2>
     <p class="sec-sub"><span class="cn">AI优先处置，人工逐级兜底</span><span class="en">AI-first response, human fallback by escalation</span></p>
     <div class="layers">
       <div class="layer">
@@ -201,8 +192,8 @@ footer a { color:var(--accent); }
             <span class="layer-pct g">70%</span>
           </div>
           <p class="layer-desc"><span class="cn">场景识别 → 风险评估 → 决策生成 → 自动执行，无需人工介入</span><span class="en">Scenario recognition → risk assessment → decision generation → autonomous execution</span></p>
-          <p class="layer-items"><span class="cn">靠边停车 · 驶入服务区 · 低速绕障 · 感知模块重启 · 乘客语音安抚 · 调度备用车辆</span><span class="en">Pull over · enter service area · low-speed reroute · perception restart · passenger voice guidance · dispatch backup vehicle</span></p>
-          <p class="layer-std"><span class="cn">↳ 对齐GB标准C.2.1.2：ADS应不依赖远程协助执行DDT</span><span class="en">↳ GB C.2.1.2: ADS shall not depend on remote assistance for DDT</span></p>
+          <p class="layer-items"><span class="cn">靠边停车 · 驶入服务区 · 低速绕障 · 感知模块重启 · 乘客语音安抚 · 调度备用车辆</span><span class="en">Pull over · enter service area · low-speed reroute · perception restart · passenger voice guidance · dispatch backup</span></p>
+          <p class="layer-std"><span class="cn">↳ GB标准C.2.1.2：ADS应不依赖远程协助执行DDT</span><span class="en">↳ GB C.2.1.2: ADS shall not depend on remote assistance for DDT</span></p>
         </div>
       </div>
       <div class="layer">
@@ -212,9 +203,9 @@ footer a { color:var(--accent); }
             <h3>Layer 2 · <span class="cn">AI辅助 + 人工确认</span><span class="en">AI-Assisted + Human Confirm</span></h3>
             <span class="layer-pct a">25%</span>
           </div>
-          <p class="layer-desc"><span class="cn">AI生成处置方案（含置信度）→ 远程安全员审核确认/修改 → 车辆执行</span><span class="en">AI generates action plan with confidence → remote operator reviews and confirms → vehicle executes</span></p>
+          <p class="layer-desc"><span class="cn">AI生成处置方案（含置信度）→ 远程安全员审核确认或修改 → 车辆执行</span><span class="en">AI generates action plan with confidence → remote operator reviews/confirms → vehicle executes</span></p>
           <p class="layer-items"><span class="cn">复杂路口脱困 · 交警手势解读 · 多车冲突裁决 · 报警/叫救护车决策 · 乘客异常行为</span><span class="en">Complex intersection escape · police gesture interpretation · multi-vehicle conflict · emergency call decision</span></p>
-          <p class="layer-std"><span class="cn">↳ 对齐GB标准C.2.3：ADS应能够及时接收远程协助指令</span><span class="en">↳ GB C.2.3: ADS shall receive remote assistance commands in a timely manner</span></p>
+          <p class="layer-std"><span class="cn">↳ GB标准C.2.3：ADS应能够及时接收远程协助指令</span><span class="en">↳ GB C.2.3: ADS shall receive remote assistance commands in a timely manner</span></p>
         </div>
       </div>
       <div class="layer">
@@ -226,15 +217,14 @@ footer a { color:var(--accent); }
           </div>
           <p class="layer-desc"><span class="cn">远程人员直接接管车辆控制（≤10km/h）或派遣线下救援团队到现场</span><span class="en">Remote operator takes direct vehicle control (≤10km/h) or dispatches on-site rescue team</span></p>
           <p class="layer-items"><span class="cn">车辆硬件故障 · 批量系统瘫痪 · 事故现场处理 · 车辆起火 · 乘客物理救援</span><span class="en">Hardware failure · mass system shutdown · accident scene · vehicle fire · passenger physical rescue</span></p>
-          <p class="layer-std"><span class="cn">↳ 对齐德国StVFernLV远程驾驶框架 / Tesla Teleops模式</span><span class="en">↳ Aligned with German StVFernLV / Tesla Teleops model</span></p>
+          <p class="layer-std"><span class="cn">↳ 德国StVFernLV远程驾驶框架 / Tesla Teleops模式</span><span class="en">↳ German StVFernLV / Tesla Teleops model</span></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Incidents -->
   <section id="incidents">
-    <h2 class="sec-title serif"><span class="cn">事件记录</span><span class="en">Incident Records</span></h2>
+    <h2 class="sec-title"><span class="cn">事件记录</span><span class="en">Incident Records</span></h2>
     <p class="sec-sub"><span class="cn">来自公开渠道的结构化事件数据，持续更新</span><span class="en">Structured incident data from public sources, continuously updated</span></p>
     <div class="tbl-wrap">
     <table>
@@ -259,58 +249,58 @@ footer a { color:var(--accent); }
     <p style="margin-top:12px;color:var(--text3);font-size:0.82rem;"><span class="cn">展示6条典型事件，共16条。</span><span class="en">6 of 16 total incidents shown.</span> <a href="https://github.com/zyx312/ROAM/tree/main/incidents"><span class="cn">查看全部 →</span><span class="en">View all →</span></a></p>
   </section>
 
-  <!-- Who -->
   <section>
-    <h2 class="sec-title serif"><span class="cn">适用对象</span><span class="en">Who Is This For</span></h2>
-    <p class="sec-sub"><span class="cn">ROAM 是开源基线，各方可在此基础上构建自己的定制化平台</span><span class="en">ROAM is an open baseline — build your customized platform on top of it</span></p>
+    <h2 class="sec-title"><span class="cn">适用对象</span><span class="en">Who Is This For</span></h2>
+    <p class="sec-sub"><span class="cn">ROAM 是开源基线，各方可在此基础上构建定制化平台</span><span class="en">An open baseline — build your customized platform on top</span></p>
     <div class="who">
       <div class="who-card">
-        <h3><span class="cn">Robotaxi 运营商</span><span class="en">Robotaxi Operators</span></h3>
-        <p class="who-sub"><span class="cn">百度Apollo（萝卜快跑）、小马智行、文远知行等</span><span class="en">Baidu Apollo Go, Pony.ai, WeRide, etc.</span></p>
+        <h3><span class="cn">无人驾驶出租车运营商</span><span class="en">Robotaxi Operators</span></h3>
+        <p class="who-sub"><span class="cn">百度Apollo（萝卜快跑）、小马智行、文远知行等无人驾驶出租车服务运营方</span><span class="en">Baidu Apollo Go, Pony.ai, WeRide and other robotaxi service operators</span></p>
         <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">基于三层架构搭建远程运维中心，用事件库训练AI异常处置模型</span><span class="en">Build remote ops center on three-layer architecture, train AI response models with incident data</span></div>
       </div>
       <div class="who-card">
-        <h3><span class="cn">整车厂</span><span class="en">OEMs</span></h3>
-        <p class="who-sub"><span class="cn">上汽、一汽、长安、广汽等推出L4服务的车企</span><span class="en">SAIC, FAW, Changan, GAC deploying L4 services</span></p>
-        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">用场景分类体系规划L4部署城市，参考KPI设计运营安全目标</span><span class="en">Plan L4 city deployment using taxonomy, set operational safety targets with KPI benchmarks</span></div>
+        <h3><span class="cn">整车厂（OEM）</span><span class="en">Automotive OEMs</span></h3>
+        <p class="who-sub"><span class="cn">上汽、一汽、长安、广汽等计划推出L4无人驾驶出租车服务的车企</span><span class="en">SAIC, FAW, Changan, GAC and other automakers planning L4 robotaxi services</span></p>
+        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">用场景分类体系规划L4服务部署城市，参考KPI设计运营安全目标</span><span class="en">Plan L4 city deployment using taxonomy, set operational safety targets with KPI benchmarks</span></div>
       </div>
       <div class="who-card">
-        <h3><span class="cn">远程运营技术公司</span><span class="en">Teleops Technology Companies</span></h3>
-        <p class="who-sub"><span class="cn">Vay、Ottopia等远程驾驶/协助方案提供商</span><span class="en">Vay, Ottopia and other teleoperation solution providers</span></p>
+        <h3><span class="cn">远程运营技术公司</span><span class="en">Teleoperation Technology Companies</span></h3>
+        <p class="who-sub"><span class="cn">Vay、Ottopia等提供远程驾驶或远程协助技术方案的公司</span><span class="en">Vay, Ottopia and other remote driving / assistance technology providers</span></p>
         <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">在开源基线上构建定制化产品，节省从零开始的研发成本</span><span class="en">Build on open baseline to save R&D cost vs starting from scratch</span></div>
       </div>
       <div class="who-card">
         <h3><span class="cn">监管机构与研究者</span><span class="en">Regulators & Researchers</span></h3>
-        <p class="who-sub"><span class="cn">工信部、公安部、交通管理部门、高校及科研机构</span><span class="en">Government agencies, universities, research institutions</span></p>
-        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">基于事件数据制定监管政策，用分类体系开展安全评价研究</span><span class="en">Develop policies from incident data, conduct safety evaluation research with taxonomy</span></div>
+        <p class="who-sub"><span class="cn">工信部、公安部、各地方交通管理部门，以及高校和科研机构</span><span class="en">Government agencies, local transport authorities, universities and research institutions</span></p>
+        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">基于事件数据制定监管政策，用分类体系开展安全评价研究</span><span class="en">Develop regulatory policies from incident data, conduct safety evaluation research with taxonomy</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Standards -->
   <section>
-    <h2 class="sec-title serif"><span class="cn">对齐标准</span><span class="en">Standards Alignment</span></h2>
-    <p class="sec-sub"><span class="cn">ROAM 的四个模块与13项国内外标准形成系统性对齐</span><span class="en">ROAM's four modules systematically aligned with 13 domestic and international standards</span></p>
+    <h2 class="sec-title"><span class="cn">对齐标准</span><span class="en">Standards Alignment</span></h2>
+    <p class="sec-sub"><span class="cn">四个模块与13项国内外标准形成系统性对齐</span><span class="en">Four modules systematically aligned with 13 standards</span></p>
     <div class="tbl-wrap">
     <table>
-      <thead><tr><th><span class="cn">标准</span><span class="en">Standard</span></th><th><span class="cn">关联</span><span class="en">Relevance</span></th></tr></thead>
+      <thead><tr><th><span class="cn">标准</span><span class="en">Standard</span></th><th><span class="cn">与ROAM的关联</span><span class="en">Relevance</span></th></tr></thead>
       <tbody>
         <tr><td>GB《自动驾驶系统安全要求》</td><td><span class="cn">附录C.2 L4远程协助要求 · 附录D 安全档案结构</span><span class="en">C.2: L4 remote assistance · D: Safety Case structure</span></td></tr>
-        <tr><td>UN GTR on ADS (WP.29)</td><td><span class="cn">"称职且谨慎的人类驾驶员"全球安全基线</span><span class="en">"Competent and careful human driver" global baseline</span></td></tr>
+        <tr><td>UN GTR on ADS (WP.29)</td><td><span class="cn">"称职且谨慎的人类驾驶员"全球安全基线</span><span class="en">"Competent and careful human driver" global safety baseline</span></td></tr>
         <tr><td>ISO 34502 / ISO 21448</td><td><span class="cn">场景分类对齐 · SOTIF未知不安全场景识别</span><span class="en">Scenario taxonomy · SOTIF unknown unsafe scenarios</span></td></tr>
         <tr><td>ISO 22737 (LSAD)</td><td><span class="cn">含"无人驾驶运营调度员"角色定义</span><span class="en">Includes "driverless operation dispatcher" role</span></td></tr>
-        <tr><td><span class="cn">德国StVFernLV (2025-12)</span><span class="en">German StVFernLV (2025-12)</span></td><td><span class="cn">欧洲首个远程驾驶法律框架</span><span class="en">Europe's first teleoperated driving legal framework</span></td></tr>
+        <tr><td><span class="cn">德国 StVFernLV (2025-12)</span><span class="en">German StVFernLV (2025-12)</span></td><td><span class="cn">欧洲首个远程驾驶法律框架</span><span class="en">Europe's first teleoperated driving legal framework</span></td></tr>
         <tr><td>NHTSA SGO</td><td><span class="cn">ADS事故30秒报告要求</span><span class="en">ADS crash reporting within 30 seconds</span></td></tr>
       </tbody>
     </table>
     </div>
-    <p style="margin-top:12px;color:var(--text3);font-size:0.82rem;"><span class="cn">完整13项映射见</span><span class="en">Full 13-standard mapping:</span> <a href="https://github.com/zyx312/ROAM/blob/main/docs/related-standards.md">related-standards.md</a> · <a href="https://github.com/zyx312/ROAM/blob/main/docs/literature-review.md"><span class="cn">文献综述</span><span class="en">Literature Review</span></a></p>
+    <p style="margin-top:12px;color:var(--text3);font-size:0.82rem;">
+      <span class="cn">完整13项映射见 <a href="https://github.com/zyx312/ROAM/blob/main/docs/related-standards.md">related-standards.md</a> · 文献综述见 <a href="https://github.com/zyx312/ROAM/blob/main/docs/literature-review.md">literature-review.md</a></span>
+      <span class="en">Full mapping: <a href="https://github.com/zyx312/ROAM/blob/main/docs/related-standards.md">related-standards.md</a> · Literature review: <a href="https://github.com/zyx312/ROAM/blob/main/docs/literature-review.md">literature-review.md</a></span>
+    </p>
   </section>
 
-  <!-- Contribute -->
   <section style="text-align:center;">
-    <h2 class="sec-title serif"><span class="cn">参与贡献</span><span class="en">Contribute</span></h2>
-    <p style="color:var(--text2);max-width:540px;margin:0 auto 20px;font-size:0.92rem;"><span class="cn">ROAM 是社区共建项目。提交事件记录、完善分类体系、改进架构文档，或贡献基线数据。</span><span class="en">ROAM is community-driven. Submit incidents, improve taxonomy, enhance architecture, or contribute data.</span></p>
+    <h2 class="sec-title"><span class="cn">参与贡献</span><span class="en">Contribute</span></h2>
+    <p style="color:var(--text2);max-width:560px;margin:0 auto 20px;font-size:0.92rem;"><span class="cn">ROAM 是社区共建项目。提交事件记录、完善分类体系、改进架构文档，或贡献基线数据。</span><span class="en">ROAM is community-driven. Submit incidents, improve taxonomy, enhance architecture, or contribute data.</span></p>
     <a href="https://github.com/zyx312/ROAM/blob/main/CONTRIBUTING.md" class="btn btn-primary"><span class="cn">贡献指南</span><span class="en">How to Contribute</span></a>
   </section>
 
@@ -320,18 +310,15 @@ footer a { color:var(--accent); }
   <div class="supporters">
     <div class="sup">
       <div class="sup-name"><span class="cn">吉林大学自动驾驶安全联合实验室</span><span class="en">Jilin University AD Safety Joint Lab</span></div>
-      <div class="sup-sub">Jilin University AD Safety Joint Lab</div>
       <div class="sup-desc"><span class="cn">场景分类 · SOTIF方法论 · 学术研究</span><span class="en">Scenario taxonomy · SOTIF methodology · Research</span></div>
     </div>
     <div class="sup">
-      <div class="sup-name"><span class="cn">驭研科技</span><span class="en">DRIVEResearch</span></div>
-      <div class="sup-sub">DRIVEResearch</div>
-      <div class="sup-desc"><span class="cn">750h+ 航测自然驾驶数据 · 10.5M+ 轨迹基线</span><span class="en">750h+ aerial data · 10.5M+ trajectory baselines</span></div>
+      <div class="sup-name"><span class="cn">驭研科技（DRIVEResearch）</span><span class="en">DRIVEResearch</span></div>
+      <div class="sup-desc"><span class="cn">750h+ 航测自然驾驶数据 · 10.5M+ 轨迹基线</span><span class="en">750h+ aerial naturalistic driving data · 10.5M+ trajectory baselines</span></div>
     </div>
   </div>
-  <p><strong>ROAM</strong> · Apache 2.0 · <a href="https://github.com/zyx312/ROAM">GitHub</a></p>
-  <p><span class="cn">发起人</span><span class="en">By</span> <a href="https://www.linkedin.com/in/yuxin-zhang-auto/">Yuxin Zhang 张玉新</a></p>
-  <p style="margin-top:10px;font-size:0.75rem;"><span class="cn">事件数据来源于公开渠道，仅用于研究目的</span><span class="en">Incident data from public sources for research purposes</span></p>
+  <p><strong>ROAM</strong> · Apache 2.0 · <a href="https://github.com/zyx312/ROAM">GitHub</a> · <a href="https://www.linkedin.com/in/zhangyuxin/">Yuxin Zhang</a></p>
+  <p style="margin-top:8px;font-size:0.75rem;"><span class="cn">事件数据来源于公开渠道，仅用于研究目的</span><span class="en">Incident data from public sources for research purposes</span></p>
 </footer>
 
 <script>

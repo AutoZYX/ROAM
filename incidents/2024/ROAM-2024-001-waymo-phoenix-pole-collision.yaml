@@ -40,7 +40,7 @@ regulatory_action: |
   NHTSA recall. Waymo issued voluntary recall of 672 vehicles and deployed OTA
   software update to improve static object avoidance in constrained spaces.
 sources:
-  - url: "https://www.nhtsa.gov/recalls"
-    title: "NHTSA Waymo Recall - Pole Collision"
+  - url: "https://www.damfirm.com/waymo-accident-statistics.html"
+    title: "Waymo Accidents - NHTSA Crash Data"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

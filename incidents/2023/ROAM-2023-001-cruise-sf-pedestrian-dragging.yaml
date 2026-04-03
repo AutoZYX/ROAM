@@ -48,9 +48,9 @@ regulatory_action: |
   Cruise suspended all driverless operations nationwide. GM subsequently wound down
   Cruise operations entirely in late 2024.
 sources:
-  - url: "https://www.nhtsa.gov/press-releases/nhtsa-closes-cruise-investigation"
-    title: "NHTSA Cruise Investigation"
-  - url: "https://www.cpuc.ca.gov/news-and-updates/all-news/cpuc-issues-citation-to-cruise"
-    title: "CPUC Citation to Cruise"
+  - url: "https://techcrunch.com/2023/11/08/cruise-recalls-entire-fleet-after-robotaxi-ran-over-dragged-pedestrian/"
+    title: "Cruise recalls entire fleet after robotaxi ran over, dragged pedestrian - TechCrunch"
+  - url: "https://www.cbsnews.com/sanfrancisco/news/nhtsa-robotaxi-cruise-pay-penalty-failing-report-san-francisco-crash-involving-pedestrian/"
+    title: "Cruise to pay $1.5M penalty - CBS News"
 contributor: "ROAM Core Team"
 last_updated: "2026-04-02"

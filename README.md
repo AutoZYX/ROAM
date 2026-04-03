@@ -6,7 +6,7 @@
 [![Incidents](https://img.shields.io/badge/Incidents-16-red.svg)](#incident-database)
 [![Scenarios](https://img.shields.io/badge/Scenarios-6%20categories-orange.svg)](#scenario-taxonomy)
 
-🌐 **Website:** [zyx312.github.io/ROAM](https://zyx312.github.io/ROAM)
+🌐 **Website:** [AutoZYX.github.io/ROAM](https://AutoZYX.github.io/ROAM)
 
 ---
 
@@ -147,6 +147,6 @@ If you use ROAM in your research, please cite:
   title={ROAM: RoboTaxi Operations Anomaly Management},
   author={Zhang, Yuxin and Contributors},
   year={2026},
-  url={https://github.com/zyx312/ROAM}
+  url={https://github.com/AutoZYX/ROAM}
 }
 ```

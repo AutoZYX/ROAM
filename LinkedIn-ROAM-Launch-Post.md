@@ -28,8 +28,8 @@ The project is aligned with China's draft GB ADS safety standard (Appendix C.2),
 
 I hope this can serve as a starting point. Contributions, critiques, and forks are all welcome.
 
-🔗 GitHub: https://github.com/zyx312/ROAM
-🌐 Website: https://zyx312.github.io/ROAM
-📄 Literature Review (40 references): https://github.com/zyx312/ROAM/blob/main/docs/literature-review-en.md
+🔗 GitHub: https://github.com/AutoZYX/ROAM
+🌐 Website: https://AutoZYX.github.io/ROAM
+📄 Literature Review (40 references): https://github.com/AutoZYX/ROAM/blob/main/docs/literature-review-en.md
 
 #Robotaxi #AutonomousDriving #SOTIF #RemoteOperations #Teleoperation #AutomotiveSafety #OpenSource #ROAM

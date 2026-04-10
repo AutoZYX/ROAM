@@ -1,16 +1,30 @@
-# 强制性 GB《智能网联汽车 自动驾驶系统安全要求》附录 C.2 增强建议
+# 强制性 GB《智能网联汽车 自动驾驶系统安全要求》附录 C.2 增强建议（已废弃）
 
-**Comments on Mandatory GB Draft: Enhancement Proposal for Appendix C.2 Remote Assistance Requirements**
+**Comments on Mandatory GB Draft: Enhancement Proposal for Appendix C.2 Remote Assistance Requirements (DEPRECATED)**
 
 ---
 
 > 作者：Yuxin Zhang
 > 日期：2026 年 4 月
-> 状态：**草稿**（征求意见截止 2026-04-13）
+> 状态：**❌ 已废弃 —— 经战略评估后放弃此窗口**
 
 ---
 
-## ⚠️ 紧迫性说明
+## ❌ 已废弃说明
+
+本文档是 v1.0 战略下的产物，经 2026-04-10 战略评估后决定**放弃强制 GB 征求意见嵌入窗口**。理由：
+
+1. **技术成熟度不足**：L4 远程运营领域尚缺少足够的行业实践，ROAM 作为开源框架虽有系统性归纳，但尚未经历大规模落地验证
+2. **周期不可控**：在强制 GB 征求意见阶段加入系统性新内容，势必引发大量技术讨论，导致 GB 发布周期延长
+3. **角色冲突**：作者本身也是该强制 GB 起草组的参与者之一，在此阶段提交增量建议存在程序性问题
+
+**v1.1 战略**：不参与强制 GB，直接瞄准 TC114/SC34 国家推荐标准 GB/T 立项（预计 2027 Q1 启动）。详见 [`README.md`](README.md) 和 [`proposal-roadmap.md`](proposal-roadmap.md)。
+
+本文档保留仅作历史记录。
+
+---
+
+## ⚠️ 紧迫性说明（原文，供历史参考）
 
 工信部 2026 年 2 月公开征求意见的强制性国家标准《智能网联汽车 自动驾驶系统安全要求》（TC114/SC34 归口，计划 **2027-07-01 实施**）的**征求意见截止日期为 2026-04-13**。
 

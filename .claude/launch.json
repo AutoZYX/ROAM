@@ -4,7 +4,7 @@
     {
       "name": "main-app",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "/Users/zyx/Desktop/WorkToDo/ROAM/docs"],
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "/Users/zyx/Documents/GitHub/ROAM"],
       "port": 8080
     }
   ]

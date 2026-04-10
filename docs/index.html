@@ -333,6 +333,54 @@ footer a { color:var(--accent); }
     </p>
   </section>
 
+  <!-- Markey RAOS Report -->
+  <section id="markey-raos">
+    <h2 class="sec-title"><span class="cn">美国国会调查：远程协助操作员报告</span><span class="en">US Congressional Investigation: RAOS Report</span></h2>
+    <p class="sec-sub"><span class="cn">2026年3月，参议员Markey发布首份针对自动驾驶远程协助操作的国会调查报告</span><span class="en">March 2026: Senator Markey published the first Congressional investigation into AV remote assistance operations</span></p>
+
+    <div class="alert" style="border-color:#d4a0a0;background:#fdf0f0;">
+      <strong style="color:#8a2020;"><span class="cn">核心发现</span><span class="en">Core Finding</span></strong>
+      <p style="color:#5c1212;"><span class="cn">七家头部自动驾驶公司（Aurora、May Mobility、Motional、Nuro、Tesla、Waymo、Zoox）<strong>均拒绝披露</strong>其无人车需要远程人工干预的频率——这正是ROAM开放事件数据库旨在填补的透明度空白。</span><span class="en">Seven major AV companies (Aurora, May Mobility, Motional, Nuro, Tesla, Waymo, Zoox) <strong>all refused to disclose</strong> how frequently their AVs require remote human intervention — precisely the transparency gap ROAM's open incident database aims to fill.</span></p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;">
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:8px;"><span class="cn">延迟数据对比</span><span class="en">Latency Comparison</span></h3>
+        <table style="font-size:0.95rem;">
+          <thead><tr><th><span class="cn">公司</span><span class="en">Company</span></th><th><span class="cn">平均延迟</span><span class="en">Avg Latency</span></th><th><span class="cn">最差</span><span class="en">Worst</span></th></tr></thead>
+          <tbody>
+            <tr><td>May Mobility</td><td>100–140 ms</td><td>500 ms</td></tr>
+            <tr><td>Waymo <span class="cn">（本土）</span><span class="en">(domestic)</span></td><td>150 ms</td><td>—</td></tr>
+            <tr><td>Nuro</td><td>200 ms</td><td>—</td></tr>
+            <tr><td>Waymo <span class="cn">（海外）</span><span class="en">(overseas)</span></td><td>250 ms</td><td>—</td></tr>
+            <tr><td>Motional</td><td>80–300 ms</td><td>—</td></tr>
+            <tr><td>Zoox</td><td>—</td><td>333 ms</td></tr>
+            <tr><td>Aurora / Tesla</td><td colspan="2" style="color:var(--text3);"><span class="cn">拒绝披露</span><span class="en">Refused to disclose</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:6px;padding:20px;">
+        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:8px;"><span class="cn">关键发现</span><span class="en">Key Findings</span></h3>
+        <ul style="font-size:1rem;color:var(--text2);line-height:1.8;list-style:disc;padding-left:20px;">
+          <li><span class="cn">Waymo是唯一使用海外RAO的公司（菲律宾，约占50%）</span><span class="en">Waymo is the only company using overseas RAOs (Philippines, ~50%)</span></li>
+          <li><span class="cn">Waymo海外RAO不持有美国驾照</span><span class="en">Waymo overseas RAOs lack US driver's licenses</span></li>
+          <li><span class="cn">Tesla是唯一允许RAO直接控制车辆的公司（≤10 mph）</span><span class="en">Tesla is the only company allowing RAO direct vehicle control (≤10 mph)</span></li>
+          <li><span class="cn">NTSB发现Waymo车辆执行错误RAO指令驶过校车</span><span class="en">NTSB found Waymo vehicle followed incorrect RAO guidance past a school bus</span></li>
+          <li><span class="cn">缺乏联邦层面的RAO延迟标准</span><span class="en">No federal standard for permissible RAO latency</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:20px; padding:16px 20px; background:var(--bg2); border-radius:6px; border-left:3px solid var(--accent);">
+      <p style="font-size:1.05rem; color:var(--text2); line-height:1.7;"><span class="cn"><strong>对ROAM的意义：</strong>Markey报告从立法层面印证了ROAM项目的核心假设——行业在远程运营透明度方面存在系统性缺失，需要独立的开放数据基础设施来填补。报告中首次披露的跨公司延迟数据也为ROAM的KPI基准体系提供了实证参考。</span><span class="en"><strong>Implications for ROAM:</strong> The Markey report legislatively validates ROAM's core thesis — the industry suffers from systemic opacity in remote operations, requiring independent open data infrastructure. The first-ever cross-company latency data also provides empirical benchmarks for ROAM's KPI framework.</span></p>
+    </div>
+
+    <p style="margin-top:16px;color:var(--text3);font-size:0.95rem;">
+      <span class="cn">报告全文：<a href="Markey-Remote-Back-Seat-Operators-Report-2026.pdf">Markey RAOS Report (PDF)</a> · 中文解读：<a href="Waymo拒交安全数据：七家自动驾驶巨头集体沉默.pdf">智车科技分析</a></span>
+      <span class="en">Full report: <a href="Markey-Remote-Back-Seat-Operators-Report-2026.pdf">Markey RAOS Report (PDF)</a> · Chinese analysis: <a href="Waymo拒交安全数据：七家自动驾驶巨头集体沉默.pdf">Smart Car Technology article</a></span>
+    </p>
+  </section>
+
   <!-- Taxonomy Detail -->
   <section>
     <h2 class="sec-title"><span class="cn">场景分类体系 v1.0</span><span class="en">Scenario Taxonomy v1.0</span></h2>

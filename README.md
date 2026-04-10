@@ -18,6 +18,8 @@ Three months earlier, a power outage in San Francisco left Waymo vehicles strand
 
 These aren't edge cases — they're previews of what happens when L4 robotaxi fleets scale without adequate remote operations infrastructure.
 
+In March 2026, a [US Congressional investigation](docs/Markey-Remote-Back-Seat-Operators-Report-2026.pdf) revealed that **all seven major AV companies refused to disclose** how frequently their vehicles require remote human intervention — underscoring the urgent need for independent, open operational transparency.
+
 **ROAM provides the open-source foundation for solving this problem:**
 
 1. 📋 **Incident Database** — Structured, searchable records of every known robotaxi anomaly
@@ -133,6 +135,9 @@ The GRVA draft Global Technical Regulation requires manufacturers to demonstrate
 
 **Germany StVFernLV Teleoperation Framework**
 Germany's Road Traffic Remote Driving Ordinance (December 2025) is Europe's first comprehensive legal framework for teleoperated driving. It specifies operator training requirements, communication infrastructure standards, and operational constraints. ROAM's Architecture Layer 3 (Remote Driving / On-Site) aligns with these requirements, and ROAM's Benchmarks include communication performance KPIs that map to StVFernLV's minimum bandwidth and latency mandates.
+
+**US Congressional Investigation: Markey RAOS Report (March 2026)**
+Senator Markey's [Remote Back Seat Operators report](docs/Markey-Remote-Back-Seat-Operators-Report-2026.pdf) is the first Congressional investigation into AV remote assistance operations. Key findings: all 7 companies refused to disclose RAO intervention frequency; cross-company latency ranged from 100ms to 500ms with no federal standard; Waymo uses overseas RAOs (Philippines) without US driver's licenses. Markey announced plans for legislation establishing federal RAO standards — reinforcing the need for ROAM's open, evidence-based benchmarks.
 
 ## License
 

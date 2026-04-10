@@ -73,6 +73,24 @@ SAE J3016 was updated in May 2024 (jointly published with ISO), adding terminolo
 
 ISO 22737:2021 defines operational requirements for low-speed automated driving systems on predefined routes, with a maximum speed limit of 32 km/h, and introduces the role of "Driverless Operation Dispatcher" [24]. This standard provides a normative foundation for remote operations in low-speed closed or semi-closed environments.
 
+### 2.8 US Congressional Investigation: Markey RAOS Report
+
+On March 31, 2026, US Senator Edward J. Markey published "Remote Back Seat Operators: Revealing the Autonomous Vehicle Industry's Reliance on Human Remote Assistance Operators" -- the first Congressional investigation into how AV companies use Remote Assistance Operators (RAOs) [50]. Senator Markey's office sent oversight letters to seven major AV companies -- Aurora, May Mobility, Motional, Nuro, Tesla, Waymo, and Zoox -- requesting detailed information about their remote assistance operations [50].
+
+The investigation yielded five key findings with direct implications for ROAM:
+
+**First, every AV company refused to disclose RAO intervention frequency.** All seven companies cited commercial confidentiality, hiding critical transparency data from the public, regulators, and legislators [50]. This finding constitutes the strongest evidence to date that the industry's "autonomous" narrative rests on an undisclosed human support infrastructure -- precisely the transparency gap that ROAM's open incident database is designed to address.
+
+**Second, Waymo is the only company using overseas RAOs.** Approximately half of Waymo's RAO workforce is located in the Philippines, introducing additional latency, cybersecurity, and cultural context risks [50]. No other investigated company employs offshore RAOs.
+
+**Third, Waymo's overseas RAOs do not hold US driver's licenses.** Waymo's Philippines-based RAOs hold local driver's licenses rather than US ones [50]. Given that RAO guidance directly influences AV behavior on US roads, this raises safety concerns about familiarity with US traffic rules and conventions.
+
+**Fourth, latency varied significantly across companies.** The investigation revealed a wide range of average one-way latency figures: May Mobility 100-140 ms (worst-case 500 ms), Waymo domestic 150 ms, Nuro 200 ms, Waymo overseas 250 ms, Motional 80-300 ms (direction-dependent), and Zoox worst-case 333 ms [50]. Aurora and Tesla declined to provide latency data. The absence of any federal standard for permissible RAO latency means each company effectively sets its own safety threshold.
+
+**Fifth, AV systems may not reliably reject dangerous RAO guidance.** While every company claimed their ADS would ignore unsafe RAO advice, an NTSB investigation found that a Waymo vehicle followed incorrect RAO guidance and illegally passed a school bus with an extended stop sign [50][51].
+
+Senator Markey subsequently called on NHTSA to investigate AV companies' remote assistance practices and announced plans to introduce legislation establishing federal standards for RAO operations [51]. This regulatory momentum signals that mandatory RAO transparency requirements may be forthcoming -- reinforcing the timeliness and relevance of ROAM's mission to establish open, evidence-based benchmarks for remote operations.
+
 ## 3 Industry Practice: Remote Operations Architecture
 
 ### 3.1 Waymo Fleet Response
@@ -359,6 +377,10 @@ The ROAM project will adhere to open-source collaboration principles, providing 
 [48] DJI Enterprise, "DJI Dock 2 Elevates Automated Drone Operations," 2024. IP55 weather resistance, dual RTK antennas, battery backup, automatic return-to-dock on communication loss. [Link](https://enterprise.dji.com/news/detail/dji-dock-2-release)
 
 [49] DJI Enterprise, "DJI UTC (Unmanned Aerial System Training Centers) Program," 200+ global training centers, 40,000+ certified pilots. [Link](https://enterprise-insights.dji.com/learning-center)
+
+[50] Office of Senator Edward J. Markey, "Remote Back Seat Operators: Revealing the Autonomous Vehicle Industry's Reliance on Human Remote Assistance Operators," March 31, 2026. The first US Congressional investigation into AV remote assistance operations, covering seven companies (Aurora, May Mobility, Motional, Nuro, Tesla, Waymo, Zoox). [Link](https://www.markey.senate.gov/news/press-releases/senator-markey-releases-groundbreaking-report-on-autonomous-vehicle-industrys-use-of-remote-human-operators) [PDF](docs/Markey-Remote-Back-Seat-Operators-Report-2026.pdf)
+
+[51] 智车科技 (Smart Car Technology), "Waymo拒交安全数据：七家自动驾驶巨头集体沉默 (Waymo Refuses Safety Data: Seven AV Giants Collectively Silent)," April 9, 2026. Chinese-language analysis of the Markey RAOS report, providing additional context on industry transparency challenges.
 
 ---
 

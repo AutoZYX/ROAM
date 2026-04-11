@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif">
+  <!-- ================ Background ================ -->
+  <rect width="1600" height="1100" fill="#FAFBFC"/>
+
+  <!-- ================ Title ================ -->
+  <text x="800" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2937">
+    图 3　四类远程运营架构对比
+  </text>
+  <text x="800" y="82" text-anchor="middle" font-size="17" fill="#6B7280" font-style="italic">
+    Comparison of Four Remote Operations Architectures
+  </text>
+
+  <!-- ================ Column headers ================ -->
+  <!-- Header background -->
+  <rect x="60" y="120" width="280" height="80" fill="#F3F4F6" stroke="#E5E7EB" stroke-width="1.5"/>
+  <text x="200" y="155" text-anchor="middle" font-size="17" font-weight="700" fill="#374151">维度</text>
+  <text x="200" y="180" text-anchor="middle" font-size="13" fill="#9CA3AF" font-style="italic">Dimension</text>
+
+  <!-- Waymo header -->
+  <rect x="340" y="120" width="305" height="80" fill="#1E40AF"/>
+  <text x="492" y="155" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">Waymo</text>
+  <text x="492" y="183" text-anchor="middle" font-size="14" fill="#BFDBFE">咨询模式 Advisory</text>
+
+  <!-- Tesla header -->
+  <rect x="645" y="120" width="305" height="80" fill="#C2410C"/>
+  <text x="797" y="155" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">Tesla</text>
+  <text x="797" y="183" text-anchor="middle" font-size="14" fill="#FED7AA">直接控制 Direct Control</text>
+
+  <!-- Apollo header -->
+  <rect x="950" y="120" width="305" height="80" fill="#047857"/>
+  <text x="1102" y="155" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">百度 Apollo</text>
+  <text x="1102" y="183" text-anchor="middle" font-size="14" fill="#A7F3D0">规模化运营 Scaling</text>
+
+  <!-- UAV header -->
+  <rect x="1255" y="120" width="285" height="80" fill="#6D28D9"/>
+  <text x="1397" y="155" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">UAV 行业</text>
+  <text x="1397" y="183" text-anchor="middle" font-size="14" fill="#DDD6FE">跨域参照 Cross-Domain</text>
+
+  <!-- ================ Row 1: 技术路线 ================ -->
+  <g>
+    <rect x="60" y="200" width="280" height="100" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="80" y="240" font-size="16" font-weight="700" fill="#1F2937">技术路线</text>
+    <text x="80" y="262" font-size="12" fill="#9CA3AF" font-style="italic">Technical Approach</text>
+
+    <rect x="340" y="200" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="360" y="232" font-size="14" fill="#1F2937">咨询模式：远程人员仅</text>
+    <text x="360" y="252" font-size="14" fill="#1F2937">提供情境与建议</text>
+    <text x="360" y="278" font-size="13" fill="#9CA3AF" font-style="italic">"phone-a-friend" 范式</text>
+
+    <rect x="645" y="200" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="665" y="232" font-size="14" fill="#1F2937">直接控制：远程操作员</text>
+    <text x="665" y="252" font-size="14" fill="#1F2937">可接管车辆控制</text>
+    <text x="665" y="278" font-size="13" fill="#9CA3AF" font-style="italic">仅在 ≤2 mph 时激活</text>
+
+    <rect x="950" y="200" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="970" y="232" font-size="14" fill="#1F2937">规模化部署，远程</text>
+    <text x="970" y="252" font-size="14" fill="#1F2937">干预手段不完善</text>
+    <text x="970" y="278" font-size="13" fill="#9CA3AF" font-style="italic">武汉事件暴露缺陷</text>
+
+    <rect x="1255" y="200" width="285" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="1275" y="232" font-size="14" fill="#1F2937">间接控制 + 操作员</text>
+    <text x="1275" y="252" font-size="14" fill="#1F2937">专业认证体系</text>
+    <text x="1275" y="278" font-size="13" fill="#9CA3AF" font-style="italic">35 年成熟经验</text>
+  </g>
+
+  <!-- ================ Row 2: 人车比 ================ -->
+  <g>
+    <rect x="60" y="300" width="280" height="100" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="80" y="340" font-size="16" font-weight="700" fill="#1F2937">人车比</text>
+    <text x="80" y="362" font-size="12" fill="#9CA3AF" font-style="italic">Operator-to-Vehicle Ratio</text>
+
+    <rect x="340" y="300" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="492" y="345" text-anchor="middle" font-size="32" font-weight="700" fill="#1E40AF">1 : 41</text>
+    <text x="492" y="378" text-anchor="middle" font-size="13" fill="#6B7280">3000 辆 / 70 名操作员</text>
+
+    <rect x="645" y="300" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="797" y="345" text-anchor="middle" font-size="22" font-weight="700" fill="#C2410C">未公开</text>
+    <text x="797" y="378" text-anchor="middle" font-size="13" fill="#6B7280">Markey 调查未披露</text>
+
+    <rect x="950" y="300" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="1102" y="345" text-anchor="middle" font-size="32" font-weight="700" fill="#047857">≤ 1 : 3</text>
+    <text x="1102" y="378" text-anchor="middle" font-size="13" fill="#6B7280">中国监管要求</text>
+
+    <rect x="1255" y="300" width="285" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="1397" y="345" text-anchor="middle" font-size="22" font-weight="700" fill="#6D28D9">1 : 1（中大型）</text>
+    <text x="1397" y="378" text-anchor="middle" font-size="13" fill="#6B7280">数十年技术上限</text>
+  </g>
+
+  <!-- ================ Row 3: 通信延迟 ================ -->
+  <g>
+    <rect x="60" y="400" width="280" height="100" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="80" y="440" font-size="16" font-weight="700" fill="#1F2937">通信延迟</text>
+    <text x="80" y="462" font-size="12" fill="#9CA3AF" font-style="italic">Communication Latency</text>
+
+    <rect x="340" y="400" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="360" y="432" font-size="14" fill="#1F2937">本土：</text>
+    <text x="430" y="432" font-size="15" font-weight="700" fill="#1E40AF">~150 ms</text>
+    <text x="360" y="458" font-size="14" fill="#1F2937">菲律宾：</text>
+    <text x="442" y="458" font-size="15" font-weight="700" fill="#DC2626">~250 ms</text>
+    <text x="360" y="486" font-size="13" fill="#9CA3AF" font-style="italic">跨境延迟差异显著</text>
+
+    <rect x="645" y="400" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="797" y="445" text-anchor="middle" font-size="20" font-weight="700" fill="#C2410C">未提供</text>
+    <text x="797" y="478" text-anchor="middle" font-size="13" fill="#6B7280">向 Markey 拒绝披露</text>
+
+    <rect x="950" y="400" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="1102" y="445" text-anchor="middle" font-size="18" font-weight="700" fill="#047857">未公开</text>
+    <text x="1102" y="478" text-anchor="middle" font-size="13" fill="#6B7280">无第三方独立验证</text>
+
+    <rect x="1255" y="400" width="285" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="1397" y="445" text-anchor="middle" font-size="20" font-weight="700" fill="#6D28D9">300 ms 临界</text>
+    <text x="1397" y="478" text-anchor="middle" font-size="13" fill="#6B7280">驾驶表现显著下降</text>
+  </g>
+
+  <!-- ================ Row 4: 运营规模 ================ -->
+  <g>
+    <rect x="60" y="500" width="280" height="100" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="80" y="540" font-size="16" font-weight="700" fill="#1F2937">运营规模</text>
+    <text x="80" y="562" font-size="12" fill="#9CA3AF" font-style="italic">Operating Scale</text>
+
+    <rect x="340" y="500" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="360" y="535" font-size="14" fill="#1F2937">每周 40 万+ 付费出行</text>
+    <text x="360" y="558" font-size="14" fill="#1F2937">累计 400 万英里</text>
+    <text x="360" y="580" font-size="13" fill="#9CA3AF" font-style="italic">截至 2025 年底</text>
+
+    <rect x="645" y="500" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="665" y="535" font-size="14" fill="#1F2937">奥斯汀启动 + 计划</text>
+    <text x="665" y="558" font-size="14" fill="#1F2937">扩展至若干城市</text>
+    <text x="665" y="580" font-size="13" fill="#9CA3AF" font-style="italic">2026 年 1 月转无人监管</text>
+
+    <rect x="950" y="500" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="970" y="535" font-size="14" fill="#1F2937">2025 Q4 完成</text>
+    <text x="970" y="558" font-size="14" fill="#1F2937">340 万 + 订单</text>
+    <text x="970" y="580" font-size="13" fill="#9CA3AF" font-style="italic">中国规模最大之一</text>
+
+    <rect x="1255" y="500" width="285" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="1275" y="535" font-size="14" fill="#1F2937">DJI UTC：4 万 +</text>
+    <text x="1275" y="558" font-size="14" fill="#1F2937">认证飞手</text>
+    <text x="1275" y="580" font-size="13" fill="#9CA3AF" font-style="italic">200+ 全球培训中心</text>
+  </g>
+
+  <!-- ================ Row 5: 典型教训 ================ -->
+  <g>
+    <rect x="60" y="600" width="280" height="120" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="80" y="640" font-size="16" font-weight="700" fill="#1F2937">典型教训</text>
+    <text x="80" y="662" font-size="12" fill="#9CA3AF" font-style="italic">Typical Lessons</text>
+
+    <rect x="340" y="600" width="305" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="360" y="630" font-size="14" fill="#1F2937">2025-12 旧金山断电：</text>
+    <text x="360" y="652" font-size="14" fill="#1F2937">缺乏批量召回机制，</text>
+    <text x="360" y="674" font-size="14" fill="#1F2937">应急热线等待 2h36m</text>
+    <text x="360" y="700" font-size="13" fill="#9CA3AF" font-style="italic">系统性故障难以应对</text>
+
+    <rect x="645" y="600" width="305" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="665" y="630" font-size="14" fill="#1F2937">直接控制带来法律</text>
+    <text x="665" y="652" font-size="14" fill="#1F2937">责任与延迟敏感性</text>
+    <text x="665" y="674" font-size="14" fill="#1F2937">的双重风险</text>
+    <text x="665" y="700" font-size="13" fill="#9CA3AF" font-style="italic">高速场景边界恶化</text>
+
+    <rect x="950" y="600" width="305" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="970" y="630" font-size="14" fill="#1F2937">2026-03 武汉停摆：</text>
+    <text x="970" y="652" font-size="14" fill="#1F2937">~100 辆同时熄火，</text>
+    <text x="970" y="674" font-size="14" fill="#1F2937">最终依赖交警救援</text>
+    <text x="970" y="700" font-size="13" fill="#9CA3AF" font-style="italic">单点故障扩散链条</text>
+
+    <rect x="1255" y="600" width="285" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="1275" y="630" font-size="14" fill="#1F2937">Cummings 五项教训：</text>
+    <text x="1275" y="652" font-size="14" fill="#1F2937">延迟、HMI、负荷、</text>
+    <text x="1275" y="674" font-size="14" fill="#1F2937">训练、应急降级</text>
+    <text x="1275" y="700" font-size="13" fill="#9CA3AF" font-style="italic">代际差可被压缩</text>
+  </g>
+
+  <!-- ================ Row 6: 责任边界 ================ -->
+  <g>
+    <rect x="60" y="720" width="280" height="100" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="80" y="760" font-size="16" font-weight="700" fill="#1F2937">责任边界</text>
+    <text x="80" y="782" font-size="12" fill="#9CA3AF" font-style="italic">Liability Boundary</text>
+
+    <rect x="340" y="720" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="360" y="755" font-size="14" fill="#1F2937">远程人员不构成"驾驶"</text>
+    <text x="360" y="778" font-size="14" fill="#1F2937">ADS 保留最终否决权</text>
+    <text x="360" y="800" font-size="13" fill="#9CA3AF" font-style="italic">符合 SAE J3016 主导地位</text>
+
+    <rect x="645" y="720" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="665" y="755" font-size="14" fill="#1F2937">远程操作员实质</text>
+    <text x="665" y="778" font-size="14" fill="#1F2937">承担驾驶员责任</text>
+    <text x="665" y="800" font-size="13" fill="#9CA3AF" font-style="italic">与德国 StVFernLV 呼应</text>
+
+    <rect x="950" y="720" width="305" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="970" y="755" font-size="14" fill="#1F2937">缺乏明确的法定</text>
+    <text x="970" y="778" font-size="14" fill="#1F2937">责任分配框架</text>
+    <text x="970" y="800" font-size="13" fill="#9CA3AF" font-style="italic">中国地方立法探索阶段</text>
+
+    <rect x="1255" y="720" width="285" height="100" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="1275" y="755" font-size="14" fill="#1F2937">FAA Part 107 等</text>
+    <text x="1275" y="778" font-size="14" fill="#1F2937">明确认证体系</text>
+    <text x="1275" y="800" font-size="13" fill="#9CA3AF" font-style="italic">类驾照式责任界定</text>
+  </g>
+
+  <!-- ================ Bottom summary box ================ -->
+  <g>
+    <rect x="100" y="870" width="1400" height="170" rx="8" fill="#F0F9FF" stroke="#1E40AF" stroke-width="1.5"/>
+    <text x="120" y="905" font-size="16" font-weight="700" fill="#1E40AF">关键观察</text>
+
+    <text x="120" y="935" font-size="14" fill="#1F2937">
+      其一，"咨询 vs 直接控制"的根本分歧反映了对 ADS 主导地位与人类最终责任的不同权重。
+    </text>
+    <text x="120" y="960" font-size="14" fill="#1F2937">
+      其二，1:41（Waymo）与 1:3（中国监管）之间的数量级差距，是远程运营经济性与安全性的根本张力。
+    </text>
+    <text x="120" y="985" font-size="14" fill="#1F2937">
+      其三，现有运营商均未能有效应对系统性故障场景，这是行业共同的架构性空白而非局部管理问题。
+    </text>
+    <text x="120" y="1010" font-size="14" fill="#1F2937">
+      其四，UAV 行业 35 年经验对自动驾驶具有可迁移价值，代际差可通过系统借鉴被压缩。
+    </text>
+  </g>
+
+  <!-- Data source -->
+  <text x="1500" y="1080" text-anchor="end" font-size="13" fill="#9CA3AF" font-style="italic">
+    数据来源：Markey RAOS Report (2026) · Cummings (2026) · Waymo / Apollo 公开数据
+  </text>
+</svg>

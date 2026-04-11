@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif">
+  <!-- ================ Background ================ -->
+  <rect width="1600" height="1100" fill="#FAFBFC"/>
+
+  <!-- ================ Title ================ -->
+  <text x="800" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2937">
+    图 6　ROAM 三层决策参考架构流程图
+  </text>
+  <text x="800" y="82" text-anchor="middle" font-size="17" fill="#6B7280" font-style="italic">
+    ROAM Three-Layer Decision Reference Architecture
+  </text>
+
+  <!-- ================ Defs: arrow markers ================ -->
+  <defs>
+    <marker id="arrow-dark" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0,0 12,6 0,12" fill="#374151"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0,0 12,6 0,12" fill="#D97706"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0,0 12,6 0,12" fill="#DC2626"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0,0 12,6 0,12" fill="#047857"/>
+    </marker>
+  </defs>
+
+  <!-- ================ Top: Anomaly trigger ================ -->
+  <g>
+    <rect x="600" y="120" width="400" height="70" rx="35" fill="#FFFFFF" stroke="#374151" stroke-width="2.5"/>
+    <text x="800" y="153" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2937">
+      运营异常事件触发
+    </text>
+    <text x="800" y="178" text-anchor="middle" font-size="14" fill="#6B7280" font-style="italic">
+      Anomaly Trigger
+    </text>
+  </g>
+
+  <!-- Arrow down to scenario classification -->
+  <line x1="800" y1="190" x2="800" y2="225" stroke="#374151" stroke-width="2.5" marker-end="url(#arrow-dark)"/>
+
+  <!-- ================ Scenario classification (diamond) ================ -->
+  <g>
+    <polygon points="800,235 1010,310 800,385 590,310" fill="#FFFFFF" stroke="#374151" stroke-width="2.5"/>
+    <text x="800" y="295" text-anchor="middle" font-size="17" font-weight="700" fill="#1F2937">
+      场景分类与
+    </text>
+    <text x="800" y="320" text-anchor="middle" font-size="17" font-weight="700" fill="#1F2937">
+      严重度/紧急度评估
+    </text>
+    <text x="800" y="345" text-anchor="middle" font-size="13" fill="#6B7280" font-style="italic">
+      Scenario · S0—S4 · U0—U3
+    </text>
+  </g>
+
+  <!-- ================ Three layer routing ================ -->
+  <!-- Layer 1 path (left) -->
+  <g>
+    <line x1="700" y1="370" x2="280" y2="450" stroke="#047857" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+    <text x="450" y="395" font-size="13" font-weight="600" fill="#047857">高信任 / 低紧急</text>
+  </g>
+  <!-- Layer 2 path (middle) -->
+  <g>
+    <line x1="800" y1="395" x2="800" y2="450" stroke="#D97706" stroke-width="2.5" marker-end="url(#arrow-amber)"/>
+    <text x="815" y="430" font-size="13" font-weight="600" fill="#D97706">中等信任</text>
+  </g>
+  <!-- Layer 3 path (right) -->
+  <g>
+    <line x1="900" y1="370" x2="1320" y2="450" stroke="#DC2626" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+    <text x="1050" y="395" font-size="13" font-weight="600" fill="#DC2626">硬件失效 / 极高紧急</text>
+  </g>
+
+  <!-- ================ Layer 1 (Green) ================ -->
+  <g>
+    <rect x="80" y="460" width="420" height="280" rx="10" fill="#FFFFFF" stroke="#047857" stroke-width="2.5"/>
+    <rect x="80" y="460" width="420" height="60" rx="10" fill="#047857"/>
+    <rect x="80" y="510" width="420" height="10" fill="#047857"/>
+
+    <text x="100" y="495" font-size="20" font-weight="700" fill="#FFFFFF">Layer 1　AI 自主响应</text>
+    <text x="470" y="495" text-anchor="end" font-size="22" font-weight="700" fill="#FFFFFF">≈ 70%</text>
+    <text x="100" y="540" font-size="14" font-weight="600" fill="#047857">AI Autonomous Response</text>
+
+    <text x="100" y="575" font-size="15" fill="#1F2937">由 ADS 在车端自主完成</text>
+    <text x="100" y="600" font-size="15" fill="#1F2937">无需远程人工介入</text>
+
+    <line x1="100" y1="615" x2="480" y2="615" stroke="#E5E7EB" stroke-width="1"/>
+
+    <text x="100" y="640" font-size="14" fill="#6B7280">典型处置：</text>
+    <text x="100" y="660" font-size="14" fill="#1F2937">靠边停车 · 驶入服务区 · 低速绕障</text>
+    <text x="100" y="680" font-size="14" fill="#1F2937">感知模块重启 · 乘客语音安抚</text>
+
+    <line x1="100" y1="695" x2="480" y2="695" stroke="#E5E7EB" stroke-width="1"/>
+
+    <text x="100" y="720" font-size="14" font-weight="600" fill="#047857">目标响应时间　&lt; 10 秒</text>
+  </g>
+
+  <!-- ================ Layer 2 (Amber) ================ -->
+  <g>
+    <rect x="590" y="460" width="420" height="280" rx="10" fill="#FFFFFF" stroke="#D97706" stroke-width="2.5"/>
+    <rect x="590" y="460" width="420" height="60" rx="10" fill="#D97706"/>
+    <rect x="590" y="510" width="420" height="10" fill="#D97706"/>
+
+    <text x="610" y="495" font-size="20" font-weight="700" fill="#FFFFFF">Layer 2　AI 辅助 + 人工</text>
+    <text x="980" y="495" text-anchor="end" font-size="22" font-weight="700" fill="#FFFFFF">≈ 25%</text>
+    <text x="610" y="540" font-size="14" font-weight="600" fill="#D97706">AI-Assisted + Human Confirm</text>
+
+    <text x="610" y="575" font-size="15" fill="#1F2937">ADS 生成方案+置信度</text>
+    <text x="610" y="600" font-size="15" fill="#1F2937">远程操作员审核确认或修改</text>
+
+    <line x1="610" y1="615" x2="990" y2="615" stroke="#E5E7EB" stroke-width="1"/>
+
+    <text x="610" y="640" font-size="14" fill="#6B7280">典型处置：</text>
+    <text x="610" y="660" font-size="14" fill="#1F2937">复杂路口脱困 · 交警手势解读</text>
+    <text x="610" y="680" font-size="14" fill="#1F2937">多车冲突裁决 · 报警决策</text>
+
+    <line x1="610" y1="695" x2="990" y2="695" stroke="#E5E7EB" stroke-width="1"/>
+
+    <text x="610" y="720" font-size="14" font-weight="600" fill="#D97706">目标响应时间　&lt; 3 分钟</text>
+  </g>
+
+  <!-- ================ Layer 3 (Red) ================ -->
+  <g>
+    <rect x="1100" y="460" width="420" height="280" rx="10" fill="#FFFFFF" stroke="#DC2626" stroke-width="2.5"/>
+    <rect x="1100" y="460" width="420" height="60" rx="10" fill="#DC2626"/>
+    <rect x="1100" y="510" width="420" height="10" fill="#DC2626"/>
+
+    <text x="1120" y="495" font-size="20" font-weight="700" fill="#FFFFFF">Layer 3　远程驾驶 + 派人</text>
+    <text x="1490" y="495" text-anchor="end" font-size="22" font-weight="700" fill="#FFFFFF">≈ 5%</text>
+    <text x="1120" y="540" font-size="14" font-weight="600" fill="#DC2626">Remote Driving + On-Site</text>
+
+    <text x="1120" y="575" font-size="15" fill="#1F2937">远程直接接管（≤10 km/h）</text>
+    <text x="1120" y="600" font-size="15" fill="#1F2937">或派遣线下救援团队</text>
+
+    <line x1="1120" y1="615" x2="1500" y2="615" stroke="#E5E7EB" stroke-width="1"/>
+
+    <text x="1120" y="640" font-size="14" fill="#6B7280">典型处置：</text>
+    <text x="1120" y="660" font-size="14" fill="#1F2937">车辆硬件故障 · 批量系统瘫痪</text>
+    <text x="1120" y="680" font-size="14" fill="#1F2937">事故现场处理 · 车辆起火</text>
+
+    <line x1="1120" y1="695" x2="1500" y2="695" stroke="#E5E7EB" stroke-width="1"/>
+
+    <text x="1120" y="720" font-size="14" font-weight="600" fill="#DC2626">目标响应时间　&lt; 15 分钟</text>
+  </g>
+
+  <!-- ================ Escalation arrows between layers ================ -->
+  <!-- L1 → L2 escalation -->
+  <g>
+    <path d="M 510 600 L 580 600" stroke="#374151" stroke-width="2.2" fill="none" marker-end="url(#arrow-dark)" stroke-dasharray="6,4"/>
+    <text x="545" y="588" text-anchor="middle" font-size="12" fill="#6B7280">升级</text>
+    <text x="545" y="618" text-anchor="middle" font-size="11" fill="#9CA3AF" font-style="italic">escalate</text>
+  </g>
+  <!-- L2 → L3 escalation -->
+  <g>
+    <path d="M 1020 600 L 1090 600" stroke="#374151" stroke-width="2.2" fill="none" marker-end="url(#arrow-dark)" stroke-dasharray="6,4"/>
+    <text x="1055" y="588" text-anchor="middle" font-size="12" fill="#6B7280">升级</text>
+    <text x="1055" y="618" text-anchor="middle" font-size="11" fill="#9CA3AF" font-style="italic">escalate</text>
+  </g>
+
+  <!-- ================ Bottom: convergence to outcome ================ -->
+  <!-- Arrows from each layer down -->
+  <g stroke="#374151" stroke-width="2.2" fill="none">
+    <line x1="290" y1="745" x2="290" y2="800" marker-end="url(#arrow-dark)"/>
+    <line x1="800" y1="745" x2="800" y2="800" marker-end="url(#arrow-dark)"/>
+    <line x1="1310" y1="745" x2="1310" y2="800" marker-end="url(#arrow-dark)"/>
+  </g>
+
+  <!-- Outcome verification box -->
+  <g>
+    <rect x="500" y="810" width="600" height="80" rx="8" fill="#F3F4F6" stroke="#6B7280" stroke-width="2"/>
+    <text x="800" y="843" text-anchor="middle" font-size="18" font-weight="700" fill="#1F2937">
+      处置结果验证 · 审计日志记录
+    </text>
+    <text x="800" y="870" text-anchor="middle" font-size="13" fill="#6B7280" font-style="italic">
+      Outcome Verification · Audit Logging
+    </text>
+  </g>
+  <!-- Lines from outer layers to center box -->
+  <g stroke="#374151" stroke-width="2.2" fill="none">
+    <path d="M 290 800 L 290 850 L 500 850" marker-end="url(#arrow-dark)"/>
+    <path d="M 1310 800 L 1310 850 L 1100 850" marker-end="url(#arrow-dark)"/>
+  </g>
+
+  <!-- ================ Bottom: Trust calibration mechanism note ================ -->
+  <g>
+    <rect x="80" y="930" width="1440" height="135" rx="10" fill="#EFF6FF" stroke="#1E40AF" stroke-width="1.8"/>
+    <text x="100" y="965" font-size="17" font-weight="700" fill="#1E40AF">
+      核心机制：时间约束 + 信任升级 双重分级兜底
+    </text>
+    <text x="100" y="987" font-size="13" fill="#6B7280" font-style="italic">
+      Dual-Mechanism Fallback: Time Constraint + Trust-Driven Escalation
+    </text>
+
+    <text x="100" y="1015" font-size="14" fill="#1F2937">
+      其一，每层均设有最长响应时间，超时自动升级至下一层；
+    </text>
+    <text x="100" y="1037" font-size="14" fill="#1F2937">
+      其二，借鉴 C-TRAIL 双重信任机制（常识信任 + 运动学信任），AI 信任度低于阈值时主动升级；
+    </text>
+    <text x="100" y="1059" font-size="14" fill="#1F2937">
+      其三，所有决策均记录至审计日志，支撑事后审查与合规论证。
+    </text>
+  </g>
+
+  <!-- Data source -->
+  <text x="1500" y="1090" text-anchor="end" font-size="13" fill="#9CA3AF" font-style="italic">
+    来源：ROAM architecture/reference-architecture.md
+  </text>
+</svg>

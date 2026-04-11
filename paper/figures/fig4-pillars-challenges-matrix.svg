@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif">
+  <!-- ================ Background ================ -->
+  <rect width="1600" height="1100" fill="#FAFBFC"/>
+
+  <!-- ================ Title ================ -->
+  <text x="800" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2937">
+    图 4　六大技术支柱与六大关键挑战归因矩阵
+  </text>
+  <text x="800" y="82" text-anchor="middle" font-size="17" fill="#6B7280" font-style="italic">
+    Six Technology Pillars × Six Key Challenges Attribution Matrix
+  </text>
+
+  <!-- ================ Top-left corner empty cell ================ -->
+  <rect x="80" y="130" width="380" height="100" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="270" y="170" text-anchor="middle" font-size="14" fill="#9CA3AF" font-style="italic">
+    技术支柱 ↓　　挑战 →
+  </text>
+  <text x="270" y="195" text-anchor="middle" font-size="13" fill="#9CA3AF" font-style="italic">
+    Pillars ↓　　Challenges →
+  </text>
+
+  <!-- ================ Six challenge column headers ================ -->
+  <g>
+    <!-- C1: 系统性故障 -->
+    <rect x="460" y="130" width="170" height="100" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+    <text x="545" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#991B1B">挑战 1</text>
+    <text x="545" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2937">系统性故障</text>
+    <text x="545" y="207" text-anchor="middle" font-size="13" fill="#1F2937">应急能力缺失</text>
+
+    <!-- C2: 概念分歧 -->
+    <rect x="630" y="130" width="170" height="100" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+    <text x="715" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#92400E">挑战 2</text>
+    <text x="715" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2937">远程协助/驾驶</text>
+    <text x="715" y="207" text-anchor="middle" font-size="13" fill="#1F2937">概念分歧</text>
+
+    <!-- C3: 人车比 -->
+    <rect x="800" y="130" width="170" height="100" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+    <text x="885" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#92400E">挑战 3</text>
+    <text x="885" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2937">人车比经济性</text>
+    <text x="885" y="207" text-anchor="middle" font-size="13" fill="#1F2937">数量级差距</text>
+
+    <!-- C4: 通信延迟 -->
+    <rect x="970" y="130" width="170" height="100" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+    <text x="1055" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#991B1B">挑战 4</text>
+    <text x="1055" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2937">通信延迟与</text>
+    <text x="1055" y="207" text-anchor="middle" font-size="13" fill="#1F2937">跨境运营</text>
+
+    <!-- C5: 法律责任 -->
+    <rect x="1140" y="130" width="170" height="100" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+    <text x="1225" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#92400E">挑战 5</text>
+    <text x="1225" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2937">法律责任</text>
+    <text x="1225" y="207" text-anchor="middle" font-size="13" fill="#1F2937">界定不清</text>
+
+    <!-- C6: 自然驾驶基准 -->
+    <rect x="1310" y="130" width="170" height="100" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+    <text x="1395" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#92400E">挑战 6</text>
+    <text x="1395" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1F2937">自然驾驶</text>
+    <text x="1395" y="207" text-anchor="middle" font-size="13" fill="#1F2937">基准缺失</text>
+  </g>
+
+  <!-- ================ Six pillar rows ================ -->
+  <!-- Row 1: 感知与决策 -->
+  <g>
+    <rect x="80" y="230" width="380" height="120" fill="#EEF2FF" stroke="#1E40AF" stroke-width="1.5"/>
+    <text x="100" y="265" font-size="16" font-weight="700" fill="#1E40AF">支柱 1　自动驾驶感知与决策</text>
+    <text x="100" y="287" font-size="13" fill="#6B7280" font-style="italic">Perception &amp; Decision</text>
+    <text x="100" y="312" font-size="13" fill="#374151">异常自识别 · 不确定性量化</text>
+    <text x="100" y="332" font-size="13" fill="#374151">ODD 监控 · SOTIF 触发条件</text>
+
+    <!-- Cells C1-C6 for P1 -->
+    <rect x="460" y="230" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="545" cy="290" r="22" fill="#DC2626"/>
+    <text x="545" y="298" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">●</text>
+
+    <rect x="630" y="230" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="800" y="230" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="970" y="230" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="1140" y="230" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="1310" y="230" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="1395" cy="290" r="22" fill="#DC2626"/>
+    <text x="1395" y="298" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">●</text>
+  </g>
+
+  <!-- Row 2: 远程遥控 -->
+  <g>
+    <rect x="80" y="350" width="380" height="120" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.5"/>
+    <text x="100" y="385" font-size="16" font-weight="700" fill="#C2410C">支柱 2　远程遥控与人机交互</text>
+    <text x="100" y="407" font-size="13" fill="#6B7280" font-style="italic">Teleoperation &amp; HMI</text>
+    <text x="100" y="432" font-size="13" fill="#374151">低延迟驾驶 · waypoint 规划</text>
+    <text x="100" y="452" font-size="13" fill="#374151">情境感知 · HMI 设计</text>
+
+    <rect x="460" y="350" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="630" y="350" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="715" cy="410" r="22" fill="#DC2626"/>
+    <text x="715" y="418" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">●</text>
+
+    <rect x="800" y="350" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="970" y="350" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="1140" y="350" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="1310" y="350" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  </g>
+
+  <!-- Row 3: 无线通信 -->
+  <g>
+    <rect x="80" y="470" width="380" height="120" fill="#ECFDF5" stroke="#047857" stroke-width="1.5"/>
+    <text x="100" y="505" font-size="16" font-weight="700" fill="#047857">支柱 3　无线通信网络</text>
+    <text x="100" y="527" font-size="13" fill="#6B7280" font-style="italic">Wireless Communication</text>
+    <text x="100" y="552" font-size="13" fill="#374151">5G URLLC · 网络切片</text>
+    <text x="100" y="572" font-size="13" fill="#374151">C-V2X · LEO 卫星备份</text>
+
+    <rect x="460" y="470" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="630" y="470" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="800" y="470" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="970" y="470" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="1055" cy="530" r="22" fill="#DC2626"/>
+    <text x="1055" y="538" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">●</text>
+
+    <rect x="1140" y="470" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="1310" y="470" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  </g>
+
+  <!-- Row 4: AI 信任 -->
+  <g>
+    <rect x="80" y="590" width="380" height="120" fill="#F5F3FF" stroke="#6D28D9" stroke-width="1.5"/>
+    <text x="100" y="625" font-size="16" font-weight="700" fill="#6D28D9">支柱 4　AI 辅助决策与信任校准</text>
+    <text x="100" y="647" font-size="13" fill="#6B7280" font-style="italic">AI Decision &amp; Trust</text>
+    <text x="100" y="672" font-size="13" fill="#374151">置信度量化 · 自动升级</text>
+    <text x="100" y="692" font-size="13" fill="#374151">可信 AI 治理</text>
+
+    <rect x="460" y="590" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="630" y="590" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="800" y="590" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="885" cy="650" r="22" fill="#F59E0B"/>
+    <text x="885" y="657" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">◐</text>
+
+    <rect x="970" y="590" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="1140" y="590" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="1310" y="590" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  </g>
+
+  <!-- Row 5: 网络安全 -->
+  <g>
+    <rect x="80" y="710" width="380" height="120" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.5"/>
+    <text x="100" y="745" font-size="16" font-weight="700" fill="#DC2626">支柱 5　网络安全与数据保护</text>
+    <text x="100" y="767" font-size="13" fill="#6B7280" font-style="italic">Cybersecurity &amp; Data</text>
+    <text x="100" y="792" font-size="13" fill="#374151">整车安全 · OTA 安全</text>
+    <text x="100" y="812" font-size="13" fill="#374151">数据主权 · 隐私保护</text>
+
+    <rect x="460" y="710" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="630" y="710" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="800" y="710" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="970" y="710" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="1140" y="710" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="1225" cy="770" r="22" fill="#F59E0B"/>
+    <text x="1225" y="777" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">◐</text>
+
+    <rect x="1310" y="710" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  </g>
+
+  <!-- Row 6: 运营组织 -->
+  <g>
+    <rect x="80" y="830" width="380" height="120" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+    <text x="100" y="865" font-size="16" font-weight="700" fill="#D97706">支柱 6　运营组织与人因工程</text>
+    <text x="100" y="887" font-size="13" fill="#6B7280" font-style="italic">Operations &amp; Human Factors</text>
+    <text x="100" y="912" font-size="13" fill="#374151">操作员认证 · 工作负荷</text>
+    <text x="100" y="932" font-size="13" fill="#374151">跨时区协同 · 应急组织</text>
+
+    <rect x="460" y="830" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="545" cy="890" r="22" fill="#DC2626"/>
+    <text x="545" y="898" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">●</text>
+
+    <rect x="630" y="830" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="800" y="830" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="885" cy="890" r="22" fill="#DC2626"/>
+    <text x="885" y="898" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">●</text>
+
+    <rect x="970" y="830" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+
+    <rect x="1140" y="830" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+    <circle cx="1225" cy="890" r="22" fill="#DC2626"/>
+    <text x="1225" y="898" text-anchor="middle" font-size="20" font-weight="700" fill="#FFFFFF">●</text>
+
+    <rect x="1310" y="830" width="170" height="120" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  </g>
+
+  <!-- ================ Legend ================ -->
+  <g>
+    <rect x="100" y="980" width="1400" height="80" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+
+    <text x="120" y="1010" font-size="15" font-weight="700" fill="#1F2937">归因关系：</text>
+
+    <circle cx="240" cy="1005" r="13" fill="#DC2626"/>
+    <text x="263" y="1010" font-size="14" fill="#374151">主要归因（核心成因）</text>
+
+    <circle cx="450" cy="1005" r="13" fill="#F59E0B"/>
+    <text x="473" y="1010" font-size="14" fill="#374151">次要归因（协同成因）</text>
+
+    <text x="120" y="1042" font-size="13" fill="#6B7280" font-style="italic">
+      关键观察：六项挑战中绝大多数同时跨越多个技术支柱，说明单支柱视角不足以应对，需要参考架构进行整合。
+    </text>
+  </g>
+
+  <!-- Data source -->
+  <text x="1500" y="1080" text-anchor="end" font-size="13" fill="#9CA3AF" font-style="italic">
+    来源：本文第 6 章六大挑战分析
+  </text>
+</svg>

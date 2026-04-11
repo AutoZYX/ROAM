@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif">
+  <!-- ================ Background ================ -->
+  <rect width="1600" height="1100" fill="#FAFBFC"/>
+
+  <!-- ================ Title ================ -->
+  <text x="800" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2937">
+    图 2　L4 自动驾驶十种运营模式分类矩阵
+  </text>
+  <text x="800" y="82" text-anchor="middle" font-size="17" fill="#6B7280" font-style="italic">
+    Ten Operating Models for L4 Autonomous Mobility
+  </text>
+
+  <!-- ================ Lane 1: 商业运营 (Commercial) - Blue ================ -->
+  <g>
+    <rect x="80" y="120" width="1440" height="180" rx="8" fill="#EEF2FF" opacity="0.5"/>
+    <rect x="80" y="120" width="6" height="180" fill="#1E40AF"/>
+    <text x="105" y="148" font-size="20" font-weight="700" fill="#1E40AF">一、商业运营</text>
+    <text x="105" y="170" font-size="14" fill="#6B7280" font-style="italic">Commercial Operations</text>
+
+    <!-- M1 Card -->
+    <g>
+      <rect x="290" y="160" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.8"/>
+      <rect x="290" y="160" width="380" height="38" rx="6" fill="#1E40AF"/>
+      <rect x="290" y="190" width="380" height="8" fill="#1E40AF"/>
+      <text x="310" y="186" font-size="17" font-weight="700" fill="#FFFFFF">M1　Robotaxi 运营商车队</text>
+      <text x="310" y="222" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="430" y="222" font-size="14" fill="#1F2937">运营商自建 ROC</text>
+      <text x="310" y="246" font-size="14" fill="#6B7280">代表：</text>
+      <text x="380" y="246" font-size="14" fill="#1F2937">Waymo · Apollo Go · Pony.ai</text>
+      <text x="310" y="270" font-size="13" fill="#9CA3AF" font-style="italic">全栈一体化责任</text>
+    </g>
+
+    <!-- M2 Card -->
+    <g>
+      <rect x="700" y="160" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.8"/>
+      <rect x="700" y="160" width="380" height="38" rx="6" fill="#1E40AF"/>
+      <rect x="700" y="190" width="380" height="8" fill="#1E40AF"/>
+      <text x="720" y="186" font-size="17" font-weight="700" fill="#FFFFFF">M2　OEM 直营 Robotaxi 车队</text>
+      <text x="720" y="222" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="840" y="222" font-size="14" fill="#1F2937">OEM 自建 ROC</text>
+      <text x="720" y="246" font-size="14" fill="#6B7280">代表：</text>
+      <text x="790" y="246" font-size="14" fill="#1F2937">Tesla Robotaxi · Zeekr Mobility</text>
+      <text x="720" y="270" font-size="13" fill="#9CA3AF" font-style="italic">品牌声誉与安全事件强绑定</text>
+    </g>
+
+    <!-- M3 Card -->
+    <g>
+      <rect x="1110" y="160" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.8"/>
+      <rect x="1110" y="160" width="380" height="38" rx="6" fill="#1E40AF"/>
+      <rect x="1110" y="190" width="380" height="8" fill="#1E40AF"/>
+      <text x="1130" y="186" font-size="17" font-weight="700" fill="#FFFFFF">M3　车队即服务（FaaS）</text>
+      <text x="1130" y="222" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="1250" y="222" font-size="14" fill="#1F2937">平台 + 车队主</text>
+      <text x="1130" y="246" font-size="14" fill="#6B7280">代表：</text>
+      <text x="1200" y="246" font-size="14" fill="#1F2937">Hertz × AV · 租车公司转型</text>
+      <text x="1130" y="270" font-size="13" fill="#9CA3AF" font-style="italic">所有权与运营权分离</text>
+    </g>
+  </g>
+
+  <!-- ================ Lane 2: 个人所有 (Personal Ownership) - Red - HIGHLIGHTED ================ -->
+  <g>
+    <rect x="80" y="320" width="1440" height="180" rx="8" fill="#FEF2F2" opacity="0.55"/>
+    <rect x="80" y="320" width="6" height="180" fill="#DC2626"/>
+    <text x="105" y="348" font-size="20" font-weight="700" fill="#DC2626">二、个人所有</text>
+    <text x="105" y="370" font-size="14" fill="#6B7280" font-style="italic">Personal Ownership</text>
+    <text x="105" y="395" font-size="12" fill="#991B1B">★ 关键转变：OEM 服务化</text>
+    <text x="105" y="412" font-size="12" fill="#991B1B">★ Manufacturer →</text>
+    <text x="105" y="427" font-size="12" fill="#991B1B">　 Service Provider</text>
+
+    <!-- M4 Card - Highlighted -->
+    <g>
+      <rect x="290" y="360" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#DC2626" stroke-width="2.5"/>
+      <rect x="290" y="360" width="380" height="38" rx="6" fill="#DC2626"/>
+      <rect x="290" y="390" width="380" height="8" fill="#DC2626"/>
+      <text x="310" y="386" font-size="17" font-weight="700" fill="#FFFFFF">M4　个人所有 + OEM 订阅</text>
+      <text x="310" y="422" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="430" y="422" font-size="14" font-weight="600" fill="#DC2626">OEM（服务化）</text>
+      <text x="310" y="446" font-size="14" fill="#6B7280">代表：</text>
+      <text x="380" y="446" font-size="14" fill="#1F2937">Tesla FSD 订阅 · 蔚来订阅</text>
+      <text x="310" y="470" font-size="13" fill="#9CA3AF" font-style="italic">订阅状态异常 · 数据所有权</text>
+    </g>
+
+    <!-- M5 Card - Highlighted -->
+    <g>
+      <rect x="700" y="360" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#DC2626" stroke-width="2.5"/>
+      <rect x="700" y="360" width="380" height="38" rx="6" fill="#DC2626"/>
+      <rect x="700" y="390" width="380" height="8" fill="#DC2626"/>
+      <text x="720" y="386" font-size="17" font-weight="700" fill="#FFFFFF">M5　个人所有 + 闲时共享</text>
+      <text x="720" y="422" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="840" y="422" font-size="14" font-weight="600" fill="#DC2626">动态切换（OEM/平台）</text>
+      <text x="720" y="446" font-size="14" fill="#6B7280">代表：</text>
+      <text x="790" y="446" font-size="14" fill="#1F2937">Tesla Robotaxi 网络愿景</text>
+      <text x="720" y="470" font-size="13" fill="#9CA3AF" font-style="italic">★ 全新异常类：所有权切换冲突</text>
+    </g>
+
+    <!-- M6 Card - Highlighted -->
+    <g>
+      <rect x="1110" y="360" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#DC2626" stroke-width="2.5"/>
+      <rect x="1110" y="360" width="380" height="38" rx="6" fill="#DC2626"/>
+      <rect x="1110" y="390" width="380" height="8" fill="#DC2626"/>
+      <text x="1130" y="386" font-size="17" font-weight="700" fill="#FFFFFF">M6　纯私人 L4 车辆</text>
+      <text x="1130" y="422" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="1250" y="422" font-size="14" font-weight="600" fill="#DC2626">OEM + 车主兜底</text>
+      <text x="1130" y="446" font-size="14" fill="#6B7280">代表：</text>
+      <text x="1200" y="446" font-size="14" fill="#1F2937">Mercedes DRIVE PILOT</text>
+      <text x="1130" y="470" font-size="13" fill="#9CA3AF" font-style="italic">高端客户期望管理</text>
+    </g>
+  </g>
+
+  <!-- ================ Lane 3: 公共交通 (Public Transit) - Green ================ -->
+  <g>
+    <rect x="80" y="520" width="1440" height="180" rx="8" fill="#ECFDF5" opacity="0.55"/>
+    <rect x="80" y="520" width="6" height="180" fill="#047857"/>
+    <text x="105" y="548" font-size="20" font-weight="700" fill="#047857">三、公共交通</text>
+    <text x="105" y="570" font-size="14" fill="#6B7280" font-style="italic">Public Transit</text>
+
+    <!-- M7 Card -->
+    <g>
+      <rect x="495" y="560" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#047857" stroke-width="1.8"/>
+      <rect x="495" y="560" width="380" height="38" rx="6" fill="#047857"/>
+      <rect x="495" y="590" width="380" height="8" fill="#047857"/>
+      <text x="515" y="586" font-size="17" font-weight="700" fill="#FFFFFF">M7　L4 公交巴士</text>
+      <text x="515" y="622" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="635" y="622" font-size="14" fill="#1F2937">公交公司 + 技术方双责任</text>
+      <text x="515" y="646" font-size="14" fill="#6B7280">代表：</text>
+      <text x="585" y="646" font-size="14" fill="#1F2937">轻舟 Robobus · 宇通 L4 巴士</text>
+      <text x="515" y="670" font-size="13" fill="#9CA3AF" font-style="italic">多乘客应急 · 大客流停靠</text>
+    </g>
+
+    <!-- M8 Card -->
+    <g>
+      <rect x="905" y="560" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#047857" stroke-width="1.8"/>
+      <rect x="905" y="560" width="380" height="38" rx="6" fill="#047857"/>
+      <rect x="905" y="590" width="380" height="8" fill="#047857"/>
+      <text x="925" y="586" font-size="17" font-weight="700" fill="#FFFFFF">M8　L4 微循环接驳</text>
+      <text x="925" y="622" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="1045" y="622" font-size="14" fill="#1F2937">运营方（委托技术方支持）</text>
+      <text x="925" y="646" font-size="14" fill="#6B7280">代表：</text>
+      <text x="995" y="646" font-size="14" fill="#1F2937">园区 / 景区 / 地铁接驳</text>
+      <text x="925" y="670" font-size="13" fill="#9CA3AF" font-style="italic">L1 自主率可达 85% 以上</text>
+    </g>
+  </g>
+
+  <!-- ================ Lane 4: 专用环境 (Specialized) - Purple ================ -->
+  <g>
+    <rect x="80" y="720" width="1440" height="180" rx="8" fill="#F5F3FF" opacity="0.55"/>
+    <rect x="80" y="720" width="6" height="180" fill="#6D28D9"/>
+    <text x="105" y="748" font-size="20" font-weight="700" fill="#6D28D9">四、专用环境</text>
+    <text x="105" y="770" font-size="14" fill="#6B7280" font-style="italic">Specialized Environments</text>
+
+    <!-- M9 Card -->
+    <g>
+      <rect x="495" y="760" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#6D28D9" stroke-width="1.8"/>
+      <rect x="495" y="760" width="380" height="38" rx="6" fill="#6D28D9"/>
+      <rect x="495" y="790" width="380" height="8" fill="#6D28D9"/>
+      <text x="515" y="786" font-size="17" font-weight="700" fill="#FFFFFF">M9　无人配送（末端物流）</text>
+      <text x="515" y="822" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="635" y="822" font-size="14" fill="#1F2937">物流企业自建 ROC</text>
+      <text x="515" y="846" font-size="14" fill="#6B7280">代表：</text>
+      <text x="585" y="846" font-size="14" fill="#1F2937">美团 · 京东 · Nuro · Starship</text>
+      <text x="515" y="870" font-size="13" fill="#9CA3AF" font-style="italic">无乘客 · L3 响应可放宽</text>
+    </g>
+
+    <!-- M10 Card -->
+    <g>
+      <rect x="905" y="760" width="380" height="130" rx="6" fill="#FFFFFF" stroke="#6D28D9" stroke-width="1.8"/>
+      <rect x="905" y="760" width="380" height="38" rx="6" fill="#6D28D9"/>
+      <rect x="905" y="790" width="380" height="8" fill="#6D28D9"/>
+      <text x="925" y="786" font-size="17" font-weight="700" fill="#FFFFFF">M10　特定环境专用</text>
+      <text x="925" y="822" font-size="14" fill="#6B7280">远程运营责任：</text>
+      <text x="1045" y="822" font-size="14" fill="#1F2937">集成商 + 客户企业</text>
+      <text x="925" y="846" font-size="14" fill="#6B7280">代表：</text>
+      <text x="995" y="846" font-size="14" fill="#1F2937">矿区 · 港口 · 机场 · 农场</text>
+      <text x="925" y="870" font-size="13" fill="#9CA3AF" font-style="italic">L1 自主率可达 90% 以上</text>
+    </g>
+  </g>
+
+  <!-- ================ Bottom: Three Dimensions Legend ================ -->
+  <g>
+    <rect x="100" y="940" width="1400" height="100" rx="8" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="800" y="970" text-anchor="middle" font-size="16" font-weight="700" fill="#1F2937">
+      分类维度：车辆所有权（who owns）× 服务提供方（who serves）× 使用场景（for what）
+    </text>
+    <text x="800" y="998" text-anchor="middle" font-size="14" fill="#4B5563">
+      其中 M4—M6 模式下，OEM 必须从制造商角色升级为服务提供者，承担 7×24 小时远程运营支持
+    </text>
+    <text x="800" y="1020" text-anchor="middle" font-size="13" fill="#9CA3AF" font-style="italic">
+      OEMs in M4—M6 must transition from Manufacturers to Service Providers
+    </text>
+  </g>
+
+  <!-- Data source -->
+  <text x="1500" y="1080" text-anchor="end" font-size="13" fill="#9CA3AF" font-style="italic">
+    来源：ROAM 开源项目 taxonomy/operating-models-v1.0.md
+  </text>
+</svg>

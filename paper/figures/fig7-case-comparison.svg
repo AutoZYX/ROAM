@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif">
+  <!-- ================ Background ================ -->
+  <rect width="1600" height="1200" fill="#FAFBFC"/>
+
+  <!-- ================ Title ================ -->
+  <text x="800" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2937">
+    图 7　武汉萝卜快跑与旧金山 Waymo 事件 ROAM 诊断对比
+  </text>
+  <text x="800" y="82" text-anchor="middle" font-size="17" fill="#6B7280" font-style="italic">
+    ROAM Diagnostic Comparison: Wuhan Apollo vs. SF Waymo Systemic Failures
+  </text>
+
+  <!-- ================ Two case headers ================ -->
+  <!-- Wuhan header -->
+  <g>
+    <rect x="60" y="120" width="740" height="100" rx="8" fill="#1E40AF"/>
+    <text x="430" y="158" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">
+      武汉萝卜快跑停摆事件
+    </text>
+    <text x="430" y="188" text-anchor="middle" font-size="15" fill="#BFDBFE">
+      2026-03-31　约 100 辆 L4 车辆在高架同时熄火
+    </text>
+    <text x="430" y="210" text-anchor="middle" font-size="13" fill="#BFDBFE" font-style="italic">
+      Wuhan Apollo Go Mass Shutdown
+    </text>
+  </g>
+
+  <!-- SF Waymo header -->
+  <g>
+    <rect x="800" y="120" width="740" height="100" rx="8" fill="#C2410C"/>
+    <text x="1170" y="158" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">
+      旧金山 Waymo 断电事件
+    </text>
+    <text x="1170" y="188" text-anchor="middle" font-size="15" fill="#FED7AA">
+      2025-12-13　PG&amp;E 电网故障致 20+ 车辆瘫痪
+    </text>
+    <text x="1170" y="210" text-anchor="middle" font-size="13" fill="#FED7AA" font-style="italic">
+      San Francisco Waymo Blackout
+    </text>
+  </g>
+
+  <!-- ================ Row: Scenario Encoding ================ -->
+  <g>
+    <rect x="60" y="240" width="740" height="100" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="80" y="270" font-size="14" font-weight="700" fill="#6B7280">ROAM 场景编码　Scenario Code</text>
+    <text x="80" y="305" font-size="15" fill="#1F2937">
+      主要：<tspan font-weight="700" fill="#1E40AF">A1</tspan> 云端/网络批量失联
+    </text>
+    <text x="80" y="328" font-size="15" fill="#1F2937">
+      次要：<tspan font-weight="700" fill="#1E40AF">C1</tspan> 路中停车 ·
+      <tspan font-weight="700" fill="#1E40AF">F1</tspan> 乘客被困
+    </text>
+    <text x="780" y="328" text-anchor="end" font-size="13" fill="#6B7280">严重度 S3 / 紧急度 U3</text>
+
+    <rect x="800" y="240" width="740" height="100" rx="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1.5"/>
+    <text x="820" y="270" font-size="14" font-weight="700" fill="#6B7280">ROAM 场景编码　Scenario Code</text>
+    <text x="820" y="305" font-size="15" fill="#1F2937">
+      主要：<tspan font-weight="700" fill="#C2410C">A3</tspan> 区域性断电
+    </text>
+    <text x="820" y="328" font-size="15" fill="#1F2937">
+      次要：<tspan font-weight="700" fill="#C2410C">A1</tspan> 网络失联 ·
+      <tspan font-weight="700" fill="#C2410C">E3</tspan> 应急车辆冲突
+    </text>
+    <text x="1520" y="328" text-anchor="end" font-size="13" fill="#6B7280">严重度 S3 / 紧急度 U1</text>
+  </g>
+
+  <!-- ================ Three-layer failure analysis ================ -->
+  <text x="800" y="380" text-anchor="middle" font-size="20" font-weight="700" fill="#1F2937">
+    三层决策架构失效点诊断
+  </text>
+  <text x="800" y="402" text-anchor="middle" font-size="13" fill="#9CA3AF" font-style="italic">
+    Three-Layer Decision Architecture Failure Diagnosis
+  </text>
+
+  <!-- Layer 1 row -->
+  <g>
+    <rect x="60" y="420" width="120" height="120" rx="6" fill="#047857"/>
+    <text x="120" y="475" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">Layer 1</text>
+    <text x="120" y="500" text-anchor="middle" font-size="13" fill="#FFFFFF">AI 自主</text>
+    <text x="120" y="520" text-anchor="middle" font-size="11" fill="#A7F3D0" font-style="italic">≈ 70%</text>
+
+    <!-- Wuhan L1 -->
+    <rect x="200" y="420" width="600" height="120" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.8"/>
+    <text x="220" y="450" font-size="22" font-weight="700" fill="#DC2626">✕</text>
+    <text x="255" y="450" font-size="15" font-weight="700" fill="#991B1B">完全失效</text>
+    <text x="220" y="480" font-size="14" fill="#1F2937">未能自主完成最小风险动作</text>
+    <text x="220" y="503" font-size="14" fill="#1F2937">车辆集体停滞而非安全驶离主干道</text>
+    <text x="220" y="526" font-size="13" fill="#9CA3AF" font-style="italic">缺乏对系统性故障的自识别能力</text>
+
+    <!-- SF L1 -->
+    <rect x="820" y="420" width="720" height="120" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.8"/>
+    <text x="840" y="450" font-size="22" font-weight="700" fill="#D97706">◐</text>
+    <text x="875" y="450" font-size="15" font-weight="700" fill="#92400E">部分生效</text>
+    <text x="840" y="480" font-size="14" fill="#1F2937">单车执行 MRM 靠边停车</text>
+    <text x="840" y="503" font-size="14" fill="#1F2937">但无法群体协调，车队仍滞留</text>
+    <text x="840" y="526" font-size="13" fill="#9CA3AF" font-style="italic">单车策略无法应对群体级故障</text>
+  </g>
+
+  <!-- Layer 2 row -->
+  <g>
+    <rect x="60" y="550" width="120" height="120" rx="6" fill="#D97706"/>
+    <text x="120" y="605" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">Layer 2</text>
+    <text x="120" y="630" text-anchor="middle" font-size="13" fill="#FFFFFF">AI + 人工</text>
+    <text x="120" y="650" text-anchor="middle" font-size="11" fill="#FED7AA" font-style="italic">≈ 25%</text>
+
+    <!-- Wuhan L2 -->
+    <rect x="200" y="550" width="600" height="120" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.8"/>
+    <text x="220" y="580" font-size="22" font-weight="700" fill="#DC2626">✕</text>
+    <text x="255" y="580" font-size="15" font-weight="700" fill="#991B1B">完全失效</text>
+    <text x="220" y="610" font-size="14" fill="#1F2937">云端与 ROC 同时失联</text>
+    <text x="220" y="633" font-size="14" fill="#1F2937">远程操作员无可用信道</text>
+    <text x="220" y="656" font-size="13" fill="#9CA3AF" font-style="italic">通信栈共因失效</text>
+
+    <!-- SF L2 -->
+    <rect x="820" y="550" width="720" height="120" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.8"/>
+    <text x="840" y="580" font-size="22" font-weight="700" fill="#DC2626">✕</text>
+    <text x="875" y="580" font-size="15" font-weight="700" fill="#991B1B">完全失效</text>
+    <text x="840" y="610" font-size="14" fill="#1F2937">通信中断导致 ROC 视频流丢失</text>
+    <text x="840" y="633" font-size="14" fill="#1F2937">远程协助通道无法建立</text>
+    <text x="840" y="656" font-size="13" fill="#9CA3AF" font-style="italic">外部基础设施依赖被击穿</text>
+  </g>
+
+  <!-- Layer 3 row -->
+  <g>
+    <rect x="60" y="680" width="120" height="120" rx="6" fill="#DC2626"/>
+    <text x="120" y="735" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">Layer 3</text>
+    <text x="120" y="760" text-anchor="middle" font-size="13" fill="#FFFFFF">远程驾驶</text>
+    <text x="120" y="780" text-anchor="middle" font-size="11" fill="#FECACA" font-style="italic">≈ 5%</text>
+
+    <!-- Wuhan L3 -->
+    <rect x="200" y="680" width="600" height="120" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.8"/>
+    <text x="220" y="710" font-size="22" font-weight="700" fill="#DC2626">✕</text>
+    <text x="255" y="710" font-size="15" font-weight="700" fill="#991B1B">完全失效</text>
+    <text x="220" y="740" font-size="14" fill="#1F2937">缺乏专业本地救援团队</text>
+    <text x="220" y="763" font-size="14" fill="#1F2937">最终依靠交警逐车到场处置</text>
+    <text x="220" y="786" font-size="13" fill="#9CA3AF" font-style="italic">无制度化应急联动</text>
+
+    <!-- SF L3 -->
+    <rect x="820" y="680" width="720" height="120" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.8"/>
+    <text x="840" y="710" font-size="22" font-weight="700" fill="#D97706">◐</text>
+    <text x="875" y="710" font-size="15" font-weight="700" fill="#92400E">部分触发</text>
+    <text x="840" y="740" font-size="14" fill="#1F2937">向城市应急服务转接</text>
+    <text x="840" y="763" font-size="14" fill="#1F2937">但无法覆盖所有车辆</text>
+    <text x="840" y="786" font-size="13" fill="#9CA3AF" font-style="italic">应急热线累计等待 2h36m</text>
+  </g>
+
+  <!-- ================ KPI quantification row ================ -->
+  <g>
+    <rect x="60" y="820" width="740" height="170" rx="6" fill="#F9FAFB" stroke="#1E40AF" stroke-width="1.5"/>
+    <text x="80" y="855" font-size="16" font-weight="700" fill="#1E40AF">KPI 量化对比　KPI Quantification</text>
+
+    <text x="80" y="888" font-size="14" fill="#6B7280">MTTR：</text>
+    <text x="160" y="888" font-size="16" font-weight="700" fill="#DC2626">~120 分钟</text>
+    <text x="285" y="888" font-size="13" fill="#9CA3AF">（超出 L3 目标 8 倍）</text>
+
+    <text x="80" y="916" font-size="14" fill="#6B7280">AI 自主处置率：</text>
+    <text x="220" y="916" font-size="16" font-weight="700" fill="#DC2626">≈ 0%</text>
+
+    <text x="80" y="944" font-size="14" fill="#6B7280">通信延迟 P99：</text>
+    <text x="220" y="944" font-size="16" font-weight="700" fill="#DC2626">∞（完全失联）</text>
+
+    <text x="80" y="972" font-size="14" fill="#6B7280">合规率：</text>
+    <text x="170" y="972" font-size="14" fill="#1F2937">违反 1:3 安全员比例要求</text>
+
+    <rect x="800" y="820" width="740" height="170" rx="6" fill="#F9FAFB" stroke="#C2410C" stroke-width="1.5"/>
+    <text x="820" y="855" font-size="16" font-weight="700" fill="#C2410C">KPI 量化对比　KPI Quantification</text>
+
+    <text x="820" y="888" font-size="14" fill="#6B7280">MTTR：</text>
+    <text x="900" y="888" font-size="16" font-weight="700" fill="#DC2626">~156 分钟</text>
+    <text x="1025" y="888" font-size="13" fill="#9CA3AF">（超出 L3 目标 10 倍）</text>
+
+    <text x="820" y="916" font-size="14" fill="#6B7280">AI 自主处置率：</text>
+    <text x="960" y="916" font-size="16" font-weight="700" fill="#DC2626">≈ 0%</text>
+
+    <text x="820" y="944" font-size="14" fill="#6B7280">通信延迟 P99：</text>
+    <text x="960" y="944" font-size="16" font-weight="700" fill="#DC2626">∞（完全失联）</text>
+
+    <text x="820" y="972" font-size="14" fill="#6B7280">合规率：</text>
+    <text x="910" y="972" font-size="14" fill="#1F2937">触发 NHTSA SGO 报告要求</text>
+  </g>
+
+  <!-- ================ Common pattern conclusion ================ -->
+  <g>
+    <rect x="60" y="1010" width="1480" height="170" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="2"/>
+    <text x="80" y="1045" font-size="18" font-weight="700" fill="#991B1B">
+      共同诊断：当系统性故障发生时，三层决策架构的所有层级会被同时击穿
+    </text>
+    <text x="80" y="1067" font-size="13" fill="#6B7280" font-style="italic">
+      Diagnosis: All Three Layers Are Simultaneously Penetrated under Systemic Failures
+    </text>
+
+    <text x="80" y="1098" font-size="14" fill="#1F2937">
+      • Layer 1 依赖的 ADS 感知与决策仅能维持单车 MRM，无法做出群体级决策（如统一召回）；
+    </text>
+    <text x="80" y="1122" font-size="14" fill="#1F2937">
+      • Layer 2 依赖的远程通信在系统性故障中恰恰是故障本身，无法作为兜底；
+    </text>
+    <text x="80" y="1146" font-size="14" fill="#1F2937">
+      • Layer 3 依赖的本地救援团队或应急联动机制在两起事件中都未被有效激活；
+    </text>
+    <text x="80" y="1170" font-size="14" font-weight="700" fill="#991B1B">
+      → 改进方向：构建冗余通信架构 · 群体级 MRM · 区域性应急联动网络 → 车队韧性工程（Fleet Resilience Engineering）
+    </text>
+  </g>
+</svg>

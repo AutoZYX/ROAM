@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif">
+  <!-- ================ Background ================ -->
+  <rect width="1600" height="900" fill="#FAFBFC"/>
+
+  <!-- ================ Title ================ -->
+  <text x="800" y="52" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2937">
+    图 1　L4 自动驾驶监管与标准发展时间线（2021—2027）
+  </text>
+  <text x="800" y="82" text-anchor="middle" font-size="17" fill="#6B7280" font-style="italic">
+    Regulatory and Standards Timeline for L4 Autonomous Driving
+  </text>
+
+  <!-- ================ Year axis ================ -->
+  <!-- Axis line -->
+  <line x1="180" y1="720" x2="1500" y2="720" stroke="#374151" stroke-width="2.5"/>
+  <polygon points="1500,720 1488,714 1488,726" fill="#374151"/>
+
+  <!-- Year ticks and labels -->
+  <g font-size="20" font-weight="600" fill="#374151">
+    <line x1="220" y1="715" x2="220" y2="732" stroke="#374151" stroke-width="2"/>
+    <text x="220" y="758" text-anchor="middle">2021</text>
+
+    <line x1="410" y1="715" x2="410" y2="732" stroke="#374151" stroke-width="2"/>
+    <text x="410" y="758" text-anchor="middle">2022</text>
+
+    <line x1="600" y1="715" x2="600" y2="732" stroke="#374151" stroke-width="2"/>
+    <text x="600" y="758" text-anchor="middle">2023</text>
+
+    <line x1="790" y1="715" x2="790" y2="732" stroke="#374151" stroke-width="2"/>
+    <text x="790" y="758" text-anchor="middle">2024</text>
+
+    <line x1="980" y1="715" x2="980" y2="732" stroke="#374151" stroke-width="2"/>
+    <text x="980" y="758" text-anchor="middle">2025</text>
+
+    <line x1="1170" y1="715" x2="1170" y2="732" stroke="#374151" stroke-width="2"/>
+    <text x="1170" y="758" text-anchor="middle">2026</text>
+
+    <line x1="1360" y1="715" x2="1360" y2="732" stroke="#374151" stroke-width="2"/>
+    <text x="1360" y="758" text-anchor="middle">2027</text>
+  </g>
+
+  <!-- ================ Swim lanes (background stripes) ================ -->
+  <rect x="180" y="130" width="1320" height="130" fill="#EEF2FF" opacity="0.55"/>
+  <rect x="180" y="270" width="1320" height="130" fill="#ECFDF5" opacity="0.55"/>
+  <rect x="180" y="410" width="1320" height="130" fill="#FFF7ED" opacity="0.55"/>
+  <rect x="180" y="550" width="1320" height="130" fill="#FEF2F2" opacity="0.55"/>
+
+  <!-- Lane labels (left side) -->
+  <g font-size="19" font-weight="700" fill="#1F2937">
+    <text x="170" y="200" text-anchor="end">国际标准组织</text>
+    <text x="170" y="223" text-anchor="end" font-size="13" font-weight="400" fill="#6B7280">ISO / SAE / UNECE</text>
+
+    <text x="170" y="340" text-anchor="end">中国标准体系</text>
+    <text x="170" y="363" text-anchor="end" font-size="13" font-weight="400" fill="#6B7280">GB / YD/T</text>
+
+    <text x="170" y="480" text-anchor="end">美国监管</text>
+    <text x="170" y="503" text-anchor="end" font-size="13" font-weight="400" fill="#6B7280">NHTSA / 国会</text>
+
+    <text x="170" y="620" text-anchor="end">欧洲法规</text>
+    <text x="170" y="643" text-anchor="end" font-size="13" font-weight="400" fill="#6B7280">UK / DE</text>
+
+    <text x="170" y="810" text-anchor="end" font-weight="700">行业典型事件</text>
+    <text x="170" y="833" text-anchor="end" font-size="13" font-weight="400" fill="#6B7280">Incidents</text>
+  </g>
+
+  <!-- ================ Lane 1: International Standards (blue) ================ -->
+  <!-- ISO 21448 SOTIF @ 2022 -->
+  <g>
+    <circle cx="410" cy="195" r="11" fill="#1E40AF" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="318" y="156" width="184" height="34" rx="4" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.8"/>
+    <text x="410" y="179" text-anchor="middle" font-size="16" font-weight="600" fill="#1E40AF">ISO 21448 SOTIF</text>
+  </g>
+
+  <!-- SAE J3016 update @ 2024-05 -->
+  <g>
+    <circle cx="870" cy="195" r="11" fill="#1E40AF" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="780" y="156" width="180" height="34" rx="4" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.8"/>
+    <text x="870" y="179" text-anchor="middle" font-size="16" font-weight="600" fill="#1E40AF">SAE J3016 更新</text>
+  </g>
+
+  <!-- UN GTR ADS @ 2026-01 -->
+  <g>
+    <circle cx="1180" cy="195" r="11" fill="#1E40AF" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="1083" y="156" width="200" height="34" rx="4" fill="#FFFFFF" stroke="#1E40AF" stroke-width="1.8"/>
+    <text x="1183" y="179" text-anchor="middle" font-size="16" font-weight="600" fill="#1E40AF">UN GTR ADS 草案</text>
+  </g>
+
+  <!-- ================ Lane 2: China (green) ================ -->
+  <!-- GB/T 40429 自动驾驶分级 @ 2021 -->
+  <g>
+    <circle cx="250" cy="335" r="11" fill="#047857" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="180" y="296" width="190" height="34" rx="4" fill="#FFFFFF" stroke="#047857" stroke-width="1.8"/>
+    <text x="275" y="319" text-anchor="middle" font-size="16" font-weight="600" fill="#047857">GB/T 40429 分级</text>
+  </g>
+
+  <!-- YD/T 4778-4783 @ 2024 -->
+  <g>
+    <circle cx="820" cy="335" r="11" fill="#047857" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="710" y="296" width="225" height="34" rx="4" fill="#FFFFFF" stroke="#047857" stroke-width="1.8"/>
+    <text x="822" y="319" text-anchor="middle" font-size="16" font-weight="600" fill="#047857">YD/T 4778—4783 远程驾驶</text>
+  </g>
+
+  <!-- GB 44495/44496 @ 2024 -->
+  <g>
+    <circle cx="890" cy="375" r="11" fill="#047857" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="795" y="384" width="200" height="34" rx="4" fill="#FFFFFF" stroke="#047857" stroke-width="1.8"/>
+    <text x="895" y="407" text-anchor="middle" font-size="16" font-weight="600" fill="#047857">GB 44495 / 44496</text>
+  </g>
+
+  <!-- 强制 GB 征求意见 @ 2026-02 -->
+  <g>
+    <circle cx="1190" cy="335" r="11" fill="#047857" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="1080" y="296" width="232" height="34" rx="4" fill="#FFFFFF" stroke="#047857" stroke-width="1.8"/>
+    <text x="1196" y="319" text-anchor="middle" font-size="16" font-weight="600" fill="#047857">强制 GB 征求意见稿</text>
+  </g>
+
+  <!-- 强制 GB 实施 @ 2027-07 (规划里程碑标记) -->
+  <g>
+    <polygon points="1440,325 1456,341 1440,357 1424,341" fill="#B91C1C" stroke="#FFFFFF" stroke-width="2"/>
+    <rect x="1338" y="368" width="216" height="34" rx="4" fill="#FEF2F2" stroke="#B91C1C" stroke-width="1.8"/>
+    <text x="1446" y="391" text-anchor="middle" font-size="16" font-weight="600" fill="#B91C1C">强制 GB 实施（规划）</text>
+  </g>
+
+  <!-- ================ Lane 3: US (orange) ================ -->
+  <!-- NHTSA AV 框架 @ 2025-04 -->
+  <g>
+    <circle cx="1010" cy="475" r="11" fill="#C2410C" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="908" y="436" width="210" height="34" rx="4" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.8"/>
+    <text x="1013" y="459" text-anchor="middle" font-size="16" font-weight="600" fill="#C2410C">NHTSA AV 框架</text>
+  </g>
+
+  <!-- Markey 国会报告 @ 2026-03 -->
+  <g>
+    <circle cx="1220" cy="475" r="11" fill="#C2410C" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="1110" y="436" width="240" height="34" rx="4" fill="#FFFFFF" stroke="#C2410C" stroke-width="1.8"/>
+    <text x="1230" y="459" text-anchor="middle" font-size="16" font-weight="600" fill="#C2410C">Markey 国会调查报告</text>
+  </g>
+
+  <!-- ================ Lane 4: Europe (purple) ================ -->
+  <!-- UK AV Act 2024 @ 2024-05 -->
+  <g>
+    <circle cx="870" cy="615" r="11" fill="#6D28D9" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="775" y="576" width="200" height="34" rx="4" fill="#FFFFFF" stroke="#6D28D9" stroke-width="1.8"/>
+    <text x="875" y="599" text-anchor="middle" font-size="16" font-weight="600" fill="#6D28D9">英国 AV Act 2024</text>
+  </g>
+
+  <!-- 德国 StVFernLV @ 2025-12 -->
+  <g>
+    <circle cx="1120" cy="615" r="11" fill="#6D28D9" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="1015" y="576" width="210" height="34" rx="4" fill="#FFFFFF" stroke="#6D28D9" stroke-width="1.8"/>
+    <text x="1120" y="599" text-anchor="middle" font-size="16" font-weight="600" fill="#6D28D9">德国 StVFernLV</text>
+  </g>
+
+  <!-- ================ Lane 5: Industry incidents (red, below axis) ================ -->
+  <!-- Cruise 行人拖拽 @ 2023-10 -->
+  <g>
+    <polygon points="760,688 776,704 760,720 744,704" fill="#DC2626" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="760" y1="720" x2="760" y2="790" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+    <rect x="660" y="790" width="200" height="34" rx="4" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.8"/>
+    <text x="760" y="813" text-anchor="middle" font-size="16" font-weight="600" fill="#991B1B">Cruise 行人拖拽事件</text>
+  </g>
+
+  <!-- SF Waymo 断电 @ 2025-12 -->
+  <g>
+    <polygon points="1150,688 1166,704 1150,720 1134,704" fill="#DC2626" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="1150" y1="720" x2="1150" y2="790" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+    <rect x="1040" y="790" width="220" height="34" rx="4" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.8"/>
+    <text x="1150" y="813" text-anchor="middle" font-size="16" font-weight="600" fill="#991B1B">旧金山 Waymo 断电</text>
+  </g>
+
+  <!-- 武汉 Apollo 停摆 @ 2026-03 -->
+  <g>
+    <polygon points="1225,688 1241,704 1225,720 1209,704" fill="#DC2626" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="1225" y1="720" x2="1225" y2="830" stroke="#DC2626" stroke-width="1" stroke-dasharray="2,2"/>
+    <rect x="1110" y="830" width="230" height="34" rx="4" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.8"/>
+    <text x="1225" y="853" text-anchor="middle" font-size="16" font-weight="600" fill="#991B1B">武汉萝卜快跑停摆</text>
+  </g>
+
+  <!-- ================ Legend ================ -->
+  <g transform="translate(200, 105)">
+    <circle cx="9" cy="9" r="7" fill="#1E40AF"/>
+    <text x="24" y="14" font-size="15" fill="#374151">国际标准</text>
+
+    <circle cx="125" cy="9" r="7" fill="#047857"/>
+    <text x="140" y="14" font-size="15" fill="#374151">中国标准</text>
+
+    <circle cx="241" cy="9" r="7" fill="#C2410C"/>
+    <text x="256" y="14" font-size="15" fill="#374151">美国监管</text>
+
+    <circle cx="357" cy="9" r="7" fill="#6D28D9"/>
+    <text x="372" y="14" font-size="15" fill="#374151">欧洲法规</text>
+
+    <polygon points="473,2 482,9 473,16 464,9" fill="#DC2626"/>
+    <text x="490" y="14" font-size="15" fill="#374151">典型事件</text>
+
+    <polygon points="591,2 600,9 591,16 582,9" fill="#B91C1C"/>
+    <text x="608" y="14" font-size="15" fill="#374151">规划里程碑</text>
+  </g>
+
+  <!-- Data source note -->
+  <text x="1500" y="885" text-anchor="end" font-size="13" fill="#9CA3AF" font-style="italic">
+    数据来源：ROAM 开源项目事件数据库 / 标准化组织官方文件
+  </text>
+</svg>

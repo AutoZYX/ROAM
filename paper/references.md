@@ -136,7 +136,7 @@
 
 ### 八、人因工程与操作员认证（[51]–[52]）
 
-[51] NEUMEIER S, WINTERSBERGER P, FRISON A K, et al. Teleoperation: The holy grail to solve problems of automated driving? Sure, but latency matters [C]// Proceedings of the 11th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutomotiveUI 2019). ACM, 2019.
+[51] NEUMEIER S, WINTERSBERGER P, FRISON A K, et al. Teleoperation: The holy grail to solve problems of automated driving? Sure, but latency matters [C]// Proceedings of the 11th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutomotiveUI 2019). ACM, 2019: 186-197. DOI: 10.1145/3342197.3344534.
 
 [52] MUTZENICH C, DURANT S, HELMAN S, et al. Updating our understanding of situation awareness in relation to remote operators of autonomous vehicles [J]. Cognitive Research: Principles and Implications, 2021, 6(1): 9.
 

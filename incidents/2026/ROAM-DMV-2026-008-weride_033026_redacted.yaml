@@ -1,0 +1,29 @@
+id: "ROAM-DMV-2026-008"
+tier: 2
+date: "2026-03-30"
+operator: "WeRide"
+location:
+  city: "San Jose, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "while traveling straight in the second lane from
+the left on Coleman Avenue at the intersection with Newhall Drive in Sa"
+scenario:
+  primary: "C2"
+severity: "S2"
+urgency: "U0"
+description: |
+  On 03/30/2026 at approximately 11:46 a.m., Vehicle 1 was involved in a rear-end collision while traveling straight in the second lane from
+  the left on Coleman Avenue at the intersection with Newhall Drive in San Jose, CA. Vehicle 1 was operating in autonomous mode and had
+  come to a complete stop at a red traffic signal when it was struck from the rear.
+  Vehicle 2, a white 2012 Chevrolet Colorado pickup truck, failed to stop and collided with the rear of Vehicle 1. Following the impact, the
+  driver of Vehicle 1 disengaged autonomous mode.
+  Both parties then relocated to a safe location on W. Hedding Street in San Jose, CA, where they exchanged information and inspected the
+  vehicles. Visible damage to both vehicles appeared minor. Vehicle 1 sustained a minor scratch to the rear bumper, and Vehicle 2 sustained a
+  minor scratch to the front bumper.
+  No injuries were reported by either party, and no emergency services were requested.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/weride_033026_redacted-pdf/"
+    title: "WeRide collision report 2026-03-30 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

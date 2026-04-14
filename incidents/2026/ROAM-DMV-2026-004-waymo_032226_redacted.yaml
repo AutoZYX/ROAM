@@ -1,0 +1,28 @@
+id: "ROAM-DMV-2026-004"
+tier: 2
+date: "2026-03-22"
+time: "10:07"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "involving a passenger car on Bowdoin Street near Felton Street"
+scenario:
+  primary: "E1"
+severity: "S1"
+urgency: "U0"
+description: |
+  On March 22, 2026 at 10:07 PM PT a Waymo Autonomous Vehicle (“Waymo AV”) operating in San Francisco, California was in a
+  collision involving a passenger car on Bowdoin Street near Felton Street.
+  
+  The Waymo AV was parked facing south at the west curb on Bowdoin Street in autonomous mode with its hazard lights activated in
+  between two parked passenger cars. A driver from Waymo roadside assistance entered the Waymo AV and transitioned the Waymo AV to
+  manual mode. The driver reversed, and the rear of the Waymo AV made contact with the front of a passenger car parked directly behind the
+  Waymo AV. At the time of the impact, the Waymo AV’s Level 4 ADS was not engaged and a driver was operating the Waymo AV in
+  manual mode. The Waymo AV sustained damage.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_032226_redacted-pdf/"
+    title: "Waymo collision report 2026-03-22 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

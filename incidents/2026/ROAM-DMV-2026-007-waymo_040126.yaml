@@ -1,0 +1,27 @@
+id: "ROAM-DMV-2026-007"
+tier: 2
+date: "2026-04-01"
+time: "12:20"
+operator: "Waymo"
+location:
+  city: "Venice, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "involving a pickup truck on Electric Avenue near Milwood Avenue"
+scenario:
+  primary: "E1"
+severity: "S1"
+urgency: "U0"
+description: |
+  On April 1, 2026 at 12:20 PM PT a Waymo Autonomous Vehicle (“Waymo AV”) operating in Venice, California was in a collision
+  involving a pickup truck on Electric Avenue near Milwood Avenue.
+  
+  The Waymo AV was stopped facing west on a narrow portion of Electric Avenue, with vehicles parked at the curb in both directions, to
+  yield to a pickup truck traveling eastbound on Electric Avenue. While the Waymo AV was stopped, the pickup truck proceeded to pass the
+  Waymo AV to the left, and the left side of the pickup truck made contact with the rear left side of the stationary Waymo AV. At the time of
+  the impact, the Waymo AV’s Level 4 ADS was engaged in autonomous mode. The Waymo AV sustained damage.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_040126-pdf/"
+    title: "Waymo collision report 2026-04-01 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

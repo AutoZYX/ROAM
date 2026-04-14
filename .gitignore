@@ -4,3 +4,8 @@ academic/
 # Crawler runtime data (raw scrapes & extracted YAML before review)
 tools/incident-crawler/raw_incidents/
 tools/incident-crawler/extracted_yaml/
+tools/dmv-importer/pdfs/
+tools/dmv-importer/texts/
+tools/dmv-importer/output/
+tools/dmv-importer/dmv-index.html
+tools/dmv-importer/*.txt

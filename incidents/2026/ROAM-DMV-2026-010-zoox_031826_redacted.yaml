@@ -1,0 +1,23 @@
+id: "ROAM-DMV-2026-010"
+tier: 2
+date: "2026-03-18"
+operator: "Zoox"
+location:
+  city: "California, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "Mariposa Street toward Hampshire Street in San Francisco
+when contact was made with the left side fender of a parked pic"
+scenario:
+  primary: "E1"
+severity: "S2"
+urgency: "U0"
+description: |
+  A Zoox vehicle (Vehicle 1) operating in manual mode was traveling east on Mariposa Street toward Hampshire Street in San Francisco
+  when contact was made with the left side fender of a parked pickup (Vehicle 2). The Zoox vehicle's front passenger-side door and fender
+  were damaged. No injuries were reported, and police were not notified.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/zoox_031826_redacted-pdf/"
+    title: "Zoox collision report 2026-03-18 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

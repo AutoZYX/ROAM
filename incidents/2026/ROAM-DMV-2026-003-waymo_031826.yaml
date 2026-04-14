@@ -1,0 +1,29 @@
+id: "ROAM-DMV-2026-003"
+tier: 2
+date: "2026-03-18"
+time: "07:29"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "involving a heavy truck on Kissling Street near 11th Street"
+scenario:
+  primary: "E1"
+severity: "S1"
+urgency: "U0"
+description: |
+  On March 18, 2026 at 7:29 AM PT a Waymo Autonomous Vehicle (“Waymo AV”) operating in San Francisco, California was in a
+  collision involving a heavy truck on Kissling Street near 11th Street.
+  
+  The Waymo AV was traveling southwestbound at a low rate of speed with its hazard lights activated on a narrow portion of Kissling Street,
+  made more narrow by a heavy truck parked in-lane facing southwest with its liftgate lowered to the ground and vehicles parked at the south
+  curb facing northeast. The Waymo AV began to maneuver left and slowed to a stop as the heavy truck’s liftgate began to elevate. The
+  Waymo AV remained stopped momentarily, then began to proceed forward and to the left to initiate a multi-point turn as the heavy truck’s
+  liftgate continued to elevate, and the front right side of the Waymo AV made contact with the rear left side of the heavy truck liftgate. At the
+  time of the impact, the Waymo AV’s Level 4 ADS was engaged in autonomous mode. The Waymo AV sustained damage.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_031826-pdf/"
+    title: "Waymo collision report 2026-03-18 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

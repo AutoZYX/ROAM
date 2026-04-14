@@ -1,0 +1,25 @@
+id: "ROAM-DMV-2026-001"
+tier: 2
+date: "2026-04-03"
+operator: "Nuro"
+location:
+  city: "Santa Clara, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "Martin Avenue, a street in Santa Clara, CA with a single travel
+lane in the direction of travel, when a motorcycle attem"
+scenario:
+  primary: "E1"
+severity: "S2"
+urgency: "U0"
+description: |
+  On April 3, 2026, Nuro was operating a Prius test vehicle in auto mode on Martin Avenue, a street in Santa Clara, CA with a single travel
+  lane in the direction of travel, when a motorcycle attempted to overtake the Nuro vehicle from behind. In so doing, the motorcyclist clipped
+  the side of the Nuro vehicle, causing some minor property damage to the Nuro vehicle. The motorcyclist then pulled over to the side of the
+  road, and both parties exchanged information. Neither the motorcyclist nor the occupants of the Nuro vehicle were injured, and law
+  enforcement was not called to the scene.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/nuro_040326-pdf/"
+    title: "Nuro collision report 2026-04-03 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

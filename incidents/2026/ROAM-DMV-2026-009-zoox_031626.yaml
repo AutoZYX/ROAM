@@ -1,0 +1,24 @@
+id: "ROAM-DMV-2026-009"
+tier: 2
+date: "2026-03-16"
+operator: "Zoox"
+location:
+  city: "California, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "21st Street toward Folsom Street in San Francisco, stopped next to parked vehicles with
+active hazard lights to pick up "
+scenario:
+  primary: "E1"
+severity: "S2"
+urgency: "U0"
+description: |
+  A Zoox autonomous vehicle, traveling west on 21st Street toward Folsom Street in San Francisco, stopped next to parked vehicles with
+  active hazard lights to pick up a passenger. Just after the passenger entered the Zoox vehicle, a passenger car (Vehicle 2) traveling behind
+  attempted to pass on the left and swiped the Zoox vehicle's left rear fender. The Zoox vehicle was towed from the scene and was found to
+  have sustained minor damage. No injuries were reported, and police were not notified.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/zoox_031626-pdf/"
+    title: "Zoox collision report 2026-03-16 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

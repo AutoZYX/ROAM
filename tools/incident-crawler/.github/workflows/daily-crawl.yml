@@ -1,0 +1,80 @@
+name: Daily Incident Crawl
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 02:00 UTC
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          cd tools/incident-crawler
+          pip install -r requirements.txt
+
+      - name: Run crawler (all sources)
+        run: |
+          cd tools/incident-crawler
+          python crawler.py --all --days 7
+        continue-on-error: true
+
+      - name: Run LLM extractor
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          cd tools/incident-crawler
+          TODAY=$(date +%Y-%m-%d)
+          if [ -d "raw_incidents/$TODAY" ]; then
+            python extractor.py --batch raw_incidents/$TODAY
+          fi
+        continue-on-error: true
+
+      - name: Check for new files
+        id: check
+        run: |
+          cd tools/incident-crawler
+          if [ -d extracted_yaml ] && [ "$(ls -A extracted_yaml)" ]; then
+            echo "has_new=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_new=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: steps.check.outputs.has_new == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Auto-crawled incidents $(date +%Y-%m-%d)"
+          title: "🤖 Daily Incident Crawl - $(date +%Y-%m-%d)"
+          body: |
+            Automated incident collection from daily crawler.
+
+            **Status:** REVIEW_NEEDED - All extracted items require human verification.
+
+            **Review checklist:**
+            - [ ] Verify all source URLs are accessible
+            - [ ] Confirm scenario classifications
+            - [ ] Validate severity/urgency assignments
+            - [ ] Check for duplicates with existing incidents
+            - [ ] Assign final ROAM-YYYY-NNN IDs
+
+            See `tools/incident-crawler/review-workflow.md` for full review procedure.
+          branch: auto-crawl/$(date +%Y-%m-%d)
+          base: main
+          labels: |
+            auto-crawled
+            needs-review

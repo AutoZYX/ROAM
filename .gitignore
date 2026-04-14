@@ -1,3 +1,6 @@
 .DS_Store
 academic/
-tools/
+
+# Crawler runtime data (raw scrapes & extracted YAML before review)
+tools/incident-crawler/raw_incidents/
+tools/incident-crawler/extracted_yaml/

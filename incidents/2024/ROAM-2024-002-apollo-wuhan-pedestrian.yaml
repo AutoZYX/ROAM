@@ -1,67 +1,86 @@
 id: "ROAM-2024-002"
+tier: 1
 date: "2024-07-07"
-operator: "Baidu Apollo (萝卜快跑)"
+time: "15:00"
+operator: "Apollo (Baidu)"
+vehicle_model: "Apollo Go Robotaxi"
 location:
   city: "Wuhan, China"
-  road_type: "urban intersection"
-  specific: "Wuhan urban area"
+  country: "China"
+  road_type: "intersection"
+  specific: "Intersection of Parrot Avenue (鹦鹉大道) and Guobo Avenue (国博大道), Hanyang District, Wuhan"
 scenario:
   primary: "C5"
   secondary: ["B4"]
-severity: "S1"
+severity: "S2"
 urgency: "U3"
+driving_automation_level: "L4"
+gb_event_type: "0x0A"
+ads_activation_status: true
 description: |
-  A Baidu Apollo robotaxi (萝卜快跑/Luobo Kuaipao) collided with a jaywalking
-  pedestrian at an intersection while the vehicle had a green light. The incident
-  was described as "light contact" (轻微接触) by Baidu. The pedestrian crossed
-  against the signal. The incident drew significant public attention in China as
-  萝卜快跑 was rapidly scaling operations in Wuhan, becoming the world's largest
-  robotaxi fleet deployment. Public debate intensified around the displacement of
-  traditional taxi drivers and safety of autonomous vehicles in Chinese cities.
+  A Baidu Apollo Go (萝卜快跑) driverless robotaxi made light contact
+  with a pedestrian at the intersection of Parrot Avenue and Guobo
+  Avenue in Hanyang District, Wuhan. Baidu stated the incident
+  occurred as the vehicle was starting up on a green light when
+  the pedestrian crossed against the red light. The pedestrian was
+  taken to hospital for examination. The event triggered
+  substantial public attention to Robotaxi safety in Chinese cities,
+  particularly given the concurrent widespread protests by Wuhan
+  taxi drivers complaining about Robotaxi competition (reportedly
+  30,000 signatures).
 description_cn: |
-  一辆百度 Apollo Robotaxi（萝卜快跑）在路口与一名闯红灯的行人发生碰撞，当时车辆处于绿灯通行状态。
-  百度将该事件描述为"轻微接触"。行人违反信号灯过马路。该事件在中国引发广泛关注，彼时萝卜快跑正在
-  武汉快速扩大运营规模，成为全球最大的 Robotaxi 车队部署。围绕传统出租车司机就业替代和自动驾驶
-  车辆在中国城市安全性的公共讨论显著升温。
+  一辆百度"萝卜快跑"无人驾驶出租车在武汉汉阳区鹦鹉大道与国博大道
+  交会路口与一名行人发生轻微接触。百度官方回应称事故发生于绿灯启动
+  之际，行人闯红灯横穿马路。行人被送医检查。该事件引发中国社会对
+  城市 Robotaxi 安全的关注，正值彼时武汉约 3 万名出租车司机集体
+  抗议 Robotaxi 冲击传统网约车生计的舆论热潮。
 impact:
   vehicles_affected: 1
   duration_minutes: null
-  traffic_disruption: "minimal"
-  injuries: 0
+  traffic_disruption: "minor"
+  injuries: 1
   fatalities: 0
 emergency_response:
-  sos_button: "not triggered"
-  customer_service: "normal"
-  remote_intervention: "post-incident review"
-  on_site_response: "traffic police"
-  resolution_method: "standard traffic incident handling"
-  resolution_method_cn: "按标准交通事件流程处理"
+  sos_button: "not_applicable"
+  customer_service: "responsive"
+  remote_intervention: "post-incident"
+  on_site_response: "police, ambulance, Baidu on-site team"
+  resolution_method: "medical follow-up; police-supervised on-scene resolution"
+  resolution_method_cn: "送医复查；警方监督下现场处置"
 root_cause:
-  category: "pedestrian behavior (jaywalking)"
-  category_cn: "行人行为（闯红灯）"
-  description: "Pedestrian jaywalked against the signal; vehicle had right of way but made contact at low speed. Questions remain about whether ADS should have anticipated and avoided the jaywalker entirely"
-  description_cn: "行人违反信号灯过马路；车辆拥有通行权但在低速下发生接触。关于自动驾驶系统是否应该预判并完全避让闯红灯行人的问题仍存争议"
-  confirmed: false
+  category: "pedestrian jaywalking against signal + perception detected too late"
+  category_cn: "行人闯红灯 + 感知识别过晚"
+  description: "Baidu attributed cause to the pedestrian crossing against the signal. Nevertheless, from a safety system perspective, the vehicle's perception and response did not avoid contact despite the vehicle being at near-zero speed at green-light launch."
+  description_cn: "百度将事故归因于行人闯红灯。但从安全系统视角，尽管车辆处于绿灯启动的极低速状态，感知与响应仍未避免接触。"
+  confirmed: true
 systemic_issues:
-  - "Chinese urban environments have high jaywalking rates requiring robust pedestrian prediction"
-  - "Public trust fragile during rapid fleet scaling"
-  - "Tension between robotaxi deployment and traditional taxi driver livelihoods"
-  - "'Light contact' framing raised questions about incident reporting transparency"
+  - "Urban intersection + vulnerable road users (VRU) remain a stress test for L4 perception"
+  - "Chinese traffic culture (jaywalking) is a known challenge for rules-based planners"
+  - "Public debate reframed the event in terms of job displacement rather than safety engineering"
+  - "Highlights the need for bilingual (CN/EN) incident classification: this is B4 (abnormal human behavior) + C5 (low-speed pedestrian contact)"
 systemic_issues_cn:
-  - "中国城市环境中行人闯红灯率较高，要求具备强健的行人预测能力"
-  - "快速扩大车队规模期间公众信任脆弱"
-  - "Robotaxi 部署与传统出租车司机生计之间的矛盾"
-  - "'轻微接触'的表述引发对事件报告透明度的质疑"
+  - "城市交叉口 + 弱势道路使用者（VRU）仍是 L4 感知的压力测试场景"
+  - "中国交通文化中的闯红灯对基于规则的规划器是已知挑战"
+  - "公共讨论把事件重构为就业冲击议题，而非安全工程议题"
+  - "突显了双语事件分类的必要性：此事件同属 B4（异常人类行为）+ C5（低速行人碰撞）"
 regulatory_action: |
-  No formal regulatory action. Local Wuhan authorities reviewed the incident.
-  The event contributed to broader national discussion about robotaxi regulation in China.
+  Wuhan municipal traffic authorities investigated the incident.
+  No formal regulatory sanctions against Baidu. The event indirectly
+  contributed to broader Chinese national discussion on Robotaxi
+  operation safety and the subsequent MIIT-led drafting of GB/T
+  "Safety Events Data Interaction and Management System Technical
+  Specification" that began formal meetings in April 2026.
 regulatory_action_cn: |
-  无正式监管行动。武汉地方当局对事件进行了审查。该事件推动了全国范围内关于 Robotaxi 监管的讨论。
+  武汉市交管部门介入调查。未对百度采取正式监管处罚。事件间接推动
+  了中国对 Robotaxi 运营安全的全国性讨论，并为 2026 年 4 月工信部
+  主导的《智能网联汽车 安全事件数据交互与管理系统技术规范》国标
+  项目组正式会议提供了舆论背景。
 sources:
   - url: "https://m.gmw.cn/2024-07/10/content_1303787341.htm"
-    title: "萝卜快跑无人驾驶出租车发生碰撞事故 - 光明网"
+    title: "萝卜快跑无人驾驶出租车发生碰撞事故官方回应 (光明网)"
   - url: "https://www.21jingji.com/article/20240710/herald/91ef764a0c349a67aa7e29b724ea40cd.html"
-    title: "萝卜快跑无人驾驶出租车与行人发生碰撞 - 21经济网"
+    title: "萝卜快跑与行人发生碰撞官方紧急回应 (21 经济网)"
+  - url: "https://www.zhihu.com/question/661156013"
+    title: "萝卜快跑武汉街头撞倒行人 (知乎讨论)"
 contributor: "ROAM Core Team"
-driving_automation_level: "L4"
-last_updated: "2026-04-02"
+last_updated: "2026-04-15"

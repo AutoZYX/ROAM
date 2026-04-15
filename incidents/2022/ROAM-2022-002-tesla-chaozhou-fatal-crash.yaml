@@ -1,0 +1,82 @@
+id: "ROAM-2022-002"
+tier: 1
+date: "2022-11-05"
+operator: "Tesla"
+vehicle_model: "Model Y"
+location:
+  city: "Chaozhou, China"
+  country: "China"
+  road_type: "urban_street"
+  specific: "Raoping County, Chaozhou, Guangdong province"
+scenario:
+  primary: "C4"
+  secondary: ["B4"]
+severity: "S4"
+urgency: "U3"
+driving_automation_level: "L2"
+gb_event_type: "0x0A"
+ads_activation_status: false
+description: |
+  A Tesla Model Y driver in Raoping County, Chaozhou, Guangdong
+  lost control of the vehicle which accelerated uncontrollably
+  through city streets for approximately 2.6 kilometers before
+  crashing, resulting in 2 deaths and 3 injuries. The driver,
+  with over 20 years of driving experience, claimed he stepped
+  hard on the brakes but the vehicle would not slow down. A
+  subsequent judicial appraisal ruled out brake or steering
+  system failure. Tesla won a defamation case against social
+  media accounts that had spread unverified claims about the
+  accident. The case became emblematic of the "unintended
+  acceleration" controversy that surrounded Tesla in China.
+description_cn: |
+  广东潮州饶平县一辆特斯拉 Model Y 车主操控车辆时，车辆在城市
+  道路上疑似失控加速行驶约 2.6 公里后发生碰撞，事故造成 2 人死亡、
+  3 人受伤。该车主驾龄 20 多年，声称用力踩下刹车但车辆无法减速。
+  后续司法鉴定排除制动和转向系统故障。特斯拉随后在针对散布未经
+  证实指控的社交媒体账号的名誉权案件中胜诉。该案成为当时笼罩在
+  特斯拉中国头上"意外加速"争议的标志性事件。
+impact:
+  vehicles_affected: 1
+  duration_minutes: null
+  traffic_disruption: "severe"
+  injuries: 3
+  fatalities: 2
+emergency_response:
+  sos_button: "not_applicable"
+  customer_service: "delayed"
+  remote_intervention: "none"
+  on_site_response: "police, ambulance, fire department"
+  resolution_method: "criminal investigation; judicial appraisal confirmed no mechanical failure"
+  resolution_method_cn: "刑事调查；司法鉴定排除机械故障"
+root_cause:
+  category: "disputed — driver error vs system anomaly (judicially ruled driver error)"
+  category_cn: "存在争议——司法鉴定认定为驾驶员操作失误"
+  description: "Judicial appraisal concluded the brake and steering systems were functioning normally. Tesla attributed the incident to driver operation. The driver maintained hardware malfunction. No black-box data showing Autopilot engagement; ADS was not active at time of incident. The case left unresolved public suspicion about sudden acceleration claims."
+  description_cn: "司法鉴定认定制动与转向系统正常。特斯拉将事件归因于驾驶员操作。车主坚持硬件故障说法。黑匣子数据显示 Autopilot 未启动；事故时 ADS 不处于激活状态。该案在公众层面对'突然加速'的争议并未完全消解。"
+  confirmed: true
+systemic_issues:
+  - "Data sovereignty concerns: vehicle telemetry controlled by OEM, limiting independent verification"
+  - "Black-box / Event Data Recorder standards insufficient at that time in China"
+  - "Disputed cases between OEM and owner became common pattern without neutral arbitration"
+  - "Precursor to MIIT's 2021 mandate requiring Chinese automakers to store driving data domestically"
+systemic_issues_cn:
+  - "数据主权问题：车辆遥测数据由 OEM 掌控，独立验证困难"
+  - "事故数据记录仪（EDR）标准在当时的中国不足"
+  - "OEM 与车主的争议案件成为常态，缺乏中立仲裁机制"
+  - "推动了工信部 2021 年要求中国车企国内存储行驶数据的政策"
+regulatory_action: |
+  Case led to broader policy attention on data sovereignty and
+  EDR standards in China. Tesla was required to establish China
+  data centers for vehicle data storage. GB 39732-2020 (EDR) was
+  enforced more strictly in subsequent inspections.
+regulatory_action_cn: |
+  该案推动了中国对数据主权和 EDR 标准的政策关注。特斯拉被要求在
+  中国境内建立数据中心存储车辆数据。GB 39732-2020《汽车事件数据
+  记录系统》在后续执法中更严格执行。
+sources:
+  - url: "http://www.people.com.cn/n1/2022/1116/c32306-32567406.html"
+    title: "又现失控特斯拉潮州事故暴露了啥 (人民网)"
+  - url: "http://auto.cyol.com/gb/articles/2023-11/02/content_nyvgAaswGO.html"
+    title: "特斯拉潮州事故定论与车无关 (中青在线)"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-15"

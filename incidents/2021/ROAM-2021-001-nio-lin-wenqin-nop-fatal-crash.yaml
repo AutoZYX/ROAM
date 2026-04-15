@@ -1,0 +1,85 @@
+id: "ROAM-2021-001"
+tier: 1
+date: "2021-08-12"
+time: "14:00"
+operator: "NIO"
+vehicle_model: "ES8"
+location:
+  city: "Putian, China"
+  country: "China"
+  road_type: "expressway"
+  specific: "Shenhai Expressway, Hanjiang section, Putian, Fujian"
+scenario:
+  primary: "C4"
+  secondary: ["B2"]
+severity: "S4"
+urgency: "U3"
+driving_automation_level: "L2"
+gb_event_type: "0x0A"
+ads_activation_status: true
+description: |
+  A 31-year-old entrepreneur Lin Wenqin (founder of Meiyihao brand
+  management company) was driving a NIO ES8 with NOP (Navigate on
+  Pilot) assistance function engaged when the vehicle collided with
+  a stationary road construction vehicle on the Shenhai Expressway
+  in the Hanjiang section, Putian, Fujian. Lin was killed in the
+  crash. This became the first publicly reported fatal accident in
+  China involving a Chinese automaker's Level 2+ navigation
+  assistance feature, triggering nationwide debate on marketing of
+  "autonomous" features by domestic EV brands.
+description_cn: |
+  31岁企业家林文钦（美一好品牌管理公司创始人）驾驶一辆蔚来 ES8，
+  在开启 NOP（Navigate on Pilot，领航辅助驾驶）功能后，在沈海高速
+  涵江段与一辆静止的道路施工车辆发生碰撞，林文钦当场死亡。此事件
+  是中国自主品牌 L2+ 导航辅助驾驶公开报道的首起致死事故，引发了
+  全国范围内对国产新能源车企"自动驾驶"功能营销话术的大讨论。
+impact:
+  vehicles_affected: 1
+  duration_minutes: null
+  traffic_disruption: "moderate"
+  injuries: 0
+  fatalities: 1
+emergency_response:
+  sos_button: "not_applicable"
+  customer_service: "responsive"
+  remote_intervention: "none"
+  on_site_response: "police, ambulance, NIO representatives"
+  resolution_method: "criminal investigation and civil settlement"
+  resolution_method_cn: "交警事故调查 + 民事赔偿协商"
+root_cause:
+  category: "static obstacle detection failure in L2+ NOP"
+  category_cn: "L2+ NOP 对静止障碍物识别失效"
+  description: "NIO NOP, like most L2+ systems of that era, had known limitations detecting stationary vehicles on highways when the ego vehicle was traveling at speed. The construction vehicle was stopped in the lane, presenting a scenario that the radar/camera fusion algorithm was not robust to."
+  description_cn: "蔚来 NOP（以及当时大多数 L2+ 系统）在主车高速行驶时对车道内静止车辆的识别存在已知局限。施工车辆停在车道内，其雷达/视觉融合算法未能在该场景下可靠识别。"
+  confirmed: false
+systemic_issues:
+  - "Marketing by Chinese EV brands blurred the line between L2+ driver assistance and autonomous driving"
+  - "Drivers over-trusted L2+ features, reducing attention to the road"
+  - "Known stationary-object detection limitation on highways was not adequately communicated to users"
+  - "Regulatory framework for L2+ ADAS safety claims was weak at the time"
+  - "Triggered the first public scrutiny of L2+ fatal incidents in China"
+systemic_issues_cn:
+  - "中国电动车品牌在营销中模糊了 L2+ 辅助驾驶与自动驾驶的界限"
+  - "车主过度信任 L2+ 功能，降低了对道路的关注度"
+  - "高速场景下静止物体识别的已知局限未充分告知用户"
+  - "当时对 L2+ ADAS 安全宣传的监管框架薄弱"
+  - "触发了中国对 L2+ 致死事件的首次大规模公开审视"
+regulatory_action: |
+  Event triggered MIIT (Ministry of Industry and Information
+  Technology) to subsequently tighten restrictions on advertising
+  of "autonomous driving" by OEMs. Industry-wide shift from
+  "自动驾驶" to "辅助驾驶" terminology followed within 6 months.
+  Direct regulatory sanctions against NIO were not confirmed.
+regulatory_action_cn: |
+  事件触发工信部随后收紧对 OEM "自动驾驶"宣传用语的监管。6 个月
+  内行业统一从"自动驾驶"改为"辅助驾驶"术语。未确认对蔚来的直接
+  监管处罚。
+sources:
+  - url: "https://www.qbitai.com/2021/08/27596.html"
+    title: "蔚来 NIO Pilot 首起致死车祸 (量子位)"
+  - url: "https://finance.sina.com.cn/chanjing/gsnews/2021-08-15/doc-ikqciyzm1552155.shtml"
+    title: "31 岁企业家车祸离世 ES8 NOP 功能 (新浪财经)"
+  - url: "http://finance.people.com.cn/BIG5/n1/2021/0816/c1004-32193956.html"
+    title: "31 岁企业家驾驶蔚来车祸身亡行车数据披露 (人民网)"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-15"

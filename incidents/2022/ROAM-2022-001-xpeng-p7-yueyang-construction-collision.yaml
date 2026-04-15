@@ -1,0 +1,75 @@
+id: "ROAM-2022-001"
+tier: 1
+date: "2022-04-22"
+operator: "XPeng"
+vehicle_model: "P7"
+location:
+  city: "Yueyang, China"
+  country: "China"
+  road_type: "other"
+  specific: "National highway G107 near Yueyang, Hunan province"
+scenario:
+  primary: "C4"
+  secondary: ["B2"]
+severity: "S2"
+urgency: "U2"
+driving_automation_level: "L2"
+gb_event_type: "0x07"
+ads_activation_status: true
+description: |
+  An XPeng P7 owner in Yueyang, Hunan province drove for more than
+  ten kilometers on a national highway with Advanced Driver
+  Assistance System (ADAS, XPILOT at the time) engaged, when the
+  vehicle encountered an overturned vehicle in its travel lane and
+  collided with it at speed without braking. The driver survived
+  but the P7 was heavily damaged. XPeng officially responded that
+  the cause was the driver's failure to maintain attention on the
+  road ahead and take over the vehicle in time.
+description_cn: |
+  一名湖南岳阳的小鹏 P7 车主在国道上开启辅助驾驶（彼时称 XPILOT）
+  行驶了十几公里，前方突遇一辆侧翻的事故车辆，P7 未减速直接撞了
+  上去。车主幸存但车辆严重损毁。小鹏汽车官方回应称，事故主因是
+  车主未对前方环境保持观察并及时接管车辆。
+impact:
+  vehicles_affected: 1
+  duration_minutes: null
+  traffic_disruption: "minor"
+  injuries: 1
+  fatalities: 0
+emergency_response:
+  sos_button: "not_applicable"
+  customer_service: "responsive (post-incident)"
+  remote_intervention: "none"
+  on_site_response: "police, ambulance"
+  resolution_method: "civil settlement; XPeng stated driver inattention"
+  resolution_method_cn: "民事赔偿处理；小鹏方面指明车主未及时接管"
+root_cause:
+  category: "L2 driver-inattention + stationary obstacle not detected"
+  category_cn: "L2 驾驶员未接管 + 静止障碍物未识别"
+  description: "XPILOT system at the time had known limitations in identifying stationary irregular objects (overturned vehicle) on the road. The L2 paradigm places driver as always-ready supervisor, but the driver relied on system and did not take over when the static obstacle appeared."
+  description_cn: "当时 XPILOT 系统对车道内静止的非常规物体（侧翻车辆）识别存在已知局限。L2 范式要求驾驶员时刻准备接管，但该车主过度依赖系统，未在静止障碍物出现时接管车辆。"
+  confirmed: true
+systemic_issues:
+  - "L2+ stationary obstacle detection was widely unreliable in Chinese market in 2022"
+  - "Over-trust in L2 systems by Chinese consumers following aggressive OEM marketing"
+  - "Highway/national-road ODD for L2 was poorly defined"
+  - "Takeover-request latency and attention monitoring were insufficient"
+systemic_issues_cn:
+  - "2022 年中国市场 L2+ 静止障碍物识别普遍不可靠"
+  - "中国消费者在 OEM 激进营销下对 L2 系统过度信任"
+  - "高速/国道 L2 ODD 定义不清晰"
+  - "接管请求延迟和注意力监测不足"
+regulatory_action: |
+  No specific regulatory sanction. Part of broader 2022 incidents
+  that later informed MIIT's intelligent-connected-vehicle safety
+  management requirements.
+regulatory_action_cn: |
+  未有专项监管处罚。属于 2022 年一系列同类事件，后续推动了工信部
+  《智能网联汽车产品准入和安全管理》相关要求的出台。
+sources:
+  - url: "https://m.thepaper.cn/newsDetail_forward_30146733"
+    title: "首例智能驾驶致死案宣判？小鹏汽车澄清 (澎湃新闻)"
+  - url: "http://www.cnautonews.com/houshichang/2025/02/18/detail_20250218371935.html"
+    title: "智能驾驶已来事故责任谁担 (中国汽车报)"
+contributor: "ROAM Core Team"
+last_updated: "2026-04-15"

@@ -1,7 +1,7 @@
 id: "ROAM-DMV-2020-002"
 tier: 2
 date: "2020-01-21"
-operator: "Unknown"
+operator: "Zoox"
 location:
   city: "San Francisco, USA"
   country: "USA"
@@ -17,6 +17,6 @@ description: |
   passenger-side door of the Zoox vehicle; there was no damage to the truck. There were no injuries and police were not called.
 sources:
   - url: "https://www.dmv.ca.gov/portal/file/collision-report-zoox-january-21-2020-2-pdf/"
-    title: "Unknown collision report 2020-01-21 (CA DMV OL 316)"
+    title: "Zoox collision report 2020-01-21 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
-last_updated: "2026-04-14"
+last_updated: "2026-04-15"

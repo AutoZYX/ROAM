@@ -19,16 +19,67 @@ OPERATOR_MAP = {
     "waymo": "Waymo",
     "zoox": "Zoox",
     "cruise": "Cruise (GM)",
-    "gm": "Cruise (GM)",
+    "gm cruise": "Cruise (GM)",
+    "general motors": "Cruise (GM)",
     "apple": "Apple",
     "nuro": "Nuro",
     "weride": "WeRide",
     "pony": "Pony.ai",
     "apollo": "Apollo (Baidu)",
+    "baidu": "Apollo (Baidu)",
     "mercedes": "Mercedes-Benz",
     "lyft": "Lyft",
     "aimotive": "AImotive",
+    "argo": "Argo AI",
+    "aurora": "Aurora",
+    "may mobility": "May Mobility",
+    "beep": "Beep",
+    "ohmio": "Ohmio",
+    "tensor": "Tensor",
+    "gatik": "Gatik",
+    "motional": "Motional",
+    "toyota": "Toyota Research",
+    "nvidia": "NVIDIA",
+    "udelv": "Udelv",
+    "ghost": "Ghost Autonomy",
+    "phantom": "Phantom AI",
+    "embark": "Embark",
+    "plus": "Plus",
+    "tusimple": "TuSimple",
+    "kodiak": "Kodiak",
+    "applied intuition": "Applied Intuition",
+    "imagry": "Imagry",
+    "qualcomm": "Qualcomm",
+    "valeo": "Valeo",
+    "bosch": "Bosch",
+    "continental": "Continental",
+    "mobileye": "Mobileye",
 }
+
+
+def parse_operator_from_text(text: str) -> str | None:
+    """Extract MANUFACTURER'S NAME from Section 1 of the PDF text."""
+    # Match: "MANUFACTURER'S NAME ... AVT NUMBER\n <name>"
+    # The name is the line after the "MANUFACTURER'S NAME" header.
+    # PDF text uses both ' and ' (curly and straight).
+    m = re.search(
+        r"MANUFACTURER[\u2019']S NAME[^\n]*\n\s*([^\n]+?)\s*\n",
+        text,
+    )
+    if not m:
+        return None
+    raw = m.group(1).strip()
+    # Clean up common suffixes
+    cleaned = re.sub(r",?\s*(LLC|Inc\.?|Corp\.?|Corporation|Ltd\.?|Company|Co\.?)$", "", raw, flags=re.IGNORECASE).strip()
+    if not cleaned:
+        return None
+    # Match against known operators
+    lower = cleaned.lower()
+    for key, name in OPERATOR_MAP.items():
+        if key in lower:
+            return name
+    # Unknown operator — return cleaned raw name, not "Unknown"
+    return cleaned
 
 
 def pdftotext(pdf_path: Path) -> str:
@@ -40,10 +91,16 @@ def pdftotext(pdf_path: Path) -> str:
     return result.stdout
 
 
-def parse_operator(filename: str) -> str:
+def parse_operator(filename: str, text: str = "") -> str:
+    """Prefer PDF content (Section 1 MANUFACTURER'S NAME), fall back to filename."""
+    if text:
+        from_text = parse_operator_from_text(text)
+        if from_text:
+            return from_text
+
     stem = filename.lower().replace("_redacted", "").replace("-pdf", "")
     for key, name in OPERATOR_MAP.items():
-        if stem.startswith(key):
+        if stem.startswith(key) or f"-{key}-" in stem or f"_{key}_" in stem:
             return name
     return "Unknown"
 
@@ -307,7 +364,7 @@ def process_pdf(pdf_path: Path, id_counter: dict) -> tuple[str, dict]:
     if not is_autonomous(narrative):
         return "MANUAL", None
 
-    operator = parse_operator(pdf_path.stem)
+    operator = parse_operator(pdf_path.stem, text)
     date = parse_date(pdf_path.stem, text)
     time = parse_time(narrative)
     location = parse_location(text, narrative)

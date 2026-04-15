@@ -1,7 +1,7 @@
 id: "ROAM-DMV-2022-070"
 tier: 2
 date: "2022-04-22"
-operator: "Unknown"
+operator: "Zoox"
 location:
   city: "San Francisco, USA"
   country: "USA"
@@ -17,6 +17,6 @@ description: |
   were not called, and there were no injuries.
 sources:
   - url: "https://www.dmv.ca.gov/portal/file/zoo_042222-pdf/"
-    title: "Unknown collision report 2022-04-22 (CA DMV OL 316)"
+    title: "Zoox collision report 2022-04-22 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
-last_updated: "2026-04-14"
+last_updated: "2026-04-15"

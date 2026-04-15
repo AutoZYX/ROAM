@@ -1,7 +1,7 @@
 id: "ROAM-DMV-2022-002"
 tier: 2
 date: "2022-09-22"
-operator: "Unknown"
+operator: "Argo AI"
 location:
   city: "Palo Alto, USA"
   country: "USA"
@@ -21,6 +21,6 @@ description: |
   cyclist indicated that he was fine and apologized. The Argo AV sustained minor damage to its passenger side door handle.
 sources:
   - url: "https://www.dmv.ca.gov/portal/file/argo_092222-pdf/"
-    title: "Unknown collision report 2022-09-22 (CA DMV OL 316)"
+    title: "Argo AI collision report 2022-09-22 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
-last_updated: "2026-04-14"
+last_updated: "2026-04-15"

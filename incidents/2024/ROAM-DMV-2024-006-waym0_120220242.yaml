@@ -2,7 +2,7 @@ id: "ROAM-DMV-2024-006"
 tier: 2
 date: "2024-12-02"
 time: "07:58"
-operator: "Unknown"
+operator: "Waymo"
 location:
   city: "Los Angeles, USA"
   country: "USA"
@@ -22,6 +22,6 @@ description: |
   Both vehicles sustained damage.
 sources:
   - url: "https://www.dmv.ca.gov/portal/file/waym0_120220242-pdf/"
-    title: "Unknown collision report 2024-12-02 (CA DMV OL 316)"
+    title: "Waymo collision report 2024-12-02 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
-last_updated: "2026-04-14"
+last_updated: "2026-04-15"

@@ -1,7 +1,7 @@
 id: "ROAM-DMV-2019-004"
 tier: 2
 date: "2019-10-12"
-operator: "Unknown"
+operator: "Zoox"
 location:
   city: "San Francisco, USA"
   country: "USA"
@@ -17,6 +17,6 @@ description: |
   vehicle behind the Zoox vehicle made contact with the rear bumper of the Zoox vehicle. There were no injuries.
 sources:
   - url: "https://www.dmv.ca.gov/portal/file/collision-report-zoox-october-12-2019-pdf/"
-    title: "Unknown collision report 2019-10-12 (CA DMV OL 316)"
+    title: "Zoox collision report 2019-10-12 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
-last_updated: "2026-04-14"
+last_updated: "2026-04-15"

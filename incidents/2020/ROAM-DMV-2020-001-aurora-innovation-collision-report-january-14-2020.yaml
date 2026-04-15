@@ -2,7 +2,7 @@ id: "ROAM-DMV-2020-001"
 tier: 2
 date: "2020-01-14"
 time: "11:13"
-operator: "Unknown"
+operator: "Aurora"
 location:
   city: "Santa Clara, USA"
   country: "USA"
@@ -18,6 +18,6 @@ description: |
   Aurora vehicle. There were no injuries to the occupants of either vehicle, nor damage to either vehicle.
 sources:
   - url: "https://www.dmv.ca.gov/portal/file/aurora-innovation-collision-report-january-14-2020-pdf/"
-    title: "Unknown collision report 2020-01-14 (CA DMV OL 316)"
+    title: "Aurora collision report 2020-01-14 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
-last_updated: "2026-04-14"
+last_updated: "2026-04-15"

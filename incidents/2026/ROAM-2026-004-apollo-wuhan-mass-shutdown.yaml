@@ -68,13 +68,60 @@ systemic_issues_cn:
   - "按受影响车辆数计，全球最大规模的 Robotaxi 车队故障事件"
   - "晚高峰桥梁停运将公众影响和危险最大化"
 regulatory_action: |
+  [Phase 1: Immediate response, Days 1-3]
   Wuhan city government initiated emergency review of 萝卜快跑 operations.
-  Ministry of Industry and Information Technology (MIIT) reportedly requested
-  incident report from Baidu. National-level discussion on robotaxi fleet
-  resilience standards intensified.
+  MIIT requested incident report from Baidu.
+
+  [Phase 2: National-level escalation, Days 4-14]
+  Three central government ministries (工信部/公安部/交通运输部) convened
+  an emergency national safety supervision meeting on autonomous driving.
+  More than 10 pilot cities simultaneously tightened access requirements,
+  suspended geographic expansion approvals, and launched comprehensive
+  safety audits of all L4 robotaxi operations.
+
+  [Phase 3: Regulatory paradigm shift]
+  The incident triggered a fundamental reversal in China's AV regulatory
+  logic — from the prior decade's "inclusive and prudent" (包容审慎)
+  approach prioritizing innovation, toward a "safety bottom-line
+  hardening" (安全底线刚性化) framework with full-chain accountability.
+
+  Key new regulatory directions announced:
+  - Cloud-network-edge-vehicle (云-网-边-车) systemic safety supervision:
+    cloud platforms must demonstrate multi-region redundancy, fault
+    isolation, and graceful degradation; single-center cloud control
+    architecture prohibited
+  - Vehicle-level minimum safety system: mandatory independent fallback
+    system that can execute emergency stop, pull-over, hazard lights,
+    and door unlock even when cloud, network, and main system all fail
+  - Full lifecycle dynamic supervision: replacing the prior access-only
+    (准入式) model with continuous monitoring including daily spot checks,
+    monthly safety assessments, and quarterly compliance audits
+  - Exit mechanism: enterprises causing major systemic failures with
+    severe social impact face immediate license revocation and 3-year
+    re-application ban
+  - Enterprise primary liability: operating companies explicitly
+    designated as first-responsible party (第一责任人) for the entire
+    design-production-operation-maintenance chain, with mandatory
+    advance compensation (先行赔付) mechanisms for passengers
+
+  This represents the most significant shift in China's AV regulatory
+  framework since the beginning of L4 pilot programs, effectively ending
+  the era of "tolerance for innovation trial-and-error" in favor of
+  "rigid safety baselines with full-chain accountability closure."
 regulatory_action_cn: |
-  武汉市政府启动对萝卜快跑运营的紧急审查。据报道工业和信息化部（MIIT）要求百度提交
-  事故报告。关于 Robotaxi 车队韧性标准的全国性讨论加速推进。
+  [第一阶段：即时响应，1-3天]
+  武汉市政府启动对萝卜快跑运营的紧急审查。工信部要求百度提交事故报告。
+
+  [第二阶段：国家层面升级，4-14天]
+  国家三部门（工信部、公安部、交通运输部）紧急召开全国自动驾驶安全监管会议。
+  超过10个试点城市同步收紧准入、暂停扩区、全面排查。
+
+  [第三阶段：监管范式转向]
+  事件触发了中国自动驾驶监管逻辑的根本性逆转——从此前十年的"包容审慎"转向
+  "安全底线刚性化、全链条责任闭环化"。新监管方向包括：云-网-边-车系统性安全
+  全链条监管、车辆级最小安全系统（强制独立后备）、准入-运营-退出全生命周期
+  动态监管、重大系统性故障企业吊销资质且3年内不得重新申请、运营企业第一责任人
+  制度与先行赔付机制。
 sources:
   - url: "https://www.huxiu.com/article/4847431.html"
     title: "萝卜快跑瘫痪事故暴露的阿喀琉斯之踵 - 虎嗅网"
@@ -82,6 +129,8 @@ sources:
     title: "Passengers stranded after robotaxi outage in Wuhan - NBC News"
   - url: "https://www.cnbc.com/2026/04/01/baidu-robotaxis-caused-crashes-in-wuhan-reports.html"
     title: "Baidu robotaxis halted mid-traffic in Wuhan - CNBC"
+  - url: "wechat://智驾政研室/2026-04-23"
+    title: "从武汉萝卜快跑故障看行业变局：安全监管趋严，自动驾驶企业必须回答的问题 - 智驾政研室"
 contributor: "ROAM Core Team"
 driving_automation_level: "L4"
-last_updated: "2026-04-02"
+last_updated: "2026-04-26"

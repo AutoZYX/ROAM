@@ -1,0 +1,23 @@
+id: "ROAM-DMV-2025-005"
+tier: 2
+date: "2025-11-18"
+time: "10:15"
+operator: "Unknown"
+location:
+  city: "San Jose, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "2701 Orchard Pkwy"
+scenario:
+  primary: "E1"
+severity: "S1"
+urgency: "U0"
+description: |
+  On Nov 18, 2025, at 10:15 AM, the AV was being driven manually on Orchard Pkwy, and was stopped, waiting in traffic. There was a truck
+  in front of the AV and another vehicle behind the AV. The truck in front started backing up, and its rear rack made contact with the front
+  blind spot sensor pod of the AV. The AV driver honked, but did not have time or space to back up.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/tensor_111825-pdf/"
+    title: "Unknown collision report 2025-11-18 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

@@ -1,0 +1,28 @@
+id: "ROAM-DMV-2025-048"
+tier: 2
+date: "2025-09-26"
+time: "12:49"
+operator: "Waymo"
+location:
+  city: "Daly City, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "Mission Street at E. Market Street"
+scenario:
+  primary: "C3"
+severity: "S1"
+urgency: "U0"
+description: |
+  On September 26, 2025 at 12:49 AM PT a Waymo Autonomous Vehicle (“Waymo AV”) operating in Daly City, California was in a
+  collision involving a passenger car on Mission Street at E. Market Street.
+  
+  The Waymo AV was traveling southbound on Mission Street in the second to the rightmost lane and crossing the intersection with E.
+  Market Street at a green light. While the Waymo AV was crossing the intersection, a passenger car traveling ahead of the Waymo AV in the
+  adjacent third to the right lane crossed the dashed lane line into the Waymo AV’s lane of travel and the right side of the passenger car made
+  contact with the front left side of the Waymo AV. At the time of the impact, the Waymo AV’s Level 4 ADS was engaged in autonomous
+  mode. Both vehicles sustained damage.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_09262025-pdf/"
+    title: "Waymo collision report 2025-09-26 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

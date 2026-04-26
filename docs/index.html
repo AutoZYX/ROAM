@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://autozyx.com/assets/favicon.png" type="image/png">
 <title>ROAM — L4 自动驾驶远程运营与异常管理开源框架</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -128,10 +129,22 @@ footer a { color:var(--accent); }
   .wrap { padding:0 18px; }
   header { padding:72px 18px 48px; }
   .lang { right:18px; }
+  .autozyx-brand { left:14px; }
+  .autozyx-brand span { display:none; }
 }
+
+/* AutoZYX brand strip — 跨站统一 */
+.autozyx-brand{position:fixed;top:16px;left:20px;display:flex;align-items:center;gap:10px;padding:5px 14px 5px 5px;background:rgba(250,249,245,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(224,222,214,0.7);border-radius:28px;text-decoration:none;color:var(--text);font:500 13px/1 'Inter',-apple-system,sans-serif;z-index:100;transition:border-color .15s,transform .15s}
+.autozyx-brand:hover{border-color:#8a8a80;text-decoration:none;transform:translateY(-1px)}
+.autozyx-brand img{width:30px;height:30px;border-radius:50%;object-fit:cover;display:block}
 </style>
 </head>
 <body>
+
+<a href="https://autozyx.com" class="autozyx-brand" title="返回 AutoZYX 主页">
+  <img src="https://autozyx.com/assets/avatar.png" alt="AutoZYX">
+  <span>AutoZYX</span>
+</a>
 
 <div class="lang">
   <button class="on" onclick="L('cn',this)">中文</button>

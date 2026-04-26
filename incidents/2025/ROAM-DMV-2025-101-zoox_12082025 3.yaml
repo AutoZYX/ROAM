@@ -1,0 +1,27 @@
+id: "ROAM-DMV-2025-101"
+tier: 2
+date: "2025-12-08"
+operator: "Zoox"
+location:
+  city: "San Francisco, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "Bryant Street and 6th Street"
+scenario:
+  primary: "E1"
+severity: "S2"
+urgency: "U0"
+description: |
+  An unoccupied Zoox vehicle (Vehicle 1) was stationary in the right lane on northeast-bound Bryant Street at 6th Street in San Francisco,
+  stopped behind traffic at a red light. After the light turned green, the Zoox vehicle initially remained stopped to yield to an active police
+  vehicle making a right turn onto 6th Street from the adjacent lane. During the subsequent green light cycle, as the Zoox vehicle began to
+  proceed straight along Bryant Street, two passenger cars, including Vehicle 2, cut across its path from behind, attempting an illegal right
+  turn onto 6th Street from a through lane. The Zoox vehicle braked hard, but contact was unavoidable, and Vehicle 2 clipped the Zoox
+  vehicle’s left front fender. The front-seat passenger of Vehicle 2 exited to inspect the Zoox vehicle before returning to their car and leaving
+  the scene without exchanging information. The Zoox vehicle then cleared the scene and returned to base. Upon inspection, the Zoox vehicle
+  was found to have sustained minor damage. Police were notified, and no injuries were reported.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/zoox_12082025-pdf/"
+    title: "Zoox collision report 2025-12-08 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

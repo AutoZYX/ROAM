@@ -1,0 +1,29 @@
+id: "ROAM-DMV-2025-069"
+tier: 2
+date: "2025-12-04"
+time: "06:38"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "6th Street at Brannan Street"
+scenario:
+  primary: "E1"
+severity: "S1"
+urgency: "U0"
+description: |
+  On December 4, 2025 at 6:38 AM PT a Waymo Autonomous Vehicle (“Waymo AV”) operating in San Francisco, California was in a
+  collision involving a heavy truck on 6th Street at Brannan Street.
+  
+  The Waymo AV was traveling southeastbound in the designated right turn lane on 6th Street with its right turn signal activated in
+  preparation for a right turn onto Brannan Street. As the Waymo AV approached the intersection with Brannan Street, it slowed to a stop to
+  yield to a heavy truck with an oversized trailer that was traveling southeastbound in the second from the right lane and partially in the
+  designated right turn lane in close proximity to the Waymo AV. While the Waymo AV was stopped, the heavy truck continued to proceed
+  forward and the right side of the heavy truck trailer made contact with the left side of the stationary Waymo AV. At the time of the impact,
+  the Waymo AV’s Level 4 ADS was engaged in autonomous mode. The Waymo AV sustained damage.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_120425-pdf/"
+    title: "Waymo collision report 2025-12-04 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

@@ -1,0 +1,31 @@
+id: "ROAM-DMV-2025-011"
+tier: 2
+date: "2025-02-14"
+time: "04:01"
+operator: "Waymo"
+location:
+  city: "Mountain View, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "Logue Avenue at E. Middlefield Road"
+scenario:
+  primary: "E1"
+severity: "S1"
+urgency: "U0"
+description: |
+  On February 14, 2025 at 4:01 PM PT a Waymo Autonomous Vehicle ("Waymo AV") operating in Mountain View, California was in a
+  collision involving a passenger car on Logue Avenue at E. Middlefield Road.
+  
+  The Waymo AV was traveling south on Logue Avenue and came to a stop at a red light in the dedicated right turn lane at the intersection
+  with E. Middlefield Road. The Waymo AV proceeded from the stop line, and then came to a stop again before entering the E. Middlefield
+  Road. A passenger car that was making a right turn directly behind the Waymo AV continued forward and the front of the passenger car
+  made contact with the rear of the stationary Waymo AV. At the time of the impact, the Waymo AV's Level 4 ADS was engaged in
+  autonomous mode. The passenger car sustained damage.
+  
+  Waymo is reporting this crash under Request No. 2 of Standing General Order 2021-01. Waymo may supplement or correct its reporting
+  with additional information as it may become available.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_02142025-pdf/"
+    title: "Waymo collision report 2025-02-14 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

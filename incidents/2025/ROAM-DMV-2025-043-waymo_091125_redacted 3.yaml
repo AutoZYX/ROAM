@@ -1,0 +1,27 @@
+id: "ROAM-DMV-2025-043"
+tier: 2
+date: "2025-09-11"
+time: "04:32"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "Parking lot entrance of 785 Moscow Street"
+scenario:
+  primary: "E1"
+severity: "S2"
+urgency: "U0"
+description: |
+  On September 11, 2025 at 4:32 PM PT a Waymo Autonomous Vehicle (“Waymo AV”) operating in San Francisco, California made contact
+  with the pavement at the parking lot entrance of 785 Moscow Street.
+  
+  The Waymo AV was in autonomous mode traveling eastbound on Geneva Avenue when it began to turn left into a parking lot at 785
+  Moscow Street. As the Waymo AV proceeded northbound into the entrance of the parking lot, the Waymo AV’s undercarriage made
+  contact with the pavement at the entrance of the parking lot. At the time of the impact, the Waymo AV’s Level 4 ADS was engaged in
+  autonomous mode, and a test driver was present (in the driver’s seating position). The test driver of the Waymo AV alleged minor injuries.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_091125_redacted-pdf/"
+    title: "Waymo collision report 2025-09-11 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

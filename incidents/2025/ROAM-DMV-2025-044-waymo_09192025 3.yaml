@@ -1,0 +1,29 @@
+id: "ROAM-DMV-2025-044"
+tier: 2
+date: "2025-09-19"
+time: "09:55"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "Brannan Street near 4th Street"
+scenario:
+  primary: "E1"
+severity: "S1"
+urgency: "U0"
+description: |
+  On September 19, 2025 at 9:55 AM PT a Waymo Autonomous Vehicle (“Waymo AV”) operating in San Francisco, California was in a
+  collision involving an SUV on Brannan Street near 4th Street.
+  
+  The Waymo AV was stopped facing southwest on Brannan Street in a queue of traffic for a red light at the intersection at 4th Street. The
+  SUV stopped in front of the Waymo AV proceeded forward a short distance to close the distance with the vehicle in front of it, which was
+  stopped at the red light. The Waymo AV followed by proceeding forward a short distance before both vehicles came to a stop. While the
+  Waymo AV was proceeding forward, the SUV behind the Waymo AV proceeded forward as well, but did not stop when the Waymo AV
+  came to a stop and the front of the SUV made contact with the rear of the stationary Waymo AV. At the time of the impact, the Waymo
+  AV’s Level 4 ADS was engaged in autonomous mode. Both vehicles sustained damage.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_09192025-pdf/"
+    title: "Waymo collision report 2025-09-19 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

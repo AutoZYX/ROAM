@@ -1,0 +1,29 @@
+id: "ROAM-DMV-2025-063"
+tier: 2
+date: "2025-11-12"
+time: "11:32"
+operator: "Waymo"
+location:
+  city: "Los Angeles, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "Main Street near W. 37th Place"
+scenario:
+  primary: "C5"
+severity: "S1"
+urgency: "U0"
+description: |
+  On November 12, 2025 at 11:32 AM PT a Waymo Autonomous Vehicle (“Waymo AV”) operating in Los Angeles, California was in a
+  collision involving a suspended wire on Main Street near W. 37th Place.
+  
+  The Waymo AV was traveling northbound in the left lane on Main Street when it approached a wire apparently tied on one end to a utility
+  pole and being held up by a pedestrian on the west sidewalk of Main Street, such that the wire was suspended low across all lanes of Main
+  Street. The Waymo proceeded straight, striking the suspended wire and then driving over it. The Waymo AV sustained damage.
+  
+  Waymo is reporting this crash under Request No. 1 of Standing General Order 2021-01 because a vehicle involved was towed away.
+  Waymo may supplement or correct its reporting with additional information as it may become available.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_111225-pdf/"
+    title: "Waymo collision report 2025-11-12 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"

@@ -1,0 +1,27 @@
+id: "ROAM-DMV-2025-020"
+tier: 2
+date: "2025-05-10"
+time: "02:13"
+operator: "Waymo"
+location:
+  city: "San Francisco, USA"
+  country: "USA"
+  road_type: "urban_street"
+  specific: "Broadway near Stockton Street"
+scenario:
+  primary: "E1"
+severity: "S2"
+urgency: "U0"
+description: |
+  On May 10, 2025 at 2:13 PM PT a Waymo Autonomous Vehicle (“Waymo AV”) operating in San Francisco, California was in a collision
+  involving a van on Broadway near Stockton Street.
+  
+  The Waymo AV was traveling westbound on Broadway in the rightmost lane, slowing for a queue of traffic ahead. A van approached the
+  Waymo AV from behind, and the front of the van made contact with the rear of the Waymo AV. At the time of the impact, the Waymo
+  AV’s Level 4 ADS was engaged in autonomous mode. The Waymo AV sustained damage. The passenger in the Waymo AV alleged a
+  minor injury.
+sources:
+  - url: "https://www.dmv.ca.gov/portal/file/waymo_05102025_2-pdf/"
+    title: "Waymo collision report 2025-05-10 (CA DMV OL 316)"
+contributor: "CA DMV OL 316 (auto-imported)"
+last_updated: "2026-04-14"
